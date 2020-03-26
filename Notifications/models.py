@@ -5,7 +5,7 @@ NOTIFICATION_CHOICES = (
     ('zd', 'zone dangereuse'),
     ('vv', 'video validée'),
     ('md', 'malade'),
-    ('sg', 'signalement'),
+    ('sg', 'signalement')
 )
 
 

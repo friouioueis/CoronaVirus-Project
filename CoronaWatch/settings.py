@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'Robots',
     'Articles',
     'Signal',
-    'Notifications'
+    'Notifications',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

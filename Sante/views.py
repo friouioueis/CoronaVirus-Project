@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .serializers import *
+from .models import *
 
-# Create your views here.
+
+class infoSanteView(viewsets.ModelViewSet):
+    serializer_class = infoSanteSerializer
+    queryset = infoSante.objects.all()
