@@ -11,3 +11,11 @@ class regionView(viewsets.ModelViewSet):
 class statistiqueRegionView(viewsets.ModelViewSet):
     serializer_class = statistiqueRegionSerializer
     queryset = statistiqueRegion.objects.all()
+
+
+class regionStatsView(viewsets.ModelViewSet):
+    serializer_class = statistiqueRegionSerializer
+
+    def get_queryset(self):
+        idRegionSt = self.kwargs['id']
+        return statistiqueRegion.objects.filter(idRegionSt=idRegionSt).order_by('dateSt')

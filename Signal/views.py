@@ -13,3 +13,17 @@ class selfPhotoView(viewsets.ModelViewSet):
     queryset = selfPhoto.objects.all()
 
 
+class utilisateurSignalsView(viewsets.ModelViewSet):
+    serializer_class = signalementSerializer
+
+    def get_queryset(self):
+        idUtilisateurSg = self.kwargs['id']
+        return signalement.objects.filter(idUtilisateurSg=idUtilisateurSg)
+
+
+class utilisateurPhotosView(viewsets.ModelViewSet):
+    serializer_class = selfPhotoSerializer
+
+    def get_queryset(self):
+        idUtilisateurSph = self.kwargs['id']
+        return selfPhoto.objects.filter(idUtilisateurSph=idUtilisateurSph)

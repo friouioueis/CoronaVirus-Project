@@ -31,6 +31,30 @@ class redacteurArticlesView(viewsets.ModelViewSet):
         return article.objects.filter(idRedacteurAr=idRedacteurAr)
 
 
+class articleCommentairesView(viewsets.ModelViewSet):
+    serializer_class = commentaireSerializer
+
+    def get_queryset(self):
+        idArticleCom = self.kwargs['id']
+        return commentaire.objects.filter(idArticleCom=idArticleCom)
+
+
+class articleVideosView(viewsets.ModelViewSet):
+    serializer_class = videoArticleSerializer
+
+    def get_queryset(self):
+        idArticleVd = self.kwargs['id']
+        return videoArticle.objects.filter(idArticleVd=idArticleVd)
+
+
+class articlePhotosView(viewsets.ModelViewSet):
+    serializer_class = photoArticleSerializer
+
+    def get_queryset(self):
+        idArticlePh = self.kwargs['id']
+        return photoArticle.objects.filter(idArticlePh=idArticlePh)
+
+
 class videoThematiqueView(viewsets.ModelViewSet):
     serializer_class = videoThematiqueSerializer
     queryset = videoThematique.objects.all()
