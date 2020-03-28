@@ -4,6 +4,6 @@ from Notifications import views
 
 router = routers.DefaultRouter()
 router.register(r'notifs', views.notifUtilisateurView,basename='notifs')
-router.register(r'UtilisateurNotifs/(?P<id>.+)',views.utilisateurNotifsView,basename='UtilisateurNotifs')
+router.register(r'Utilisateur/(?P<id>.+)/notifs',views.utilisateurNotifsView,basename='UtilisateurNotifs')
 
 urlpatterns = router.urls
