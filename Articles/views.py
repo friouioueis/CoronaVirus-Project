@@ -58,3 +58,33 @@ class articlePhotosView(viewsets.ModelViewSet):
 class videoThematiqueView(viewsets.ModelViewSet):
     serializer_class = videoThematiqueSerializer
     queryset = videoThematique.objects.all()
+
+
+class ModerateurValidView(viewsets.ModelViewSet):
+    serializer_class            = articleSerializer
+
+    def get_queryset(self):
+        idModerateur            = self.kwargs['id']
+        return article.objects.filter(idModerateurAr=idModerateur, validerAR=True)
+
+class ModerateurRefusView(viewsets.ModelViewSet):
+    serializer_class            = articleSerializer
+
+    def get_queryset(self):
+        idModerateur            = self.kwargs['id']
+        return article.objects.filter(idModerateurAr=idModerateur, refuserAR=True)
+
+class ArticleValidView(viewsets.ModelViewSet):
+    serializer_class            = articleSerializer
+    queryset                    =  article.objects.filter(validerAR=True)
+
+class ArticleRefusView(viewsets.ModelViewSet):
+    serializer_class            = articleSerializer
+    queryset                    = article.objects.filter(refuserAR=True)
+
+class VideoUtilisateurView(viewsets.ModelViewSet):
+    serializer_class            = videoThematiqueSerializer
+    def get_queryset(self):
+        idUtilisateur           = self.kwargs['id']
+        return videoThematique.objects.filter(idUtilisateurVThema=idUtilisateur)
+

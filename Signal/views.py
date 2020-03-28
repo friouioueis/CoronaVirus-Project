@@ -27,3 +27,28 @@ class utilisateurPhotosView(viewsets.ModelViewSet):
     def get_queryset(self):
         idUtilisateurSph = self.kwargs['id']
         return selfPhoto.objects.filter(idUtilisateurSph=idUtilisateurSph)
+
+
+    # /////////////////////////////////
+
+class SignalModerValidView(viewsets.ModelViewSet):
+    serializer_class            = signalementSerializer
+
+    def get_queryset(self):
+        idModerateur            = self.kwargs['id']
+        return signalement.objects.filter(idModerateurSg=idModerateur, validerSg=True)
+
+class SignalModerRefusView(viewsets.ModelViewSet):
+    serializer_class            = signalementSerializer
+
+    def get_queryset(self):
+        idModerateur            = self.kwargs['id']
+        return signalement.objects.filter(idModerateurSg=idModerateur, refuserSg=True)
+
+class SignalementValidView(viewsets.ModelViewSet):
+    serializer_class            = signalementSerializer
+    queryset                    = signalement.objects.filter(validerSg=True)
+
+class SignalementRefusView(viewsets.ModelViewSet):
+    serializer_class            = signalementSerializer
+    queryset                    = signalement.objects.filter(refuserSg=True)

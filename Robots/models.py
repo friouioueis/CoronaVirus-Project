@@ -1,5 +1,4 @@
 from django.db import models
-
 from Utilisateurs.models import compteUtilisateur
 
 
@@ -9,7 +8,7 @@ class pubFacebook(models.Model):
     DateFb                          = models.DateTimeField(verbose_name='date de publication')
     validerFb                       = models.BooleanField(default=False, verbose_name='validée',null=True, blank=True)
     refuserFb                       = models.BooleanField(default=False, verbose_name='refusée',null=True, blank=True)
-    idModerateurFb                 = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
+    idModerateurFb                  = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
                                         related_name='fb_moderateur', verbose_name='moderateur',
                                         null=True, blank=True)
 

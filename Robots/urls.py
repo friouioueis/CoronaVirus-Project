@@ -6,6 +6,10 @@ router = routers.DefaultRouter()
 router.register(r'facebook', views.pubFacebookView,basename='facebook')
 router.register(r'youtube', views.pubYoutubeView, basename='youtube')
 router.register(r'web', views.pubSiteWebView, basename='web')
+router.register(r'pub/facebook/sorted', views.SortedpubFacebookView, basename='facebook-sorted')
+router.register(r'pub/youtube/sorted', views.SortedpubYoutubeView, basename='youtube-sorted')
+router.register(r'pub/web/sorted', views.SortedpubSiteWebView, basename='web-sorted')
+
 
 
 urlpatterns = router.urls

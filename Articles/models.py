@@ -12,8 +12,8 @@ class article(models.Model):
                                             null=True,blank=True)
     dateAr                      = models.DateTimeField(auto_now=True, verbose_name='date de redaction')
     contenuAr                   = models.TextField(verbose_name='Contenu')
-    validerAR                   = models.BooleanField(default=False, verbose_name='Validé', null=True,blank=True)
-    refuserAR                   = models.BooleanField(default=False, verbose_name='refusé', null=True,blank=True)
+    validerAR                   = models.BooleanField(default=False, verbose_name='Validé', null=True, blank=True)
+    refuserAR                   = models.BooleanField(default=False, verbose_name='refusé', null=True, blank=True)
 
 
     def __str__(self):
