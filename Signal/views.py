@@ -13,6 +13,3 @@ class selfPhotoView(viewsets.ModelViewSet):
     queryset = selfPhoto.objects.all()
 
 
-class videoThematiqueView(viewsets.ModelViewSet):
-    serializer_class = videoThematiqueSerializer
-    queryset = videoThematique.objects.all()

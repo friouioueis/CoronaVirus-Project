@@ -15,8 +15,4 @@ class selfPhotoSerializer(serializers.ModelSerializer):
         fields               = '__all__'
 
 
-class videoThematiqueSerializer(serializers.ModelSerializer):
-    class Meta:
-        model                = videoThematique
-        fields               = '__all__'
 

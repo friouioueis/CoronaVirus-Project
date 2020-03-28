@@ -1,5 +1,6 @@
 from django.db import models
 
+from Utilisateurs.models import compteUtilisateur
 
 
 class region(models.Model):
@@ -15,12 +16,14 @@ class statistiqueRegion(models.Model):
     idStatistique                   = models.AutoField(primary_key=True, editable=True)
     idRegionSt                      = models.ForeignKey(region, on_delete=models.CASCADE, verbose_name='region')
     nbrPorteurVirus                 = models.IntegerField(default=0, verbose_name='Nombre de proteurs')
+    idModerateurSt                  = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
+                                           related_name='St_moderateur', verbose_name='moderateur', null=True,blank=True)
     casConfirme                     = models.IntegerField(default=0, verbose_name='cas confirmés')
     casRetablis                     = models.IntegerField(default=0, verbose_name='cas retablis')
     nbrDeces                        = models.IntegerField(default=0, verbose_name='Nombre de deces')
     nbrGuerisons                    = models.IntegerField(default=0, verbose_name='Nombre de guerisons')
-    validerSt                       = models.IntegerField(default=0, verbose_name='validée')
-
+    validerSt                       = models.IntegerField(default=0, verbose_name='validée', null=True,blank=True)
+    refuserSt                       = models.IntegerField(default=0, verbose_name='refusé', null=True,blank=True)
     def __str__(self):
         return 'Statistiques de: ' + self.idRegionSt.nomRegion
 
