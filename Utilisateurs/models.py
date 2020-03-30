@@ -1,6 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
 
+from CoronaWatch import settings
 
 ROLE_CHOICES = (
     ('si', 'simple'),
@@ -42,7 +46,7 @@ class UtilisateurManager(BaseUserManager):
 
 class compteUtilisateur(AbstractBaseUser):
     idUtilisateur                   = models.AutoField(primary_key=True, editable=False)
-    nomUtilisateur                  = models.CharField(max_length=30, unique=True, verbose_name="Nom d'utilisateur")
+    username                        = models.CharField(max_length=30, unique=True, verbose_name="Nom d'utilisateur")
     email                           = models.EmailField(max_length=254, unique=True)
     date_joined				        = models.DateTimeField(verbose_name='date joined', auto_now_add=True)
     last_login				        = models.DateTimeField(verbose_name='last login', auto_now=True)
@@ -52,13 +56,13 @@ class compteUtilisateur(AbstractBaseUser):
     is_superuser			        = models.BooleanField(default=False)
 
 
-    USERNAME_FIELD = 'nomUtilisateur'
+    USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']
 
     objects = UtilisateurManager()
 
     def __str__(self):
-        return self.email + ': ' + self.nomUtilisateur
+        return self.email + ': ' + self.username
 
     def has_perm(self, perm, obj=None):
         return self.is_admin
