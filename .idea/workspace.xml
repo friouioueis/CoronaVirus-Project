@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3391a679-f613-45bc-96d2-0cf7bc29a75b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CoronaWatch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CoronaWatch.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/moi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/moi.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Articles/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Articles/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Articles/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Articles/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Articles/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Articles/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Articles/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Articles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Articles/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoronaWatch/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CoronaWatch/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoronaWatch/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CoronaWatch/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notifications/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notifications/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Notifications/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notifications/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Notifications/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Region/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Region/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Region/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Robots/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Robots/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sante/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sante/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sante/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Signal/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Signal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Signal/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilisateurs/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilisateurs/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilisateurs/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilisateurs/migrations/0002_auto_20200330_1916.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilisateurs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilisateurs/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilisateurs/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilisateurs/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilisateurs/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilisateurs/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilisateurs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilisateurs/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilisateurs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilisateurs/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
