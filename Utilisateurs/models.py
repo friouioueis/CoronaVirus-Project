@@ -12,7 +12,7 @@ ROLE_CHOICES = (
 
 
 class UtilisateurManager(BaseUserManager):
-    def create(self, email, username, password=None):
+    def create(self, email, username, last_name=None, first_name=None, password=None):
         if not email:
             raise ValueError('Users must have an email address')
         if not username:
@@ -21,17 +21,22 @@ class UtilisateurManager(BaseUserManager):
         user = self.model(
             email=self.normalize_email(email),
             username=username,
+            first_name=first_name,
+            last_name=last_name
         )
 
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, username, password):
+    def create_superuser(self, email, username, password, nom=None, prenom=None):
+
         user = self.create(
             email=self.normalize_email(email),
             password=password,
             username=username,
+            last_name=nom,
+            first_name=prenom
         )
         user.is_admin = True
         user.is_staff = True
@@ -42,8 +47,8 @@ class UtilisateurManager(BaseUserManager):
 
 class compteUtilisateur(AbstractBaseUser):
     idUtilisateur                   = models.AutoField(primary_key=True, editable=False)
-    first_name                      = models.CharField(max_length=30, null=True, blank=True, verbose_name='')
-    last_name                       = models.CharField(max_length=30, null=True, blank=True)
+    first_name                      = models.CharField(max_length=30, null=True, blank=True, verbose_name='prenom')
+    last_name                       = models.CharField(max_length=30, null=True, blank=True, verbose_name='nom')
     username                        = models.CharField(max_length=30, unique=True, verbose_name="Nom d'utilisateur")
     email                           = models.EmailField(max_length=254, unique=True)
     date_joined				        = models.DateTimeField(verbose_name='date joined', auto_now_add=True)

@@ -10,9 +10,11 @@
       <w>coreapi</w>
       <w>gestion</w>
       <w>moderateur</w>
+      <w>naissance</w>
       <w>notif</w>
       <w>notifs</w>
       <w>personel</w>
+      <w>prenom</w>
       <w>redacteur</w>
       <w>refus</w>
       <w>refuser</w>
@@ -26,6 +28,7 @@
       <w>valider</w>
       <w>videoss</w>
       <w>viewset</w>
+      <w>wilaya</w>
     </words>
   </dictionary>
 </component>
