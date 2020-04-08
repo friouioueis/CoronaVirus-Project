@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'rest_auth.registration',
-
+    'allauth.socialaccount'
 ]
 SITE_ID = 1
 MIDDLEWARE = [
@@ -119,7 +119,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTH_USER_MODEL = 'Utilisateurs.compteUtilisateur'
-
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
@@ -147,5 +146,5 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.AllowAny', )
-}
+        'rest_framework.permissions.AllowAny', ),
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'}
