@@ -16,26 +16,26 @@ ROLE_CHOICES = (
 
 
 class UtilisateurManager(BaseUserManager):
-    def create(self, email, nomUtilisateur, password=None):
+    def create(self, email, username, password=None):
         if not email:
             raise ValueError('Users must have an email address')
-        if not nomUtilisateur:
+        if not username:
             raise ValueError('Users must have a username')
 
         user = self.model(
             email=self.normalize_email(email),
-            nomUtilisateur=nomUtilisateur,
+            username=username,
         )
 
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, nomUtilisateur, password):
+    def create_superuser(self, email, username, password):
         user = self.create(
             email=self.normalize_email(email),
             password=password,
-            nomUtilisateur=nomUtilisateur,
+            username=username,
         )
         user.is_admin = True
         user.is_staff = True
@@ -77,7 +77,7 @@ class role(models.Model):
     Type                            = models.CharField(max_length=2, choices=ROLE_CHOICES)
 
     def __str__(self):
-        return self.get_Type_display() + ':' + self.idUtilisateurR.nomUtilisateur
+        return self.get_Type_display() + ':' + self.idUtilisateurR.username
 
 
 class infoPersonel(models.Model):
@@ -91,4 +91,4 @@ class infoPersonel(models.Model):
     class Meta:
         verbose_name_plural = 'Infos Personnelles'
     def __str__(self):
-        return 'Infos de: ' + self.idUtilisateurIp.nomUtilisateur
+        return 'Infos de: ' + self.idUtilisateurIp.username
