@@ -12,7 +12,7 @@ router.register(r'utilisateur/(?P<id>.+)/roles', views.utilisateurRolesView,base
 router.register(r'utilisateur/(?P<id>.+)/infos', views.utilisateurInfosView,basename='utilisateurInfos')
 
 urlpatterns = [
-    path('gestionComptes', include(router.urls)),
+    path('gestionComptes/', include(router.urls)),
     path('rest-auth/', include('rest_auth.urls')),
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
 ]
