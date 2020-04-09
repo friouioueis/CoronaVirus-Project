@@ -1,8 +1,5 @@
 from rest_framework import serializers
-
 from Articles.models import *
-
-
 
 class videoArticleSerializer(serializers.ModelSerializer):
     class Meta:
@@ -22,7 +19,7 @@ class articleSerializer(serializers.ModelSerializer):
     videos = videoArticleSerializer(many=True, required=False)
     class Meta:
         model                = article
-        fields               = ['idArticle', 'idRedacteurAr', 'idModerateurAr', 'dateAr', 'validerAR', 'refuserAR', 'contenuAr', 'photos', 'videos']
+        fields               = '__all__'
 
 
 

@@ -12,7 +12,7 @@ ROLE_CHOICES = (
 
 
 class UtilisateurManager(BaseUserManager):
-    def create(self, email, username, last_name=None, first_name=None, password=None):
+    def create(self, email, username, password=None):
         if not email:
             raise ValueError('Users must have an email address')
         if not username:
@@ -21,22 +21,17 @@ class UtilisateurManager(BaseUserManager):
         user = self.model(
             email=self.normalize_email(email),
             username=username,
-            first_name=first_name,
-            last_name=last_name
         )
-
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, username, password, nom=None, prenom=None):
+    def create_superuser(self, email, username, password):
 
         user = self.create(
             email=self.normalize_email(email),
             password=password,
             username=username,
-            last_name=nom,
-            first_name=prenom
         )
         user.is_admin = True
         user.is_staff = True
@@ -47,8 +42,6 @@ class UtilisateurManager(BaseUserManager):
 
 class compteUtilisateur(AbstractBaseUser):
     idUtilisateur                   = models.AutoField(primary_key=True, editable=False)
-    first_name                      = models.CharField(max_length=30, null=True, blank=True, verbose_name='prenom')
-    last_name                       = models.CharField(max_length=30, null=True, blank=True, verbose_name='nom')
     username                        = models.CharField(max_length=30, unique=True, verbose_name="Nom d'utilisateur")
     email                           = models.EmailField(max_length=254, unique=True)
     date_joined				        = models.DateTimeField(verbose_name='date joined', auto_now_add=True)
@@ -63,6 +56,14 @@ class compteUtilisateur(AbstractBaseUser):
     REQUIRED_FIELDS = ['email']
 
     objects = UtilisateurManager()
+
+    @property
+    def roles(self):
+        return self.role_set.all()
+
+    @property
+    def infos(self):
+        return self.infopersonel
 
     def __str__(self):
         return self.email + ': ' + self.username
@@ -86,10 +87,10 @@ class role(models.Model):
 class infoPersonel(models.Model):
     idInfoPer                       = models.AutoField(primary_key=True, editable=False)
     idUtilisateurIp                 = models.OneToOneField(compteUtilisateur, on_delete=models.CASCADE, verbose_name='utilisateur')
-    nom                             = models.CharField(max_length=50)
-    prenom                          = models.CharField(max_length=50)
-    dateNaissance                   = models.DateField(verbose_name='Date de naissance')
-    wilaya                          = models.CharField(max_length=30)
+    nom                             = models.CharField(max_length=50, null=True)
+    prenom                          = models.CharField(max_length=50, null=True)
+    dateNaissance                   = models.DateField(verbose_name='Date de naissance', null=True)
+    wilaya                          = models.CharField(max_length=30, null=True)
 
     class Meta:
         verbose_name_plural = 'Infos Personnelles'

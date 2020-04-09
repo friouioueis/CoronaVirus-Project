@@ -4,7 +4,8 @@
     <list default="true" id="3391a679-f613-45bc-96d2-0cf7bc29a75b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/moi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/moi.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Articles/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Articles/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoronaWatch/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CoronaWatch/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utilisateurs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilisateurs/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utilisateurs/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilisateurs/serializers.py" afterDir="false" />
     </list>
@@ -129,7 +130,9 @@
       <workItem from="1586207879617" duration="4774000" />
       <workItem from="1586297327783" duration="5301000" />
       <workItem from="1586310854593" duration="8818000" />
-      <workItem from="1586370873440" duration="3747000" />
+      <workItem from="1586370873440" duration="4465000" />
+      <workItem from="1586376854672" duration="775000" />
+      <workItem from="1586409567999" duration="4080000" />
     </task>
     <servers />
   </component>
