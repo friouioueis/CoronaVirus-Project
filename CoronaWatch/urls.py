@@ -17,14 +17,16 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.authtoken.views import obtain_auth_token
+from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('articles/', include('Articles.urls')),
-    path('notifications/',include('Notifications.urls')),
-    path('Region/',include('Region.urls')),
-    path('Robots/',include('Robots.urls')),
-    path('Sante/',include('Sante.urls')),
-    path('Signal/',include('Signal.urls')),
-    path('Utilisateurs/',include('Utilisateurs.urls')),
+    path('notifications/', include('Notifications.urls')),
+    path('Region/', include('Region.urls')),
+    path('Robots/', include('Robots.urls')),
+    path('Sante/', include('Sante.urls')),
+    path('Signal/', include('Signal.urls')),
+    path('Utilisateurs/', include('Utilisateurs.urls')),
+    path('api/docs', include_docs_urls(title='CoronaWatch API'))
 ]

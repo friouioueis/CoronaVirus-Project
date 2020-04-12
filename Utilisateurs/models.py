@@ -1,10 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
-from django.db.models.signals import post_save
-from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
-
-from CoronaWatch import settings
 
 ROLE_CHOICES = (
     ('si', 'simple'),
@@ -26,12 +22,12 @@ class UtilisateurManager(BaseUserManager):
             email=self.normalize_email(email),
             username=username,
         )
-
         user.set_password(password)
         user.save(using=self._db)
         return user
 
     def create_superuser(self, email, username, password):
+
         user = self.create(
             email=self.normalize_email(email),
             password=password,
@@ -61,6 +57,14 @@ class compteUtilisateur(AbstractBaseUser):
 
     objects = UtilisateurManager()
 
+    @property
+    def roles(self):
+        return self.role_set.all()
+
+    @property
+    def infos(self):
+        return self.infopersonel
+
     def __str__(self):
         return self.email + ': ' + self.username
 
@@ -83,10 +87,10 @@ class role(models.Model):
 class infoPersonel(models.Model):
     idInfoPer                       = models.AutoField(primary_key=True, editable=False)
     idUtilisateurIp                 = models.OneToOneField(compteUtilisateur, on_delete=models.CASCADE, verbose_name='utilisateur')
-    nom                             = models.CharField(max_length=50)
-    prenom                          = models.CharField(max_length=50)
-    dateNaissance                   = models.DateField(verbose_name='Date de naissance')
-    wilaya                          = models.CharField(max_length=30)
+    nom                             = models.CharField(max_length=50, null=True)
+    prenom                          = models.CharField(max_length=50, null=True)
+    dateNaissance                   = models.DateField(verbose_name='Date de naissance', null=True)
+    wilaya                          = models.CharField(max_length=30, null=True)
 
     class Meta:
         verbose_name_plural = 'Infos Personnelles'

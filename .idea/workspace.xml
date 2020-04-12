@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3391a679-f613-45bc-96d2-0cf7bc29a75b" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/moi.xml" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/moi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/moi.xml" afterDir="false" />
+>>>>>>> a24f815ca2b879e99a552a9986b052ceb9e0da3e
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Articles/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Articles/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CoronaWatch/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CoronaWatch/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utilisateurs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilisateurs/models.py" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/Utilisateurs/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilisateurs/serializers.py" afterDir="false" />
+>>>>>>> a24f815ca2b879e99a552a9986b052ceb9e0da3e
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +25,7 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -107,11 +117,23 @@
     <option name="y" value="15" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
+=======
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+>>>>>>> a24f815ca2b879e99a552a9986b052ceb9e0da3e
   </component>
   <component name="ProjectId" id="1ZkLNmJKPJkNqsRz45Z2FUOl72M" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -136,16 +158,19 @@
       <pane id="ProjectPane" />
     </panes>
   </component>
+=======
+>>>>>>> a24f815ca2b879e99a552a9986b052ceb9e0da3e
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/CoronaWatch" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -159,7 +184,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.forms">
+    <configuration name="forms" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CoronaWatch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Utilisateurs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Utilisateurs/forms.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="CoronaWatch" type="Python.DjangoServer" factoryName="Django server">
       <module name="CoronaWatch" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -184,6 +231,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.forms" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -197,6 +249,7 @@
       <updated>1585378108679</updated>
       <workItem from="1585378113667" duration="88000" />
       <workItem from="1585409832197" duration="2064000" />
+<<<<<<< HEAD
       <workItem from="1585530808044" duration="12640000" />
       <workItem from="1585608470084" duration="1290000" />
       <workItem from="1585682240875" duration="951000" />
@@ -261,6 +314,24 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout-to-restore>
   </component>
+=======
+      <workItem from="1585530808044" duration="11335000" />
+      <workItem from="1585606255308" duration="2134000" />
+      <workItem from="1585675270547" duration="8378000" />
+      <workItem from="1585694728377" duration="14000" />
+      <workItem from="1585857229432" duration="650000" />
+      <workItem from="1585947555483" duration="126000" />
+      <workItem from="1586196567555" duration="5748000" />
+      <workItem from="1586207879617" duration="4774000" />
+      <workItem from="1586297327783" duration="5301000" />
+      <workItem from="1586310854593" duration="8818000" />
+      <workItem from="1586370873440" duration="4465000" />
+      <workItem from="1586376854672" duration="775000" />
+      <workItem from="1586409567999" duration="4080000" />
+    </task>
+    <servers />
+  </component>
+>>>>>>> a24f815ca2b879e99a552a9986b052ceb9e0da3e
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -270,12 +341,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -297,6 +362,7 @@
       </map>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Articles/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -424,4 +490,6 @@
       </provider>
     </entry>
   </component>
+=======
+>>>>>>> a24f815ca2b879e99a552a9986b052ceb9e0da3e
 </project>

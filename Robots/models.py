@@ -23,7 +23,7 @@ class pubYoutube(models.Model):
     DateYt                          = models.DateTimeField(verbose_name='date de publication')
     validerYt                       = models.BooleanField(default=False, verbose_name='validée',null=True, blank=True)
     refuserYt                       = models.BooleanField(default=False, verbose_name='refusée',null=True, blank=True)
-    idModerateurYt                 = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
+    idModerateurYt                  = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
                                         related_name='yt_moderateur', verbose_name='moderateur',
                                         null=True, blank=True)
     def __str__(self):

@@ -4,33 +4,33 @@ from .models import *
 
 
 class pubFacebookView(viewsets.ModelViewSet):
-    serializer_class = pubFacebookSerializer
-    queryset = pubFacebook.objects.all()
+    serializer_class                = pubFacebookSerializer
+    queryset                        = pubFacebook.objects.all()
 
 
 class pubYoutubeView(viewsets.ModelViewSet):
-    serializer_class = pubYoutubeSerializer
-    queryset = pubYoutube.objects.all()
+    serializer_class                = pubYoutubeSerializer
+    queryset                        = pubYoutube.objects.all()
 
 
 class pubSiteWebView(viewsets.ModelViewSet):
-    serializer_class = pubSiteWebSerializer
-    queryset = pubSiteWeb.objects.all()
+    serializer_class                = pubSiteWebSerializer
+    queryset                        = pubSiteWeb.objects.all()
 
 
 class SortedpubFacebookView(viewsets.ModelViewSet):
-    serializer_class = pubFacebookSerializer
-    queryset = pubFacebook.objects.all().order_by('DateFb')
+    serializer_class                = pubFacebookSerializer
+    queryset                        = pubFacebook.objects.all().order_by('DateFb')
 
 
 class SortedpubYoutubeView(viewsets.ModelViewSet):
-    serializer_class = pubYoutubeSerializer
-    queryset = pubYoutube.objects.all().order_by('DateYt')
+    serializer_class                = pubYoutubeSerializer
+    queryset                        = pubYoutube.objects.all().order_by('DateYt')
 
 
 class SortedpubSiteWebView(viewsets.ModelViewSet):
-    serializer_class = pubSiteWebSerializer
-    queryset = pubSiteWeb.objects.all().order_by('DateSw')
+    serializer_class                = pubSiteWebSerializer
+    queryset                        = pubSiteWeb.objects.all().order_by('DateSw')
 
 
 

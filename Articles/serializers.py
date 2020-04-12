@@ -1,13 +1,5 @@
 from rest_framework import serializers
-
 from Articles.models import *
-
-
-class articleSerializer(serializers.ModelSerializer):
-    class Meta:
-        model                = article
-        fields               = '__all__'
-
 
 class videoArticleSerializer(serializers.ModelSerializer):
     class Meta:
@@ -16,9 +8,20 @@ class videoArticleSerializer(serializers.ModelSerializer):
 
 
 class photoArticleSerializer(serializers.ModelSerializer):
+
     class Meta:
         model                = photoArticle
         fields               = '__all__'
+
+
+class articleSerializer(serializers.ModelSerializer):
+    photos = photoArticleSerializer(many=True, required=False)
+    videos = videoArticleSerializer(many=True, required=False)
+    class Meta:
+        model                = article
+        fields               = '__all__'
+
+
 
 
 class commentaireSerializer(serializers.ModelSerializer):
@@ -31,3 +34,4 @@ class videoThematiqueSerializer(serializers.ModelSerializer):
     class Meta:
         model                = videoThematique
         fields               = '__all__'
+
