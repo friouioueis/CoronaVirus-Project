@@ -1,4 +1,4 @@
-#Sun Apr 12 00:13:56 WET 2020
+#Mon Apr 13 16:45:31 WET 2020
 base.0=C\:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

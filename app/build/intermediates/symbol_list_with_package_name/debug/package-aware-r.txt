@@ -1383,6 +1383,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable facebook
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
 drawable ic_edit_black_24dp
@@ -1555,6 +1556,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fab
+id facebook_singup_btn
 id fade
 id fill
 id fill_horizontal
@@ -1644,6 +1646,7 @@ id notification_main_column_container
 id off
 id on
 id or
+id or_layout
 id outline
 id packed
 id parallax
