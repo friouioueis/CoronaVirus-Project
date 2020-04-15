@@ -1581,6 +1581,7 @@ id icon_group
 id ifRoom
 id image
 id imageView
+id imageView3
 id info
 id invisible
 id italic
@@ -1627,8 +1628,8 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
+id nav_articles
 id nav_controller_view_tag
-id nav_gallery
 id nav_home
 id nav_home_second
 id nav_host_fragment
@@ -1664,6 +1665,7 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id recycler_view_articles
 id right
 id right_icon
 id right_side
@@ -1734,7 +1736,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
-id text_gallery
+id textView2
 id text_home
 id text_input_end_icon
 id text_input_start_icon
@@ -1832,6 +1834,7 @@ layout activity_login
 layout activity_main
 layout activity_singup
 layout app_bar_main
+layout article_row
 layout content_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -1849,7 +1852,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragment_gallery
+layout fragment_articles
 layout fragment_home
 layout fragment_slideshow
 layout mtrl_alert_dialog
@@ -1961,6 +1964,7 @@ string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string home_second
 string icon_content_description
+string menu_articles
 string menu_gallery
 string menu_home
 string menu_slideshow
