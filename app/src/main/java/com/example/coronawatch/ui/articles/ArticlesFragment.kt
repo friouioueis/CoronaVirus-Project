@@ -19,20 +19,28 @@ import kotlinx.android.synthetic.main.fragment_articles.view.*
 class ArticlesFragment : Fragment() {
 
     private lateinit var articlesViewModel: ArticlesViewModel
-    lateinit var recyclerViewArticles : RecyclerView
+    lateinit var recyclerView : RecyclerView
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         articlesViewModel =
-                ViewModelProviders.of(this).get(ArticlesViewModel::class.java)
+            ViewModelProviders.of(this).get(ArticlesViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_articles, container, false)
 
+        recyclerView = root.findViewById(R.id.recycler_view_articles) as RecyclerView
+        recyclerView.layoutManager = LinearLayoutManager(this.context)
+        recyclerView.adapter = ArticlesAdapter()
 
-         recyclerViewArticles = root.findViewById(R.id.recycler_view_articles) as RecyclerView
-        recyclerViewArticles.adapter = ArticlesAdapter()
 
+        fetchJSON()
         return root
     }
+
+    private fun fetchJSON() {
+        print("attemptinf to fetch JSON")
+    }
+
 }
+

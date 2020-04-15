@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class ArticlesAdapter : RecyclerView.Adapter<CustomViewHolder>() {
+class ArticlesAdapter() : RecyclerView.Adapter<CustomViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
      val layoutInflater = LayoutInflater.from(parent.context)
         val cellForRow = layoutInflater.inflate(R.layout.article_row , parent , false)
@@ -13,7 +13,7 @@ class ArticlesAdapter : RecyclerView.Adapter<CustomViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return 3
+        return 4
     }
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
