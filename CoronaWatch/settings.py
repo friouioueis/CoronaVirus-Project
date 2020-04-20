@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'rest_auth.registration',
     'allauth.socialaccount',
+    'rest_framework_serializer_field_permissions',
 
 ]
 SITE_ID = 1
@@ -148,6 +149,9 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.AllowAny', ),
-    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'}
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+    'EXCEPTION_HANDLER': 'requestlogs.views.exception_handler',}
 
 REST_AUTH_SERIALIZERS = {'USER_DETAILS_SERIALIZER': 'Utilisateurs.serializers.compteUtilisateurSerializer'}
+
+ALLOWED_HOSTS=['*']

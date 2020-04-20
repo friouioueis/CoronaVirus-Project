@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from rest_framework.authtoken.models import Token
 
 ROLE_CHOICES = (
@@ -40,8 +40,8 @@ class UtilisateurManager(BaseUserManager):
         return user
 
 
-class compteUtilisateur(AbstractBaseUser):
-    idUtilisateur                   = models.AutoField(primary_key=True, editable=False)
+class compteUtilisateur(AbstractBaseUser,PermissionsMixin):
+    id                              = models.AutoField(primary_key=True, editable=False)
     username                        = models.CharField(max_length=30, unique=True, verbose_name="Nom d'utilisateur")
     email                           = models.EmailField(max_length=254, unique=True)
     date_joined				        = models.DateTimeField(verbose_name='date joined', auto_now_add=True)

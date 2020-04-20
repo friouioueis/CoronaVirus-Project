@@ -1,19 +1,43 @@
+from requests import Response
 from rest_framework import viewsets
+
+from .policies import *
 from .serializers import *
 from .models import *
 
 
 class articleView(viewsets.ModelViewSet):
+    permission_classes              = (ArticleAccessPolicy,)
     serializer_class                = articleSerializer
     queryset                        = article.objects.all()
 
 
-class videoArticleView(viewsets.ModelViewSet):
-    serializer_class                = videoArticleSerializer
-    queryset                        = videoArticle.objects.all()
+    def partial_update(self, request, pk=None):
+        article=self.get_object()
+        article.validerAR=request.data["validerAR"]
+        article.refuserAR = request.data["refuserAR"]
+        article.save()
+        return request
 
+    def update(self, request, pk=None):
+        article=self.get_object()
+        article.idModerateurAr=compteUtilisateur.objects.get(id=request.data['idModerateurAr'])
+        article.idRedacteurAr=compteUtilisateur.objects.get(id=request.data['idRedacteurAr'])
+        article.contenuAr=request.data['contenuAr']
+        article.dateAr=request.data['dateAr']
+        article.save()
+        return request
+
+
+class videoArticleView(viewsets.ModelViewSet):
+    permission_classes              = (ArticleAccessPolicy,)
+    serializer_class                = videoArticleSerializer
+
+    def get_queryset(self):
+        return article.objects.filter(terminerAR=True)
 
 class photoArticleView(viewsets.ModelViewSet):
+    permission_classes              = (ArticleAccessPolicy,)
     serializer_class                = photoArticleSerializer
     queryset                        = photoArticle.objects.all()
 
@@ -23,6 +47,7 @@ class commentaireView(viewsets.ModelViewSet):
     queryset                        = commentaire.objects.all()
 
 class redacteurArticlesView(viewsets.ModelViewSet):
+    permission_classes = (ArticleAccessPolicy,)
     serializer_class                = articleSerializer
 
     def get_queryset(self):
@@ -39,6 +64,7 @@ class articleCommentairesView(viewsets.ModelViewSet):
 
 
 class articleVideosView(viewsets.ModelViewSet):
+    permission_classes = (ArticleAccessPolicy,)
     serializer_class                = videoArticleSerializer
 
     def get_queryset(self):
@@ -47,6 +73,7 @@ class articleVideosView(viewsets.ModelViewSet):
 
 
 class articlePhotosView(viewsets.ModelViewSet):
+    permission_classes = (ArticleAccessPolicy,)
     serializer_class                = photoArticleSerializer
 
     def get_queryset(self):
@@ -60,6 +87,7 @@ class videoThematiqueView(viewsets.ModelViewSet):
 
 
 class ModerateurValidView(viewsets.ModelViewSet):
+    permission_classes = (ModerateurAccessPolicy,)
     serializer_class            = articleSerializer
 
     def get_queryset(self):
@@ -67,6 +95,7 @@ class ModerateurValidView(viewsets.ModelViewSet):
         return article.objects.filter(idModerateurAr=idModerateur, validerAR=True)
 
 class ModerateurRefusView(viewsets.ModelViewSet):
+    permission_classes = (ModerateurAccessPolicy,)
     serializer_class            = articleSerializer
 
     def get_queryset(self):

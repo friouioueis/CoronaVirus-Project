@@ -1,3 +1,4 @@
+from django.contrib.auth.models import Group
 from rest_framework import viewsets
 from .serializers import *
 from .models import *
@@ -10,6 +11,17 @@ class compteUtilisateurView(viewsets.ModelViewSet):
 class roleView(viewsets.ModelViewSet):
     serializer_class                    = roleSerializer
     queryset                            = role.objects.all()
+
+    def create(self, request):
+        group = Group.objects.get(name=request.data['Type'])
+        compteUtilisateur.objects.get(id=request.data['idUtilisateurR']).groups.add(group)
+        return super().create(request)
+
+    def destroy(self, request, *args, **kwargs):
+        print(self.get_object().Type)
+        group = Group.objects.get(name=self.get_object().Type)
+        group.user_set.remove(self.get_object().idUtilisateurR)
+        return super().destroy(request)
 
 
 class infoPersonelView(viewsets.ModelViewSet):

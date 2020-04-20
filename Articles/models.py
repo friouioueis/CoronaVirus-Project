@@ -10,8 +10,9 @@ class article(models.Model):
     idModerateurAr                  = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
                                             related_name='art_moderateur', verbose_name='moderateur',
                                             null=True,blank=True)
-    dateAr                          = models.DateTimeField(auto_now=True, verbose_name='date de redaction')
+    dateAr                          = models.DateTimeField(verbose_name='date de redaction')
     contenuAr                       = models.TextField(verbose_name='Contenu')
+    terminerAR                      = models.BooleanField(default=False, verbose_name='Terminé', null=True, blank=True)
     validerAR                       = models.BooleanField(default=False, verbose_name='Validé', null=True, blank=True)
     refuserAR                       = models.BooleanField(default=False, verbose_name='refusé', null=True, blank=True)
 

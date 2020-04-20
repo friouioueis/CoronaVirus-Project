@@ -1,4 +1,6 @@
 from rest_framework import serializers
+from rest_framework_serializer_field_permissions.serializers import FieldPermissionSerializerMixin
+
 from Articles.models import *
 
 class videoArticleSerializer(serializers.ModelSerializer):
@@ -14,12 +16,13 @@ class photoArticleSerializer(serializers.ModelSerializer):
         fields               = '__all__'
 
 
-class articleSerializer(serializers.ModelSerializer):
+class articleSerializer(serializers.ModelSerializer,FieldPermissionSerializerMixin):
     photos = photoArticleSerializer(many=True, required=False)
     videos = videoArticleSerializer(many=True, required=False)
+
     class Meta:
-        model                = article
-        fields               = '__all__'
+        model                                          = article
+        fields                                         = '__all__'
 
 
 
