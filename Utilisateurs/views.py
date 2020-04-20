@@ -18,7 +18,6 @@ class roleView(viewsets.ModelViewSet):
         return super().create(request)
 
     def destroy(self, request, *args, **kwargs):
-        print(self.get_object().Type)
         group = Group.objects.get(name=self.get_object().Type)
         group.user_set.remove(self.get_object().idUtilisateurR)
         return super().destroy(request)
@@ -35,6 +34,16 @@ class utilisateurRolesView(viewsets.ModelViewSet):
     def get_queryset(self):
         idUtilisateurR                  = self.kwargs['id']
         return role.objects.filter(idUtilisateurR=idUtilisateurR)
+
+    def create(self, request, *args, **kwargs):
+        group = Group.objects.get(name=request.data['Type'])
+        compteUtilisateur.objects.get(id=request.data['idUtilisateurR']).groups.add(group)
+        return super().create(request)
+
+    def destroy(self, request, *args, **kwargs):
+        group = Group.objects.get(name=self.get_object().Type)
+        group.user_set.remove(self.get_object().idUtilisateurR)
+        return super().destroy(request)
 
 
 class utilisateurInfosView(viewsets.ModelViewSet):

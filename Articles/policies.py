@@ -65,15 +65,10 @@ class CommentaireAccessPolicy(AccessPolicy):
             "effect": "allow"
         },
         {
-            "action": ["destroy","update"],
+            "action": ["destroy"],
             "principal": ["group:si"],
             "effect": "allow",
             "condition": "is_author"
-        },
-        {
-            "action": ["destroy","partial_update"],
-            "principal": ["group:md"],
-            "effect": "allow",
         },
     ]
 
