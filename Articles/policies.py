@@ -70,6 +70,22 @@ class CommentaireAccessPolicy(AccessPolicy):
             "effect": "allow",
             "condition": "is_author"
         },
+        {
+            "action": ["signaler"],
+            "principal": ["group:si"],
+            "effect": "allow",
+        },
+        {
+            "action": ["modifier"],
+            "principal": ["group:si"],
+            "effect": "allow",
+            "condition": "is_author"
+        },
+        {
+            "action": ["update","partial_update"],
+            "principal": ["*"],
+            "effect": "deny",
+        },
     ]
 
     def is_author(self, request, view, action) -> bool:

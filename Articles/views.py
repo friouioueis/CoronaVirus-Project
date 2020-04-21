@@ -1,5 +1,6 @@
 from requests import Response
 from rest_framework import viewsets
+from rest_framework.decorators import action
 
 from .policies import *
 from .serializers import *
@@ -43,8 +44,28 @@ class photoArticleView(viewsets.ModelViewSet):
 
 
 class commentaireView(viewsets.ModelViewSet):
+    permission_classes = (CommentaireAccessPolicy,)
     serializer_class                = commentaireSerializer
     queryset                        = commentaire.objects.all()
+
+    @action(detail=True, methods=['PATCH'], name='modifier article')
+    def modifier(self, request, pk=None):
+        commentaire=self.get_object()
+        commentaire.contenuCom=request.data["contenuCom"]
+        commentaire.save()
+        queryset = commentaire.objects.get(pk=pk)
+        serializer = self.get_serializer(queryset, many=False)
+        return Response(serializer.data)
+
+    @action(detail=True, methods=['PATCH'], name='signaler article')
+    def signaler(self, request, pk=None):
+        commentaire=self.get_object()
+        commentaire.signalerCom=request.data["signalerCom"]
+        commentaire.save()
+        queryset = commentaire.objects.get(pk=pk)
+        serializer = self.get_serializer(queryset, many=False)
+        return Response(serializer.data)
+
 
 class redacteurArticlesView(viewsets.ModelViewSet):
     permission_classes = (ArticleAccessPolicy,)
@@ -56,12 +77,31 @@ class redacteurArticlesView(viewsets.ModelViewSet):
 
 
 class articleCommentairesView(viewsets.ModelViewSet):
+    permission_classes = (CommentaireAccessPolicy,)
     serializer_class                = commentaireSerializer
 
     def get_queryset(self):
         idArticleCom                = self.kwargs['id']
         return commentaire.objects.filter(idArticleCom=idArticleCom)
 
+
+    @action(detail=True, methods=['PATCH'], name='modifier article')
+    def modifier(self, request, *args, **kwargs):
+        comm=self.get_object()
+        comm.contenuCom=request.data["contenuCom"]
+        comm.save()
+        queryset = commentaire.objects.get(pk=self.kwargs['pk'])
+        serializer = self.get_serializer(queryset, many=False)
+        return Response(serializer.data)
+
+    @action(detail=True, methods=['PATCH'], name='signaler article')
+    def signaler(self, request, *args, **kwargs):
+        comm=self.get_object()
+        comm.signalerCom=request.data["signalerCom"]
+        comm.save()
+        queryset = commentaire.objects.get(pk=self.kwargs['pk'])
+        serializer = self.get_serializer(queryset, many=False)
+        return Response(serializer.data)
 
 class articleVideosView(viewsets.ModelViewSet):
     permission_classes = (ArticleAccessPolicy,)

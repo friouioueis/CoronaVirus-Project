@@ -22,6 +22,7 @@ class compteUtilisateurSerializer(serializers.ModelSerializer):
         obj = compteUtilisateur.objects.create(**validated_data)
         obj.save()
         return obj
+
     class Meta:
         model                = compteUtilisateur
         fields               = '__all__'
