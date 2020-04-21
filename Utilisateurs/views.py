@@ -13,13 +13,11 @@ class roleView(viewsets.ModelViewSet):
     queryset                            = role.objects.all()
 
     def create(self, request):
-        group = Group.objects.get(name=request.data['Type'])
-        compteUtilisateur.objects.get(id=request.data['idUtilisateurR']).groups.add(group)
+        role.addRole(request.data['idUtilisateurR'],request.data['Type'])
         return super().create(request)
 
     def destroy(self, request, *args, **kwargs):
-        group = Group.objects.get(name=self.get_object().Type)
-        group.user_set.remove(self.get_object().idUtilisateurR)
+        role.deleteRole(self.get_object().idUtilisateurR,self.get_object().Type)
         return super().destroy(request)
 
 

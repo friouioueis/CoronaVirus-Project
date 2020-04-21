@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin, Group
 from rest_framework.authtoken.models import Token
 
 ROLE_CHOICES = (
@@ -83,6 +83,15 @@ class role(models.Model):
     def __str__(self):
         return self.get_Type_display() + ':' + self.idUtilisateurR.username
 
+    def addRole(idUtilisateurR,Type):
+        group = Group.objects.get(name=Type)
+        user=compteUtilisateur.objects.get(id=idUtilisateurR)
+        user.groups.add(group)
+
+    def deleteRole(idUtilisateurR,Type):
+        group = Group.objects.get(name=Type)
+        user = idUtilisateurR
+        group.user_set.remove(user)
 
 class infoPersonel(models.Model):
     idInfoPer                       = models.AutoField(primary_key=True, editable=False)
