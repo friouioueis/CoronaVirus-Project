@@ -44,24 +44,25 @@ class photoArticleView(viewsets.ModelViewSet):
 
 
 class commentaireView(viewsets.ModelViewSet):
-    permission_classes = (CommentaireAccessPolicy,)
+    #permission_classes = (CommentaireAccessPolicy,)
     serializer_class                = commentaireSerializer
     queryset                        = commentaire.objects.all()
 
     @action(detail=True, methods=['PATCH'], name='modifier article')
     def modifier(self, request, pk=None):
-        commentaire=self.get_object()
-        commentaire.contenuCom=request.data["contenuCom"]
-        commentaire.save()
+        comm=self.get_object()
+        comm.contenuCom=request.data["contenuCom"]
+        comm.save()
         queryset = commentaire.objects.get(pk=pk)
+        print(commentaire.objects.get(pk=pk).idUtilisateurCom)
         serializer = self.get_serializer(queryset, many=False)
         return Response(serializer.data)
 
     @action(detail=True, methods=['PATCH'], name='signaler article')
     def signaler(self, request, pk=None):
-        commentaire=self.get_object()
-        commentaire.signalerCom=request.data["signalerCom"]
-        commentaire.save()
+        comm=self.get_object()
+        comm.signalerCom=request.data["signalerCom"]
+        comm.save()
         queryset = commentaire.objects.get(pk=pk)
         serializer = self.get_serializer(queryset, many=False)
         return Response(serializer.data)
