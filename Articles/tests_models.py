@@ -8,6 +8,6 @@ class ArticleTestCase(TestCase):
     def test_str(self):
         """Test for string representation."""
         ar = ArticleFactory()
-        self.assertEqual(str(ar), 'Article redigé par: ' + ar.idRedacteurAr.username)
+        return self.assertEqual(str(ar), 'Article redigé par: ' + ar.idRedacteurAr.username)
 
 

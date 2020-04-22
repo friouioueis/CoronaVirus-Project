@@ -1,3 +1,4 @@
+from django.http import HttpResponse, JsonResponse
 from requests import Response
 from rest_framework import viewsets
 from rest_framework.decorators import action
@@ -18,16 +19,14 @@ class articleView(viewsets.ModelViewSet):
         article.validerAR=request.data["validerAR"]
         article.refuserAR = request.data["refuserAR"]
         article.save()
-        return request
+        return JsonResponse({"idArticle":article.idArticle,"validerAR":article.validerAR,'refuserAR':article.refuserAR})
 
     def update(self, request, pk=None):
         article=self.get_object()
-        article.idModerateurAr=compteUtilisateur.objects.get(id=request.data['idModerateurAr'])
-        article.idRedacteurAr=compteUtilisateur.objects.get(id=request.data['idRedacteurAr'])
         article.contenuAr=request.data['contenuAr']
         article.dateAr=request.data['dateAr']
         article.save()
-        return request
+        return  JsonResponse({"idArticle":article.idArticle,"contenuAr":article.contenuAr,'dateAr':article.dateAr})
 
 
 class videoArticleView(viewsets.ModelViewSet):
@@ -44,29 +43,24 @@ class photoArticleView(viewsets.ModelViewSet):
 
 
 class commentaireView(viewsets.ModelViewSet):
-    #permission_classes = (CommentaireAccessPolicy,)
+    permission_classes = (CommentaireAccessPolicy,)
     serializer_class                = commentaireSerializer
     queryset                        = commentaire.objects.all()
 
-    @action(detail=True, methods=['PATCH'], name='modifier article')
-    def modifier(self, request, pk=None):
+    @action(detail=True, methods=['PATCH'], name='modifier commentaire')
+    def modifier(self, request,pk=None):
         comm=self.get_object()
         comm.contenuCom=request.data["contenuCom"]
         comm.save()
-        queryset = commentaire.objects.get(pk=pk)
-        print(commentaire.objects.get(pk=pk).idUtilisateurCom)
-        serializer = self.get_serializer(queryset, many=False)
-        return Response(serializer.data)
+        return JsonResponse({"idCommentaire": comm.idCommentaire, "contenuCom": comm.contenuCom})
 
-    @action(detail=True, methods=['PATCH'], name='signaler article')
+
+    @action(detail=True, methods=['PATCH'], name='signaler commentaire')
     def signaler(self, request, pk=None):
         comm=self.get_object()
         comm.signalerCom=request.data["signalerCom"]
         comm.save()
-        queryset = commentaire.objects.get(pk=pk)
-        serializer = self.get_serializer(queryset, many=False)
-        return Response(serializer.data)
-
+        return JsonResponse({"idCommentaire": comm.idCommentaire, "signalerCom": comm.signalerComCom})
 
 class redacteurArticlesView(viewsets.ModelViewSet):
     permission_classes = (ArticleAccessPolicy,)
@@ -86,23 +80,19 @@ class articleCommentairesView(viewsets.ModelViewSet):
         return commentaire.objects.filter(idArticleCom=idArticleCom)
 
 
-    @action(detail=True, methods=['PATCH'], name='modifier article')
+    @action(detail=True, methods=['PATCH'], name='modifier commentaire')
     def modifier(self, request, *args, **kwargs):
         comm=self.get_object()
         comm.contenuCom=request.data["contenuCom"]
         comm.save()
-        queryset = commentaire.objects.get(pk=self.kwargs['pk'])
-        serializer = self.get_serializer(queryset, many=False)
-        return Response(serializer.data)
 
-    @action(detail=True, methods=['PATCH'], name='signaler article')
+
+    @action(detail=True, methods=['PATCH'], name='signaler commentaire')
     def signaler(self, request, *args, **kwargs):
         comm=self.get_object()
         comm.signalerCom=request.data["signalerCom"]
         comm.save()
-        queryset = commentaire.objects.get(pk=self.kwargs['pk'])
-        serializer = self.get_serializer(queryset, many=False)
-        return Response(serializer.data)
+
 
 class articleVideosView(viewsets.ModelViewSet):
     permission_classes = (ArticleAccessPolicy,)

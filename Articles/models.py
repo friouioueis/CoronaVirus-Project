@@ -28,6 +28,7 @@ class article(models.Model):
         return 'Article redigé par: ' + self.idRedacteurAr.username
 
 
+
 class videoArticle(models.Model):
     idVideo                         = models.AutoField(primary_key=True, editable=False)
     idArticleVd                     = models.ForeignKey(article, on_delete=models.CASCADE, verbose_name='article')

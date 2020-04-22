@@ -1,22 +1,24 @@
-from random import randint
+import random
 
+import factory
 from factory import DjangoModelFactory, Faker
 
 from .models import *
+from Utilisateurs.factories import compteUtilisateurFactory
 
 
 class ArticleFactory(DjangoModelFactory):
-    idArticle=randint(1, 100)
-    idRedacteurAr=Faker('idRedacteurAr')
-    idModerateurAr
-    dateAr
-    contenuAr
-    terminerAR
-    validerAR
-    refuserAR
+
     class Meta:
         model = article
-
+    idArticle = factory.Sequence(lambda n: 1+n)
+    idRedacteurAr=factory.SubFactory(compteUtilisateurFactory)
+    idModerateurAr=factory.SubFactory(compteUtilisateurFactory)
+    contenuAr=Faker('text')
+    dateAr = Faker('date')
+    terminerAR=None
+    validerAR=None
+    refuserAR=None
 
 class VideoArticleFactory(DjangoModelFactory):
 
