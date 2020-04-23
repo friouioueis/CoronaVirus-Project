@@ -83,6 +83,7 @@ class role(models.Model):
     def __str__(self):
         return self.get_Type_display() + ':' + self.idUtilisateurR.username
 
+
     def addRole(idUtilisateurR,Type):
         group = Group.objects.get(name=Type)
         user=compteUtilisateur.objects.get(id=idUtilisateurR)

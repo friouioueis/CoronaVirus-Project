@@ -57,8 +57,8 @@ class commentaireView(viewsets.ModelViewSet):
 
     @action(detail=True, methods=['PATCH'], name='signaler commentaire')
     def signaler(self, request, pk=None):
-        comm=self.get_object()
-        comm.signalerCom=request.data["signalerCom"]
+        comm = self.get_object()
+        comm.signalerCom = request.data["signalerCom"]
         comm.save()
         return JsonResponse({"idCommentaire": comm.idCommentaire, "signalerCom": comm.signalerComCom})
 

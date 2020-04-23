@@ -13,7 +13,7 @@ class roleView(viewsets.ModelViewSet):
     queryset                            = role.objects.all()
 
     def create(self, request):
-        role.addRole(request.data['idUtilisateurR'],request.data['Type'])
+        role.addRole(request.data['idUtilisateurR'], request.data['Type'])
         return super().create(request)
 
     def destroy(self, request, *args, **kwargs):

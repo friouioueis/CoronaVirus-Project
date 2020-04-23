@@ -32,7 +32,7 @@ class article(models.Model):
 class videoArticle(models.Model):
     idVideo                         = models.AutoField(primary_key=True, editable=False)
     idArticleVd                     = models.ForeignKey(article, on_delete=models.CASCADE, verbose_name='article')
-    lienViAc                        = models.CharField(max_length=255, verbose_name='lien')
+    lienViAc                        = models.FileField(upload_to='article_videos/', verbose_name='lien')
 
     def __str__(self):
         return 'video pour article n°: ' + str(self.idArticleVd)
@@ -40,7 +40,7 @@ class videoArticle(models.Model):
 class photoArticle(models.Model):
     idPhoto                         = models.AutoField(primary_key=True, editable=False)
     idArticlePh                     = models.ForeignKey(article, on_delete=models.CASCADE, verbose_name='article')
-    lienPhAc                        = models.CharField(max_length=255, verbose_name='lien')
+    lienPhAc                        = models.ImageField(upload_to='article_images/', verbose_name='lien')
 
     def __str__(self):
         return 'photo pour article n°: ' + str(self.idArticlePh)
@@ -57,8 +57,8 @@ class commentaire(models.Model):
     signalerCom                     = models.BooleanField(default=False, verbose_name='signalé', null=True,blank=True)
 
     def __str__(self):
-        return 'commentaire pour article n°: ' + str(self.idArticleCom) + \
-               ' par: ' + self.idUtilisateurCom.nomUtilisateur
+        return 'commentaire pour article n°: ' + str(self.idArticleCom) +' par: ' + self.idUtilisateurCom.username
+
 
 
 class videoThematique(models.Model):
@@ -67,11 +67,13 @@ class videoThematique(models.Model):
                                             related_name='vid_utilisateur', verbose_name='utilisateur')
     idModerateurVthema              = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
                                            related_name='vid_moderateur', verbose_name='moderateur')
-    lienVthema                      = models.CharField(max_length=255, verbose_name='lien')
+    lienVthema                      = models.FileField(upload_to='video_thematique/', verbose_name='lien')
     validerVthema                   = models.BooleanField(default=False, verbose_name='validée')
     refuserVthema                   = models.BooleanField(default=False, verbose_name='refusée')
     titreVthema                     = models.CharField(max_length=255, verbose_name='titre')
     descriptionVthema               = models.TextField(verbose_name='description')
 
     def __str__(self):
-        return 'Video par: ' + self.idUtilisateurVThema.nomUtilisateur
+
+        return 'Video par: ' + self.idUtilisateurVThema.username
+
