@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'CoronaWatch.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'CoronaWatche',
+        'NAME': 'CoronaWatch',
         'USER': 'root',
         'PASS': '',
         'HOST': 'localhost',
