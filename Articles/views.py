@@ -30,14 +30,14 @@ class articleView(viewsets.ModelViewSet):
 
 
 class videoArticleView(viewsets.ModelViewSet):
-    permission_classes              = (ArticleAccessPolicy,)
+    #permission_classes              = (ArticleAccessPolicy,)
     serializer_class                = videoArticleSerializer
 
     def get_queryset(self):
         return article.objects.filter(terminerAR=True)
 
 class photoArticleView(viewsets.ModelViewSet):
-    permission_classes              = (ArticleAccessPolicy,)
+    #permission_classes              = (ArticleAccessPolicy,)
     serializer_class                = photoArticleSerializer
     queryset                        = photoArticle.objects.all()
 
@@ -85,14 +85,14 @@ class articleCommentairesView(viewsets.ModelViewSet):
         comm=self.get_object()
         comm.contenuCom=request.data["contenuCom"]
         comm.save()
-
+        return JsonResponse({"idCommentaire": comm.idCommentaire, "contenuCom": comm.contenuCom})
 
     @action(detail=True, methods=['PATCH'], name='signaler commentaire')
     def signaler(self, request, *args, **kwargs):
         comm=self.get_object()
         comm.signalerCom=request.data["signalerCom"]
         comm.save()
-
+        return JsonResponse({"idCommentaire": comm.idCommentaire, "signalerCom": comm.signalerComCom})
 
 class articleVideosView(viewsets.ModelViewSet):
     permission_classes = (ArticleAccessPolicy,)

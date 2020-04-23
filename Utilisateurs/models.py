@@ -106,3 +106,4 @@ class infoPersonel(models.Model):
         verbose_name_plural = 'Infos Personnelles'
     def __str__(self):
         return 'Infos de: ' + self.idUtilisateurIp.username
+

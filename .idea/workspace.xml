@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3391a679-f613-45bc-96d2-0cf7bc29a75b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CoronaWatch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CoronaWatch.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Signal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Signal/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Articles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Articles/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoronaWatch/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CoronaWatch/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utilisateurs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilisateurs/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utilisateurs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilisateurs/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +126,7 @@
       <workItem from="1585777360192" duration="9000" />
       <workItem from="1585868214651" duration="792000" />
       <workItem from="1586303691777" duration="601000" />
-      <workItem from="1587655190018" duration="871000" />
+      <workItem from="1587655190018" duration="3715000" />
     </task>
     <servers />
   </component>

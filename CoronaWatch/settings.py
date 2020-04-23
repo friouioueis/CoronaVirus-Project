@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'rest_auth.registration',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
     'rest_framework_serializer_field_permissions',
 
 ]
