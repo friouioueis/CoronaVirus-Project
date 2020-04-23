@@ -21,7 +21,7 @@ class signalement(models.Model):
     lienSg                          = models.ImageField(upload_to='signalement/', verbose_name='lien')
 
     def __str__(self):
-        return 'Signalement par: ' + self.idUtilisateurSg.nomUtilisateur
+        return 'Signalement par: ' + self.idUtilisateurSg.username
 
 
 class selfPhoto(models.Model):
@@ -33,4 +33,4 @@ class selfPhoto(models.Model):
     lienSph                         = models.CharField(max_length=255, verbose_name='lien')
 
     def __str__(self):
-        return 'Photo par: ' + self.idUtilisateurSph.nomUtilisateur
+        return 'Photo par: ' + self.idUtilisateurSph.username
