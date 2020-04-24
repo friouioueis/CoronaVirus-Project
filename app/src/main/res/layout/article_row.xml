@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
+    android:layout_marginBottom="3dp"
     android:background="@drawable/shape"
-    app:layout_goneMarginBottom="10dp"
-    android:layout_marginBottom="3dp">
+    app:layout_goneMarginBottom="10dp">
 
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/username_article"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -36,40 +36,54 @@
         app:layout_constraintTop_toTopOf="@+id/profile_image" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="منذ دقيقتين"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/profile_image"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintEnd_toEndOf="@+id/username_article"
+        app:layout_constraintTop_toBottomOf="@+id/username_article" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/article_content"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+
+
         android:text="@string/article"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_image"
+         />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="173dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.377"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.039"
-        app:srcCompat="@drawable/article_pic" />
+
+
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/image_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.377"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/article_content"
+                app:layout_constraintVertical_bias="0.039"
+                app:srcCompat="@drawable/article_pic"/>
+
+
 
     <ImageView
         android:id="@+id/imageView3"
@@ -91,19 +105,19 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
-        android:textSize="15sp"
+        android:background="@drawable/shape"
         android:backgroundTint="@color/backgroundcolor"
         android:gravity="right|center_vertical"
-        android:paddingRight="10dp"
-
-        android:background="@drawable/shape"
         android:hint="أضف تعليقا"
+
         android:inputType="textPersonName"
+        android:paddingRight="10dp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintCircleRadius="20dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/image_recyclerview" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

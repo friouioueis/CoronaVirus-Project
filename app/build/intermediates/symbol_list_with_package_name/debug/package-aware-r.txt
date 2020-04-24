@@ -368,7 +368,9 @@ attr fontStyle
 attr fontVariationSettings
 attr fontWeight
 attr foregroundInsidePadding
+attr freezesAnimation
 attr gapBetweenBars
+attr gifSource
 attr goIcon
 attr graph
 attr headerLayout
@@ -402,6 +404,7 @@ attr initialActivityCount
 attr insetForeground
 attr isLightTheme
 attr isMaterialTheme
+attr isOpaque
 attr itemBackground
 attr itemFillColor
 attr itemHorizontalPadding
@@ -1509,6 +1512,8 @@ id add
 id alertTitle
 id all
 id always
+id article_content
+id article_imageview
 id async
 id auto
 id barrier
@@ -1579,6 +1584,7 @@ id fragment_container_view_tag
 id full_name_singup
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id group_divider
 id groups
@@ -1590,8 +1596,8 @@ id icon_group
 id ifRoom
 id image
 id imageView
-id imageView2
 id imageView3
+id image_recyclerview
 id info
 id invisible
 id italic
@@ -1729,6 +1735,7 @@ id status_bar_latest_event_content
 id stretch
 id submenuarrow
 id submit_area
+id swipe_refresh_layout
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -1747,9 +1754,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
-id textView2
-id textView3
-id textView4
 id text_home
 id text_input_end_icon
 id text_input_start_icon
@@ -1770,11 +1774,13 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tv_time
 id unchecked
 id uniform
 id unlabeled
 id up
 id useLogo
+id username_article
 id username_singup
 id view_offset_helper
 id visible
@@ -1868,6 +1874,7 @@ layout design_text_input_start_icon
 layout fragment_articles
 layout fragment_home
 layout fragment_slideshow
+layout image_list
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2759,6 +2766,8 @@ styleable ForegroundLinearLayout android_foreground android_foregroundGravity fo
 styleable Fragment android_name android_id android_tag
 styleable FragmentContainerView android_name android_tag
 styleable FragmentNavigator android_name
+styleable GifTextureView gifSource isOpaque
+styleable GifView freezesAnimation
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable LinearConstraintLayout android_orientation
