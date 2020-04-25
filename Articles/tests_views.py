@@ -82,7 +82,7 @@ class TestArticle(APITestCase,URLPatternsTestCase):
         ar.contenuAr = "updated"
         url = reverse('articles-detail', kwargs={'pk': ar.idArticle})
         self.client.force_authenticate(user=self.user)
-        response=self.client.put(url,{'contenuAr':ar.contenuAr,'dateAr':ar.dateAr})
+        response=self.client.put(url,{'contenuAr':ar.contenuAr,'dateAr':ar.dateAr,'terminerAR':ar.terminerAR})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.json().get('contenuAr'), ar.contenuAr)
 
@@ -108,7 +108,7 @@ class TestArticle(APITestCase,URLPatternsTestCase):
         ar.validerAR = 'True'
         url = reverse('articles-detail', kwargs={'pk': ar.idArticle})
         self.client.force_authenticate(user=self.user)
-        response=self.client.patch(url,{'validerAR':ar.validerAR})
+        response=self.client.patch(url,{'validerAR':ar.validerAR,'idModerateurAr':self.user.id})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.json().get('validerAR'), ar.validerAR)
 
@@ -116,14 +116,14 @@ class TestArticle(APITestCase,URLPatternsTestCase):
 
     def test_article_validate_unauthorized(self):
 
-        Group.objects.get_or_create(name='rd')
-        role.addRole(self.user.id,'rd')
+        Group.objects.get_or_create(name='si')
+        role.addRole(self.user.id,'si')
         ar = ArticleFactory(idArticle=6)
 
         ar.validerAR = True
         url = reverse('articles-detail', kwargs={'pk': ar.idArticle})
         self.client.force_authenticate(user=self.user)
-        response=self.client.patch(url,{'validerAR':ar.validerAR})
+        response=self.client.patch(url,{'validerAR':ar.validerAR,'idModerateurAr':self.user.id})
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
 
