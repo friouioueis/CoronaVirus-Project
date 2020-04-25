@@ -59,31 +59,24 @@
         android:text="@string/article"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image"
-         />
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
 
-
-
-
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/image_recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal"
-                android:scrollbarAlwaysDrawHorizontalTrack="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.377"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/article_content"
-                app:layout_constraintVertical_bias="0.039"
-                app:srcCompat="@drawable/article_pic"/>
-
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/image_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/comment_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/article_content"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/article_pic" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -91,14 +84,14 @@
         android:layout_height="30dp"
         android:layout_marginEnd="8dp"
 
-        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_text_add_comment"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_add_comment"
         app:srcCompat="@drawable/ic_account_circle_black_24dp"
         tools:ignore="VectorDrawableCompat" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edit_text_add_comment"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
@@ -109,7 +102,6 @@
         android:backgroundTint="@color/backgroundcolor"
         android:gravity="right|center_vertical"
         android:hint="أضف تعليقا"
-
         android:inputType="textPersonName"
         android:paddingRight="10dp"
         android:textSize="15sp"
@@ -117,7 +109,29 @@
         app:layout_constraintCircleRadius="20dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_recyclerview" />
+        app:layout_constraintTop_toBottomOf="@+id/comment_section" />
+
+    <ScrollView
+        android:id="@+id/comment_section"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:maxHeight="160dp"
+        android:orientation="vertical"
+        android:scrollbarStyle="insideInset"
+        app:layout_constraintBottom_toTopOf="@+id/edit_text_add_comment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_recyclerview"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_add_comment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_view_comments"
+            android:layout_width="match_parent"
+            android:layout_height="160dp" />
+
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

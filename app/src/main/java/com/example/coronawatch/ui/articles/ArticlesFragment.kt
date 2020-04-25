@@ -7,12 +7,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.example.coronawatch.Commentaire
 import com.example.coronawatch.adapter.ArticlesAdapter
 import com.example.coronawatch.R
 import com.google.android.material.snackbar.Snackbar
@@ -20,13 +20,10 @@ import com.squareup.okhttp.Callback
 import  com.squareup.okhttp.OkHttpClient
 import com.squareup.okhttp.Request
 import com.squareup.okhttp.Response
-import kotlinx.android.synthetic.main.fragment_articles.view.*
 import org.json.JSONArray
 import org.json.JSONObject
-import org.json.JSONString
 
 import java.io.IOException
-import java.lang.Exception
 import java.lang.NullPointerException
 
 class ArticlesFragment : Fragment() {
@@ -36,8 +33,8 @@ class ArticlesFragment : Fragment() {
     lateinit var swipeRefreshLayout: SwipeRefreshLayout
     var articlesFeed = ArticlesFeed(arrayListOf())
     private var adapter = ArticlesAdapter(articlesFeed, this.context)
-    val url = "https://0d60d381.ngrok.io/articles/articles"
-    val token = "a4dc28f3f6331930112ea60844a06cf4bd2040a1"
+    val url = "https://cb763c47.ngrok.io/articles/articles"
+    val token = "5dfd1c7e93af18c660fa6b297999bb5c3b0e9e39"
     @SuppressLint("ResourceAsColor")
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -82,6 +79,7 @@ class ArticlesFragment : Fragment() {
         val client = OkHttpClient()
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(request: Request?, e: IOException?) {
+                swipeRefreshLayout.isRefreshing = false
                 print("Failed to execute request")
             }
 
@@ -128,8 +126,15 @@ class ArticlesFragment : Fragment() {
                                         imagesArrayList
                                         ,
                                         parentFragment?.context
-                                    ,
+                                        ,
                                         jsonArticle["dateAr"].toString()
+                                        ,
+                                        arrayListOf(
+                                            Commentaire("commentaire 1", "now"),
+                                            Commentaire("commentaire 2", "now")
+
+
+                                        )
                                     )
                                 )
                             }
@@ -137,8 +142,8 @@ class ArticlesFragment : Fragment() {
                             i--
                         }
                         adapter.notifyDataSetChanged()
-
                         swipeRefreshLayout.isRefreshing = false
+
                     }
                 } catch (e: org.json.JSONException) {
 
@@ -156,6 +161,7 @@ class ArticlesFragment : Fragment() {
 
 
         })
+
     }
 
 }

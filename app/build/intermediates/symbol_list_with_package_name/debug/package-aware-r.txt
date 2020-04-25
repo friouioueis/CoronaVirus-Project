@@ -1438,6 +1438,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable shape
+drawable shape_gray_background
 drawable side_nav_bar
 drawable test_custom_background
 drawable tooltip_frame_dark
@@ -1536,6 +1537,8 @@ id clear_text
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id comment_content
+id comment_section
 id confirm_button
 id container
 id content
@@ -1558,8 +1561,8 @@ id direct
 id disableHome
 id drawer_layout
 id dropdown_menu
-id editText
 id edit_query
+id edit_text_add_comment
 id email_login
 id email_singup
 id end
@@ -1609,6 +1612,7 @@ id line1
 id line3
 id listMode
 id list_item
+id list_view_comments
 id login_btn
 id logo
 id masked
@@ -1762,6 +1766,7 @@ id textinput_counter
 id textinput_error
 id textinput_helper_text
 id time
+id time_comment
 id title
 id titleDividerNoCustom
 id title_template
@@ -1780,6 +1785,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id user_name
 id username_article
 id username_singup
 id view_offset_helper
@@ -1854,6 +1860,7 @@ layout activity_main
 layout activity_singup
 layout app_bar_main
 layout article_row
+layout comment_row
 layout content_main
 layout custom_dialog
 layout design_bottom_navigation_item
