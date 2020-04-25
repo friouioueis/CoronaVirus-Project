@@ -17,7 +17,7 @@ class articleView(viewsets.ModelViewSet):
     def partial_update(self, request, pk=None):
         article=self.get_object()
         article.validerAR=request.data["validerAR"]
-        article.idModerateurAr=request.data["idModerateurAr"]
+        article.idModerateurAr_id=request.data["idModerateurAr"]
         article.save()
         return JsonResponse({"idArticle":article.idArticle,"validerAR":article.validerAR})
 

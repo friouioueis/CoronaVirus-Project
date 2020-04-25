@@ -7,7 +7,7 @@ from Articles.models import article
 class ArticleAccessPolicy(AccessPolicy):
     statements = [
         {
-            "action": ["list","retrieve"],
+            "action": ["list","retrieve","partial_update"],
             "principal": ["*"],
             "effect": "allow"
         },
@@ -23,7 +23,7 @@ class ArticleAccessPolicy(AccessPolicy):
             "condition": "is_author"
         },
         {
-            "action": ["destroy","partial_update"],
+            "action": ["destroy"],
             "principal": ["group:md"],
             "effect": "allow",
         },
