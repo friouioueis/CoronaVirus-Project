@@ -25,6 +25,7 @@ class articleView(viewsets.ModelViewSet):
         article=self.get_object()
         article.contenuAr=request.data['contenuAr']
         article.dateAr=request.data['dateAr']
+        article.terminerAR=request.data['terminerAr']
         article.save()
         return  JsonResponse({"idArticle":article.idArticle,"contenuAr":article.contenuAr,'dateAr':article.dateAr})
 
