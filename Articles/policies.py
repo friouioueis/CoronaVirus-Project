@@ -1,4 +1,7 @@
+from django.forms import model_to_dict
 from rest_access_policy import AccessPolicy
+
+from Articles.models import article
 
 
 class ArticleAccessPolicy(AccessPolicy):
@@ -29,6 +32,71 @@ class ArticleAccessPolicy(AccessPolicy):
     def is_author(self, request, view, action) -> bool:
         article = view.get_object()
         return request.user == article.idRedacteurAr
+
+
+class VideoArticleAccessPolicy(AccessPolicy):
+    statements = [
+        {
+            "action": ["list","retrieve"],
+            "principal": ["*"],
+            "effect": "allow"
+        },
+        {
+            "action": ["create"],
+            "principal": ["group:rd"],
+            "effect": "allow"
+        },
+        {
+            "action": ["destroy","update"],
+            "principal": ["group:rd"],
+            "effect": "allow",
+            "condition": "is_author"
+        },
+        {
+            "action": ["destroy","partial_update"],
+            "principal": ["group:md"],
+            "effect": "allow",
+        },
+    ]
+
+    def is_author(self, request, view, action) -> bool:
+        id = model_to_dict(view.get_object())['idArticleVd']
+        ar=article.objects.filter(idArticle=id).first()
+        print(ar)
+        return request.user == ar.idRedacteurAr
+
+
+
+class PhotoArticleAccessPolicy(AccessPolicy):
+    statements = [
+        {
+            "action": ["list","retrieve"],
+            "principal": ["*"],
+            "effect": "allow"
+        },
+        {
+            "action": ["create"],
+            "principal": ["group:rd"],
+            "effect": "allow"
+        },
+        {
+            "action": ["destroy","update"],
+            "principal": ["group:rd"],
+            "effect": "allow",
+            "condition": "is_author"
+        },
+        {
+            "action": ["destroy","partial_update"],
+            "principal": ["group:md"],
+            "effect": "allow",
+        },
+    ]
+
+    def is_author(self, request, view, action) -> bool:
+        id = model_to_dict(view.get_object())['idArticlePh']
+        ar=article.objects.filter(idArticle=id).first()
+        print(ar)
+        return request.user == ar.idRedacteurAr
 
 
 

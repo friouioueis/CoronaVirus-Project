@@ -14,7 +14,6 @@ class article(models.Model):
     contenuAr                       = models.TextField(verbose_name='Contenu')
     terminerAR                      = models.BooleanField(default=False, verbose_name='Terminé', null=True, blank=True)
     validerAR                       = models.BooleanField(default=False, verbose_name='Validé', null=True, blank=True)
-    refuserAR                       = models.BooleanField(default=False, verbose_name='refusé', null=True, blank=True)
 
     @property
     def photos(self):
