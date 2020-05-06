@@ -16,7 +16,7 @@ class ArticleFactory(DjangoModelFactory):
     idRedacteurAr=factory.SubFactory(compteUtilisateurFactory)
     idModerateurAr=factory.SubFactory(compteUtilisateurFactory)
     contenuAr=Faker('text')
-    dateAr = datetime.now()
+    dateAr = datetime.now().strftime("%Y-%m-%dT%H:%M:%S.%f")
     terminerAR=True
     validerAR=None
 
