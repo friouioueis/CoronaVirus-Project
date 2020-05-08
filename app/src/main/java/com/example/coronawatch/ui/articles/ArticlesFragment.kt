@@ -32,7 +32,7 @@ class ArticlesFragment : Fragment() {
     lateinit var recyclerView: RecyclerView
     lateinit var swipeRefreshLayout: SwipeRefreshLayout
     var articlesFeed = ArticlesFeed(arrayListOf())
-    private var adapter = ArticlesAdapter(articlesFeed, this.context)
+    private var adapter = this.context?.let { ArticlesAdapter(articlesFeed , it) }
     val url = "https://cb763c47.ngrok.io/articles/articles"
     val token = "5dfd1c7e93af18c660fa6b297999bb5c3b0e9e39"
     @SuppressLint("ResourceAsColor")
@@ -52,11 +52,11 @@ class ArticlesFragment : Fragment() {
 
         swipeRefreshLayout.setOnRefreshListener {
 
-            adapter.articlesFeed.articles.clear()
+            adapter?.articlesFeed?.articles?.clear()
 
 
             fetchJSON(url, token)
-            adapter.notifyDataSetChanged()
+            adapter?.notifyDataSetChanged()
 
 
         }
@@ -67,10 +67,10 @@ class ArticlesFragment : Fragment() {
         return root
     }
 
-    private fun fetchJSON(url: String, token: String) {
-        swipeRefreshLayout.isRefreshing = true
+     public fun fetchJSON(url: String, token: String) : Int {
+//        swipeRefreshLayout.isRefreshing = true
         val url = url
-
+        var resultNumber : Int = 0
 
         val token = "Token $token"
 
@@ -93,7 +93,7 @@ class ArticlesFragment : Fragment() {
                     activity?.runOnUiThread {
 
                         var i = json.length() - 1
-
+                        resultNumber = i
                         while (i >= 0) {
 
                             val jsonArticle = json.getJSONObject(i)
@@ -141,7 +141,7 @@ class ArticlesFragment : Fragment() {
 
                             i--
                         }
-                        adapter.notifyDataSetChanged()
+                        adapter?.notifyDataSetChanged()
                         swipeRefreshLayout.isRefreshing = false
 
                     }
@@ -161,6 +161,7 @@ class ArticlesFragment : Fragment() {
 
 
         })
+        return resultNumber
 
     }
 

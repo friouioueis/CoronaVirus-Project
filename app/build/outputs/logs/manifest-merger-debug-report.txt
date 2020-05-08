@@ -64,7 +64,7 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Lenovo\.gradle\c
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\0b64644a27cbe908efdd284bc1286545\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\f950727d86cde628325d81e7d263a503\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8ba1861a037181f3766850afe0160a40\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.7] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\1def879b0e5ddba3f4afee0601d570c8\jetified-android-gif-drawable-1.2.7\AndroidManifest.xml:2:1-11:12
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.7] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\7bfb09cefcb6abecfdccff43c63da3aa\jetified-android-gif-drawable-1.2.7\AndroidManifest.xml:2:1-11:12
 INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-35:12
 INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-35:12
 INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-35:12
@@ -280,8 +280,8 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Lenovo\.gradle\caches\transfor
 MERGED from [androidx.print:print:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\f950727d86cde628325d81e7d263a503\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8ba1861a037181f3766850afe0160a40\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8ba1861a037181f3766850afe0160a40\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.7] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\1def879b0e5ddba3f4afee0601d570c8\jetified-android-gif-drawable-1.2.7\AndroidManifest.xml:7:5-9:41
-MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.7] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\1def879b0e5ddba3f4afee0601d570c8\jetified-android-gif-drawable-1.2.7\AndroidManifest.xml:7:5-9:41
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.7] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\7bfb09cefcb6abecfdccff43c63da3aa\jetified-android-gif-drawable-1.2.7\AndroidManifest.xml:7:5-9:41
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.7] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\7bfb09cefcb6abecfdccff43c63da3aa\jetified-android-gif-drawable-1.2.7\AndroidManifest.xml:7:5-9:41
 INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion

@@ -14,10 +14,10 @@ import com.example.coronawatch.Commentaire
 import com.example.coronawatch.R
 import com.example.coronawatch.ui.articles.ArticlesFeed
 import kotlinx.android.synthetic.main.article_row.view.*
-import java.time.LocalTime
 
 
 class ArticlesAdapter(
+
     var articlesFeed: ArticlesFeed,
     val nContext: Context?
 ) : RecyclerView.Adapter<CustomViewHolder>() {
