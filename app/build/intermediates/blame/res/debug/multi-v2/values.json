@@ -59,6 +59,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\7bfb09cefcb6abecfdccff43c63da3aa\\jetified-android-gif-drawable-1.2.7\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,211",
+                        "endColumns": "155,106",
+                        "endOffsets": "206,313"
+                    },
+                    "to": {
+                        "startLines": "5917,5918",
+                        "startColumns": "4,4",
+                        "startOffsets": "381918,382074",
+                        "endColumns": "155,106",
+                        "endOffsets": "382069,382176"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\b190acf2ae74eed7eace3d4f5b154e2b\\navigation-ui-2.2.2\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4",
@@ -166,23 +183,6 @@
                         "endLines": "7163",
                         "endColumns": "24",
                         "endOffsets": "448708"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\1def879b0e5ddba3f4afee0601d570c8\\jetified-android-gif-drawable-1.2.7\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,211",
-                        "endColumns": "155,106",
-                        "endOffsets": "206,313"
-                    },
-                    "to": {
-                        "startLines": "5917,5918",
-                        "startColumns": "4,4",
-                        "startOffsets": "381918,382074",
-                        "endColumns": "155,106",
-                        "endOffsets": "382069,382176"
                     }
                 },
                 {

@@ -96,12 +96,12 @@
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\layout_image_list.xml.flat",
-        "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\src\\main\\res\\layout\\image_list.xml"
-    },
-    {
         "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_gray_background.xml.flat",
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\src\\main\\res\\drawable\\shape_gray_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\layout_image_list.xml.flat",
+        "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\src\\main\\res\\layout\\image_list.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_slideshow.xml.flat",
