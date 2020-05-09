@@ -1,0 +1,4 @@
+#Sat Apr 25 11:01:57 WAT 2020
+base.0=C\:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\dex\\debugAndroidTest\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
