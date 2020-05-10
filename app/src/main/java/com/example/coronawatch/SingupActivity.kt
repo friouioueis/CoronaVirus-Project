@@ -3,7 +3,7 @@ package com.example.coronawatch
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_singup.*
+import kotlinx.android.synthetic.main.
 
 class SingupActivity : AppCompatActivity() {
 

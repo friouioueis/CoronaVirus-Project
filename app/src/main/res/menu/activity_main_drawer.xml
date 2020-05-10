@@ -6,16 +6,37 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
-        <item
-            android:id="@+id/nav_articles"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_articles" />
-        <item
 
+            android:icon="@drawable/ic_article"
+            android:title="عرض المقالات" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_social"
+            android:title="و.التواصل الإجتماعي" />
+        <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:icon="@drawable/ic_image"
+            android:title="فيديوهات و صور" />
+        <item
+            android:id="@+id/nav_download"
+            android:icon="@drawable/ic_download"
+            android:title="تحميل" />
+        <item
+            android:id="@+id/nav_health"
+            android:icon="@drawable/ic_health_info"
+            android:title="المعلومات الحيوية" />
+        <item
+            android:id="@+id/nav_alerts"
+            android:icon="@drawable/ic_alerts"
+            android:title="الإخطارات" />
+        <item
+            android:id="@+id/nav_diagno"
+            android:icon="@drawable/ic_diagno"
+            android:title="الحصول على تشخيص" />
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/ic_notifications"
+            android:title="التنبيهات" />
+
     </group>
 </menu>

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-35:12
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-33:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.2.2] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\cf2e6c29c8c9888fdec3c0f3b6c812b6\navigation-ui-ktx-2.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui:2.2.2] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\b190acf2ae74eed7eace3d4f5b154e2b\navigation-ui-2.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\a28e3071b49cd303c87ab88f035299ad\material-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -65,33 +65,33 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\f950727d86cde628325d81e7d263a503\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8ba1861a037181f3766850afe0160a40\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.7] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\7bfb09cefcb6abecfdccff43c63da3aa\jetified-android-gif-drawable-1.2.7\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-33:12
 	package
 		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:3:5-38
 		INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-35:12
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-33:12
 		INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-35:12
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-33:12
 		INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:4:5-66
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:5:5-66
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:4:22-64
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:5:5-79
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:6:5-79
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:5:22-76
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:6:22-76
 application
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:6:5-33:19
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:8:5-31:19
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\a28e3071b49cd303c87ab88f035299ad\material-1.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\a28e3071b49cd303c87ab88f035299ad\material-1.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.dyhdyh.support:glide:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\edf6339ac9e18249f9ce240f3bc5f4d2\jetified-glide-1.0.0\AndroidManifest.xml:11:5-14:19
@@ -115,47 +115,47 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Le
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\9075dbfaab39e40f8982b36dac1019b6\core-1.2.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:9:9-41
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:11:9-41
 	android:roundIcon
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:10:9-54
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:12:9-54
 	android:icon
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:8:9-43
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:10:9-43
 	android:allowBackup
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:7:9-35
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:13:9-40
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:14:9-40
 activity#com.example.coronawatch.SingupActivity
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:14:9-19:20
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:15:9-18:20
 	android:theme
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:16:13-56
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:17:13-56
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:15:13-43
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:16:13-43
 activity#com.example.coronawatch.LoginActivity
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:20:9-28:20
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:19:9-26:20
 	android:theme
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:22:13-56
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:21:13-56
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:21:13-42
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:20:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:23:13-27:29
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:22:13-25:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:24:17-69
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:24:25-66
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:26:17-77
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:24:16-76
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:26:27-74
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:24:26-73
 activity#com.example.coronawatch.MainActivity
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:29:9-32:59
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:27:9-30:59
 	android:label
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:31:13-45
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:29:13-45
 	android:theme
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:32:13-56
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:30:13-56
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:30:13-41
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:28:13-41
 uses-sdk
 INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
