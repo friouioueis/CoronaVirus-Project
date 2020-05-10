@@ -7,12 +7,7 @@ from Articles.models import article
 class ArticleAccessPolicy(AccessPolicy):
     statements = [
         {
-            "action": ["list","retrieve"],
-            "principal": ["*"],
-            "effect": "allow"
-        },
-        {
-            "action": ["create"],
+            "action": ["list","retrieve","create"],
             "principal": ["group:rd"],
             "effect": "allow"
         },
@@ -32,6 +27,15 @@ class ArticleAccessPolicy(AccessPolicy):
     def is_author(self, request, view, action) -> bool:
         article = view.get_object()
         return request.user == article.idRedacteurAr
+
+class ArticleTermineAccessPolicy(AccessPolicy):
+    statements = [
+        {
+            "action": ["list","retrieve"],
+            "principal": ["group:rd","group:md"],
+            "effect": "allow"
+        },
+    ]
 
 
 class VideoArticleAccessPolicy(AccessPolicy):

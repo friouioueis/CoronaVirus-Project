@@ -17,8 +17,8 @@ class ArticleFactory(DjangoModelFactory):
     idModerateurAr=factory.SubFactory(compteUtilisateurFactory)
     contenuAr=Faker('text')
     dateAr = datetime.now().strftime("%Y-%m-%dT%H:%M:%S.%f")
-    terminerAR=True
-    validerAR=None
+    terminerAR=Faker('boolean')
+    validerAR=Faker('boolean')
 
 class VideoArticleFactory(DjangoModelFactory):
 
