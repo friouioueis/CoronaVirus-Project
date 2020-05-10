@@ -203,6 +203,10 @@ attr chipStrokeColor
 attr chipStrokeWidth
 attr chipStyle
 attr chipSurfaceColor
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
 attr closeIcon
 attr closeIconEnabled
 attr closeIconEndPadding
@@ -364,7 +368,9 @@ attr fontStyle
 attr fontVariationSettings
 attr fontWeight
 attr foregroundInsidePadding
+attr freezesAnimation
 attr gapBetweenBars
+attr gifSource
 attr goIcon
 attr graph
 attr headerLayout
@@ -398,6 +404,7 @@ attr initialActivityCount
 attr insetForeground
 attr isLightTheme
 attr isMaterialTheme
+attr isOpaque
 attr itemBackground
 attr itemFillColor
 attr itemHorizontalPadding
@@ -797,6 +804,7 @@ color checkbox_themeable_attribute_color
 color colorAccent
 color colorPrimary
 color colorPrimaryDark
+color darkgray
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1366,11 +1374,10 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable article_pic
 drawable avd_hide_password
 drawable avd_show_password
-drawable back
 drawable background
-drawable bavette
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1386,15 +1393,10 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable facebook
-drawable ic_alerts
-drawable ic_article
+drawable ic_account_circle_black_24dp
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
-drawable ic_diagno
-drawable ic_download
 drawable ic_edit_black_24dp
-drawable ic_health_info
-drawable ic_image
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
 drawable ic_launcher_background
@@ -1411,11 +1413,8 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
-drawable ic_notifications
-drawable ic_social
 drawable logo
 drawable logo2
-drawable man
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1438,6 +1437,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable shape
+drawable shape_gray_background
 drawable side_nav_bar
 drawable test_custom_background
 drawable tooltip_frame_dark
@@ -1512,6 +1513,8 @@ id add
 id alertTitle
 id all
 id always
+id article_content
+id article_imageview
 id async
 id auto
 id barrier
@@ -1534,6 +1537,8 @@ id clear_text
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id comment_content
+id comment_section
 id confirm_button
 id container
 id content
@@ -1557,6 +1562,7 @@ id disableHome
 id drawer_layout
 id dropdown_menu
 id edit_query
+id edit_text_add_comment
 id email_login
 id email_singup
 id end
@@ -1581,6 +1587,7 @@ id fragment_container_view_tag
 id full_name_singup
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id group_divider
 id groups
@@ -1592,6 +1599,8 @@ id icon_group
 id ifRoom
 id image
 id imageView
+id imageView3
+id image_recyclerview
 id info
 id invisible
 id italic
@@ -1603,6 +1612,7 @@ id line1
 id line3
 id listMode
 id list_item
+id list_view_comments
 id login_btn
 id logo
 id masked
@@ -1638,18 +1648,12 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
-id nav_alerts
+id nav_articles
 id nav_controller_view_tag
-id nav_diagno
-id nav_download
-id nav_gallery
-id nav_gallery3
-id nav_health
 id nav_home
 id nav_home_second
 id nav_host_fragment
 id nav_host_fragment_container
-id nav_notifications
 id nav_slideshow
 id nav_view
 id navigation_header_container
@@ -1678,9 +1682,11 @@ id password_toggle
 id peekHeight
 id percent
 id pin
+id profile_image
 id progress_circular
 id progress_horizontal
 id radio
+id recycler_view_articles
 id right
 id right_icon
 id right_side
@@ -1733,6 +1739,7 @@ id status_bar_latest_event_content
 id stretch
 id submenuarrow
 id submit_area
+id swipe_refresh_layout
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -1750,7 +1757,7 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id text_gallery
+id textView
 id text_home
 id text_input_end_icon
 id text_input_start_icon
@@ -1759,6 +1766,7 @@ id textinput_counter
 id textinput_error
 id textinput_helper_text
 id time
+id time_comment
 id title
 id titleDividerNoCustom
 id title_template
@@ -1771,11 +1779,14 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tv_time
 id unchecked
 id uniform
 id unlabeled
 id up
 id useLogo
+id user_name
+id username_article
 id username_singup
 id view_offset_helper
 id visible
@@ -1847,8 +1858,9 @@ layout abc_tooltip
 layout activity_login
 layout activity_main
 layout activity_singup
-layout alert_fragment
 layout app_bar_main
+layout article_row
+layout comment_row
 layout content_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -1866,12 +1878,10 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout diagno_fragment
-layout download_fragment
-layout fragment_gallery
+layout fragment_articles
 layout fragment_home
 layout fragment_slideshow
-layout health_fragment
+layout image_list
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -1903,7 +1913,6 @@ layout mtrl_picker_text_input_date_range
 layout nav_header_main
 layout notification_action
 layout notification_action_tombstone
-layout notification_fragment
 layout notification_media_action
 layout notification_media_cancel_action
 layout notification_template_big_media
@@ -1969,6 +1978,7 @@ string abc_toolbar_collapse_description
 string action_settings
 string app_name
 string appbar_scrolling_view_behavior
+string article
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_overflowed_content_description
@@ -1982,13 +1992,9 @@ string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string home_second
 string icon_content_description
-string menu_alert
-string menu_diagno
-string menu_download
+string menu_articles
 string menu_gallery
-string menu_health
 string menu_home
-string menu_notification
 string menu_slideshow
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
@@ -2744,6 +2750,7 @@ styleable ButtonBarLayout allowStacking
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical singleLine singleSelection
+styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleEnabled toolbarId
 styleable CollapsingToolbarLayout_Layout layout_collapseMode layout_collapseParallaxMultiplier
 styleable ColorStateListItem android_color android_alpha alpha
@@ -2766,6 +2773,8 @@ styleable ForegroundLinearLayout android_foreground android_foregroundGravity fo
 styleable Fragment android_name android_id android_tag
 styleable FragmentContainerView android_name android_tag
 styleable FragmentNavigator android_name
+styleable GifTextureView gifSource isOpaque
+styleable GifView freezesAnimation
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable LinearConstraintLayout android_orientation
@@ -2821,6 +2830,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml network_security_config
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

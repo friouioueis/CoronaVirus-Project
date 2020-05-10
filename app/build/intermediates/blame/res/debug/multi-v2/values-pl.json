@@ -4,6 +4,23 @@
             "outputFile": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pl\\values-pl.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\b190acf2ae74eed7eace3d4f5b154e2b\\navigation-ui-2.2.2\\res\\values-pl\\values-pl.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,163",
+                        "endColumns": "107,116",
+                        "endOffsets": "158,275"
+                    },
+                    "to": {
+                        "startLines": "29,30",
+                        "startColumns": "4,4",
+                        "startOffsets": "2817,2925",
+                        "endColumns": "107,116",
+                        "endOffsets": "2920,3037"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\9075dbfaab39e40f8982b36dac1019b6\\core-1.2.0\\res\\values-pl\\values-pl.xml",
                     "from": {
                         "startLines": "2",
@@ -18,23 +35,6 @@
                         "startOffsets": "3124",
                         "endColumns": "100",
                         "endOffsets": "3220"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\2e6ca9adf0e49c0f62454d8457ac4fe0\\navigation-ui-2.2.1\\res\\values-pl\\values-pl.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,163",
-                        "endColumns": "107,116",
-                        "endOffsets": "158,275"
-                    },
-                    "to": {
-                        "startLines": "29,30",
-                        "startColumns": "4,4",
-                        "startOffsets": "2817,2925",
-                        "endColumns": "107,116",
-                        "endOffsets": "2920,3037"
                     }
                 },
                 {
