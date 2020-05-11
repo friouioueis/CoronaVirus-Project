@@ -75,7 +75,6 @@ class ArticleTermineList(APITestCase):
         response = self.client.get(
             reverse('articlesTermines-list')
         )
-        expected = 2
 
         self.assertEqual(
             response.status_code, status.HTTP_403_FORBIDDEN)
@@ -550,7 +549,7 @@ class ArticleCommentaireList(APITestCase):
         for i in range(4):
             CommentaireFactory(idArticleCom=self.article)
 
-    def test_article_list(self):
+    def test_article_commentaires_list(self):
         response = self.client.get(
             reverse('articleComs-list', kwargs={'id': self.article.idArticle})
         )
@@ -574,8 +573,118 @@ class ArticleCommentaireGet(APITestCase):
         self.assertEqual(response.json().get('contenuCom'), self.commentaire.contenuCom)
 
     def test_commentaire_not_found(self):
-        response = self.client.get(reverse('commentaires-detail', kwargs={'pk': 10}))
+        response = self.client.get(reverse('articleComs-detail',kwargs={'id': self.article.idArticle,'pk': 10}))
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+class ArticlePhotosList(APITestCase):
+
+    def setUp(self):
+        self.article=ArticleFactory()
+        for i in range(4):
+            PhotoArticleFactory(idArticlePh=self.article)
+
+    def test_article_list(self):
+        response = self.client.get(
+            reverse('articlePhotos-list', kwargs={'id': self.article.idArticle})
+        )
+        expected = 4
+
+        self.assertEqual(
+            response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            len(json.loads(response.content.decode('utf-8'))),
+            expected)
+
+class ArticlePhotosGet(APITestCase):
+
+    def setUp(self):
+        self.article = ArticleFactory()
+        self.photo = PhotoArticleFactory(idArticlePh=self.article)
+
+    def test_article_video_found(self):
+        response = self.client.get(reverse('articlePhotos-detail', kwargs={'id': self.article.idArticle,'pk': self.photo.idPhoto}))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def test_article_video_not_found(self):
+        response = self.client.get(reverse('articlePhotos-detail', kwargs={'id': self.article.idArticle,'pk': 10}))
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+class ArticleVideosList(APITestCase):
+
+    def setUp(self):
+        self.article=ArticleFactory()
+        for i in range(4):
+            VideoArticleFactory(idArticleVd=self.article)
+
+    def test_article_list(self):
+        response = self.client.get(
+            reverse('articleVideos-list', kwargs={'id': self.article.idArticle})
+        )
+        expected = 4
+
+        self.assertEqual(
+            response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            len(json.loads(response.content.decode('utf-8'))),
+            expected)
+
+class ArticleVideosGet(APITestCase):
+
+    def setUp(self):
+        self.article = ArticleFactory()
+        self.video = VideoArticleFactory(idArticleVd=self.article)
+
+    def test_commentaire_found(self):
+        response = self.client.get(reverse('articleVideos-detail', kwargs={'id': self.article.idArticle,'pk': self.video.idVideo}))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def test_commentaire_not_found(self):
+        response = self.client.get(reverse('articleVideos-detail', kwargs={'id': self.article.idArticle,'pk': 10}))
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+class ModerateurArticlesVList(APITestCase):
+    def setUp(self):
+        self.user=compteUtilisateurFactory()
+        Group.objects.get_or_create(name='md')
+        role.addRole(self.user.id, 'md')
+        self.ar=ArticleFactory(idModerateurAr=self.user,validerAR=True)
+        for i in range(4):
+            ArticleFactory(idModerateurAr=self.user,validerAR=True)
+
+    def test_moderateur_articleV_list(self):
+        self.client.force_authenticate(user=self.user)
+        response = self.client.get(
+            reverse('moderateur-valid-list', kwargs={'id': self.user.id})
+        )
+        expected = 4
+        print(article.objects.count())
+        print(self.ar.validerAR)
+        print()
+        self.assertEqual(
+            response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            len(json.loads(response.content.decode('utf-8'))),
+            expected)
+
+class ModerateurArticlesRList(APITestCase):
+    def setUp(self):
+        self.user = compteUtilisateurFactory()
+        Group.objects.get_or_create(name='md')
+        role.addRole(self.user.id, 'md')
+        for i in range(4):
+            ar=ArticleFactory(idModerateurAr=self.user, validerAR=False)
+    def test_moderateur_articleR_list(self):
+        self.client.force_authenticate(user=self.user)
+        response = self.client.get(
+            reverse('moderateur-refus-list', kwargs={'id': self.user.id})
+        )
+        expected = 4
+
+        self.assertEqual(
+            response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            len(json.loads(response.content.decode('utf-8'))),
+            expected)
 
 
 

@@ -66,7 +66,6 @@ class VideoArticleAccessPolicy(AccessPolicy):
     def is_author(self, request, view, action) -> bool:
         id = model_to_dict(view.get_object())['idArticleVd']
         ar=article.objects.filter(idArticle=id).first()
-        print(ar)
         return request.user == ar.idRedacteurAr
 
 
@@ -99,7 +98,6 @@ class PhotoArticleAccessPolicy(AccessPolicy):
     def is_author(self, request, view, action) -> bool:
         id = model_to_dict(view.get_object())['idArticlePh']
         ar=article.objects.filter(idArticle=id).first()
-        print(ar)
         return request.user == ar.idRedacteurAr
 
 
@@ -107,15 +105,10 @@ class PhotoArticleAccessPolicy(AccessPolicy):
 class ModerateurAccessPolicy(AccessPolicy):
     statements = [
         {
-            "action": ["list","retrieve","destroy","update","partial_update"],
+            "action": ["list","retrieve"],
             "principal": ["group:md"],
             "effect": "allow",
             "condition": "is_moderateur"
-        },
-        {
-            "action": ["create"],
-            "principal": ["*"],
-            "effect": "deny"
         },
     ]
 

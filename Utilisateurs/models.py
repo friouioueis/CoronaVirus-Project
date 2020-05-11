@@ -6,6 +6,7 @@ ROLE_CHOICES = (
     ('si', 'simple'),
     ('rd', 'redacteur'),
     ('md', 'moderateur'),
+    ('as','agentsante'),
     ('ad', 'admin')
 )
 

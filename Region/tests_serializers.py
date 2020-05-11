@@ -4,49 +4,48 @@ from .serializers import *
 from .factories import *
 
 
-class ArticleSerializer(TestCase):
+class RegionSerializer(TestCase):
     def test_model_fields(self):
         """Serializer data matches the article object for each field."""
-        ar = ArticleFactory()
-        serializer=articleSerializer(ar)
+        ar = RegionFactory()
+        serializer=regionSerializer(ar)
         for field_name in [
-            'idArticle', 'contenuAr', 'dateAr', 'terminerAR','validerAR'
+            'idRegion', 'nomRegion', 'is_risque'
         ]:
             self.assertEqual(
                 serializer.data[field_name],
                 getattr(ar, field_name)
-            )
-        for field_name in [
-            'idRedacteurAr', 'idModerateurAr'
-        ]:
-            self.assertEqual(
-                serializer.data[field_name],
-                getattr(ar, field_name).id
             )
 
-class CommentaireSerializer(TestCase):
+from django.test import TestCase
+
+from .serializers import *
+from .factories import *
+
+
+class StatistiqueSerializer(TestCase):
     def test_model_fields(self):
         """Serializer data matches the article object for each field."""
-        ar = CommentaireFactory()
-        serializer=commentaireSerializer(ar)
+        ar = StatistiqueFactory()
+        serializer=statistiqueRegionSerializer(ar)
         for field_name in [
-            'idCommentaire', 'contenuCom', 'signalerCom'
+            'idStatistique','nbrPorteurVirus','casConfirme','casRetablis','nbrDeces','nbrGuerisons', 'dateSt','validerSt'
         ]:
             self.assertEqual(
                 serializer.data[field_name],
                 getattr(ar, field_name)
             )
         for field_name in [
-            'idUtilisateurCom', 'idModerateurCom'
+            'idModerateurSt'
         ]:
             self.assertEqual(
                 serializer.data[field_name],
                 getattr(ar, field_name).id
             )
         for field_name in [
-            'idArticleCom'
+            'idRegionSt'
         ]:
             self.assertEqual(
                 serializer.data[field_name],
-                getattr(ar, field_name).idArticle
+                getattr(ar, field_name).idRegion
             )

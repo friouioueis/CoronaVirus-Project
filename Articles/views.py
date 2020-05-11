@@ -93,7 +93,7 @@ class articleCommentairesView(viewsets.ReadOnlyModelViewSet):
 
 
 class articleVideosView(viewsets.ReadOnlyModelViewSet):
-    permission_classes = (ArticleAccessPolicy,)
+    permission_classes = (VideoArticleAccessPolicy,)
     serializer_class                = videoArticleSerializer
 
     def get_queryset(self):
@@ -102,7 +102,7 @@ class articleVideosView(viewsets.ReadOnlyModelViewSet):
 
 
 class articlePhotosView(viewsets.ReadOnlyModelViewSet):
-    permission_classes = (ArticleAccessPolicy,)
+    permission_classes = (PhotoArticleAccessPolicy,)
     serializer_class                = photoArticleSerializer
 
     def get_queryset(self):

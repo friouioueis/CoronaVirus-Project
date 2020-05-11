@@ -22,9 +22,8 @@ class statistiqueRegion(models.Model):
     casRetablis                     = models.IntegerField(default=0, verbose_name='cas retablis')
     nbrDeces                        = models.IntegerField(default=0, verbose_name='Nombre de deces')
     nbrGuerisons                    = models.IntegerField(default=0, verbose_name='Nombre de guerisons')
-    dateSt                          = models.DateTimeField(auto_now=True, verbose_name='date de Statistique')
-    validerSt                       = models.IntegerField(default=0, verbose_name='validée', null=True,blank=True)
-    refuserSt                       = models.IntegerField(default=0, verbose_name='refusé', null=True,blank=True)
+    dateSt                          = models.DateTimeField(verbose_name='date de Statistique')
+    validerSt                       = models.BooleanField(default=False, verbose_name='Validée', null=True, blank=True)
     def __str__(self):
         return 'Statistiques de: ' + self.idRegionSt.nomRegion
 
