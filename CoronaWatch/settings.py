@@ -157,6 +157,8 @@ REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'}
 
 
-REST_AUTH_SERIALIZERS = {'USER_DETAILS_SERIALIZER': 'Utilisateurs.serializers.compteUtilisateurSerializer'}
+REST_AUTH_SERIALIZERS = {
+    'USER_DETAILS_SERIALIZER': 'Utilisateurs.serializers.compteUtilisateurSerializer',
+    'TOKEN_SERIALIZER': 'Utilisateurs.serializers.TokenSerializer',}
 
 ALLOWED_HOSTS=['*']
