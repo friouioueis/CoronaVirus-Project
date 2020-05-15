@@ -10,7 +10,7 @@ class infoSante(models.Model):
     poids                               = models.FloatField(default=0)
     temperature                         = models.FloatField(default=0)
     Rythme_cardiaque                    = models.FloatField(default=0, verbose_name='rythme cardiaque')
-    dateSaisie                          = models.DateTimeField(auto_now=True, verbose_name='date de saisie')
+    dateSaisie                          = models.DateTimeField(verbose_name='date de saisie')
 
     class Meta:
         verbose_name_plural = 'Infos Sante'

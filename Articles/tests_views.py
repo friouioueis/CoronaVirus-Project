@@ -631,7 +631,6 @@ class ModerateurArticlesVList(APITestCase):
         self.user=compteUtilisateurFactory()
         Group.objects.get_or_create(name='md')
         role.addRole(self.user.id, 'md')
-        self.ar=ArticleFactory(idModerateurAr=self.user,validerAR=True)
         for i in range(4):
             ArticleFactory(idModerateurAr=self.user,validerAR=True)
 
@@ -656,7 +655,7 @@ class ModerateurArticlesRList(APITestCase):
         Group.objects.get_or_create(name='md')
         role.addRole(self.user.id, 'md')
         for i in range(4):
-            ar=ArticleFactory(idModerateurAr=self.user, validerAR=False)
+            ArticleFactory(idModerateurAr=self.user, validerAR=False)
     def test_moderateur_articleR_list(self):
         self.client.force_authenticate(user=self.user)
         response = self.client.get(

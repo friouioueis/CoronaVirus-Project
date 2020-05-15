@@ -12,10 +12,13 @@ class articleView(viewsets.ModelViewSet):
     serializer_class                = articleSerializer
     queryset                        = article.objects.all()
 
+    def perform_create(self, serializer):
+        serializer.save(idRedacteurAr=self.request.user)
+
     def partial_update(self, request, pk=None):
         article=self.get_object()
         article.validerAR=request.data["validerAR"]
-        article.idModerateurAr_id=request.data["idModerateurAr"]
+        article.idModerateurAr_id=request.user.id
         article.save()
         return JsonResponse({"idArticle":article.idArticle,"validerAR":article.validerAR})
 
@@ -57,6 +60,10 @@ class commentaireView(viewsets.ModelViewSet):
     permission_classes = (CommentaireAccessPolicy,)
     serializer_class                = commentaireSerializer
     queryset                        = commentaire.objects.all()
+
+
+    def perform_create(self, serializer):
+        serializer.save(idUtilisateurCom=self.request.user)
 
     @action(detail=True, methods=['PATCH'], name='modifier commentaire')
     def modifier(self, request,pk=None):

@@ -17,11 +17,6 @@ class RegionSerializer(TestCase):
                 getattr(ar, field_name)
             )
 
-from django.test import TestCase
-
-from .serializers import *
-from .factories import *
-
 
 class StatistiqueSerializer(TestCase):
     def test_model_fields(self):
