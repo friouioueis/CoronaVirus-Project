@@ -52,8 +52,6 @@ class ArticleTermineList(APITestCase):
         self.user2= compteUtilisateurFactory()
         Group.objects.get_or_create(name='md')
         role.addRole(self.user.id, 'md')
-        Group.objects.get_or_create(name='si')
-        role.addRole(self.user2.id, 'si')
         ArticleFactory(terminerAR=False)
         for i in range(2):
             ArticleFactory(terminerAR=True)
@@ -83,11 +81,9 @@ class ArticleValideList(APITestCase):
 
     def setUp(self):
         self.user = compteUtilisateurFactory()
-        Group.objects.get_or_create(name='si')
-        role.addRole(self.user.id, 'si')
-        ArticleFactory(terminerAR=False)
+        ArticleFactory(validerAR=False)
         for i in range(2):
-            ArticleFactory(terminerAR=True)
+            ArticleFactory(validerAR=True)
 
     def test_article_valide_list(self):
         self.client.force_authenticate(user=self.user)
@@ -401,8 +397,6 @@ class CommentaireDelete(APITestCase):
     def setUp(self):
         self.user = compteUtilisateurFactory()
         self.user2 = compteUtilisateurFactory()
-        Group.objects.get_or_create(name='si')
-        role.addRole(self.user.id, 'si')
         self.commentaire = CommentaireFactory(idUtilisateurCom=self.user)
 
     def test_commentaire_delete_authorized(self):
@@ -427,8 +421,6 @@ class CommentaireModifier(APITestCase):
     def setUp(self):
         self.user = compteUtilisateurFactory()
         self.user2 = compteUtilisateurFactory()
-        Group.objects.get_or_create(name='si')
-        role.addRole(self.user.id, 'si')
         self.commentaire = CommentaireFactory(idUtilisateurCom=self.user)
 
     def test_commentaire_modifier_authorized(self):
@@ -450,11 +442,9 @@ class CommentaireSignaler(APITestCase):
 
     def setUp(self):
         self.user = compteUtilisateurFactory()
-        Group.objects.get_or_create(name='si')
-        role.addRole(self.user.id, 'si')
         self.commentaire = CommentaireFactory()
 
-    def test_commentaire_signaler_authorized(self):
+    def test_commentaire_signaler(self):
 
         self.commentaire.signalerCom=True
         url = reverse('commentaires-signaler', kwargs={'pk': self.commentaire.idCommentaire})
@@ -467,13 +457,9 @@ class CommentaireUpdate(APITestCase):
 
     def setUp(self):
         self.user = compteUtilisateurFactory()
-        Group.objects.get_or_create(name='si')
-        role.addRole(self.user.id, 'si')
         self.commentaire = CommentaireFactory()
 
     def test_commentaire_update_unauthorized(self):
-        Group.objects.get_or_create(name='si')
-        role.addRole(self.user.id, 'si')
         c = CommentaireFactory(idCommentaire=19, idUtilisateurCom=self.user)
 
         c.contenuCom = "nouveau contenu"
@@ -486,8 +472,6 @@ class CommentaireCreate(APITestCase):
 
     def setUp(self):
         self.user = compteUtilisateurFactory()
-        Group.objects.get_or_create(name='si')
-        role.addRole(self.user.id, 'si')
 
     def test_commentaire_create(self):
         c = CommentaireFactory(idUtilisateurCom=self.user)
@@ -659,7 +643,7 @@ class ModerateurArticlesVList(APITestCase):
         expected = 4
         print(article.objects.count())
         print(self.ar.validerAR)
-        print()
+
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(

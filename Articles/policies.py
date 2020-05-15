@@ -126,23 +126,23 @@ class CommentaireAccessPolicy(AccessPolicy):
         },
         {
             "action": ["create"],
-            "principal": ["group:si"],
+            "principal": ["*"],
             "effect": "allow"
         },
         {
             "action": ["destroy"],
-            "principal": ["group:si"],
+            "principal": ["*"],
             "effect": "allow",
             "condition": "is_author"
         },
         {
             "action": ["signaler"],
-            "principal": ["group:si"],
+            "principal": ["*"],
             "effect": "allow",
         },
         {
             "action": ["modifier"],
-            "principal": ["group:si"],
+            "principal": ["*"],
             "effect": "allow",
             "condition": "is_author"
         },
