@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
     android:background="@drawable/background"
+    tools:context=".LoginActivity"
     android:backgroundTint="#444444"
     android:backgroundTintMode="multiply"
 
