@@ -3,38 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
-
+    app:startDestination="@+id/nav_main">
     <fragment
 
-        android:id="@+id/nav_gallery3"
-        android:name="com.example.coronawatch.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-    <fragment
-
-        android:id="@+id/nav_home"
-        android:name="com.example.coronawatch.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home">
-
-        <action
-            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
-            app:destination="@id/nav_home_second" />
-    </fragment>
-    <fragment
-        android:id="@+id/nav_home_second"
-        android:name="com.example.coronawatch.ui.home.HomeSecondFragment"
-        android:label="@string/home_second"
-        tools:layout="@layout/fragment_home_second">
-        <action
-            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
-            app:destination="@id/nav_home" />
-
-        <argument
-            android:name="myArg"
-            app:argType="string" />
-    </fragment>
+        android:id="@+id/nav_main"
+        android:name="com.example.coronawatch.ui.main.MainFragment"
+        android:label="الصفحة الرئيسية"
+        tools:layout="@layout/fragment_main"/>
 
     <fragment
 
@@ -42,39 +17,55 @@
         android:name="com.example.coronawatch.ui.articles.ArticlesFragment"
         android:label="المقالات"
         tools:layout="@layout/fragment_articles" />
+    <fragment
+
+        android:id="@+id/social_media"
+        android:name="com.example.coronawatch.ui.socialMedia.SocialMediaFragment"
+        android:label="و.التواصل الإجتماعي"
+        tools:layout="@layout/fragment_social_media">
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/pics_videos"
+        android:name="com.example.coronawatch.ui.diagno.PicsVideosFragment"
+        android:label="فيديوهات و صور"
+        tools:layout="@layout/fragment_pics_videos">
+
+
+
+    </fragment>
 
     <fragment
 
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.coronawatch.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
         android:id="@+id/nav_download"
         android:name="com.example.coronawatch.ui.download.DownloadFragment"
-        android:label="@string/menu_download"
+        android:label="تحميل"
         tools:layout="@layout/download_fragment" />
+
     <fragment
+
         android:id="@+id/nav_health"
         android:name="com.example.coronawatch.ui.health.HealthFragment"
-        android:label="@string/menu_health"
+        android:label="المعلومات الحيوية"
         tools:layout="@layout/health_fragment" />
+
     <fragment
         android:id="@+id/nav_alerts"
         android:name="com.example.coronawatch.ui.alert.AlertFragment"
-        android:label="@string/menu_alert"
+        android:label="الإخطارات"
         tools:layout="@layout/alert_fragment" />
     <fragment
         android:id="@+id/nav_diagno"
         android:name="com.example.coronawatch.ui.diagno.DiagnoFragment"
-        android:label="@string/menu_diagno"
+        android:label="الحصول على تشخيص"
         tools:layout="@layout/diagno_fragment" />
     <fragment
         android:id="@+id/nav_notifications"
         android:name="com.example.coronawatch.ui.notification.NotificationFragment"
-        android:label="@string/menu_notification"
+        android:label="التنبيهات"
         tools:layout="@layout/notification_fragment" />
+
 
 
 </navigation>

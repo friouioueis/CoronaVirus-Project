@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+
+    android:backgroundTint="#444444"
+    android:backgroundTintMode="multiply">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo2" />
+
+
+    <EditText
+        android:id="@+id/full_name_singup"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/white"
+        android:hint="الإسم الكامل"
+        android:inputType="text"
+
+        android:padding="10dp" />
+
+
+    <EditText
+        android:id="@+id/username_singup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/full_name_singup"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/white"
+        android:hint="اسم المستخدم"
+        android:inputType="text"
+        android:padding="10dp"
+
+        android:singleLine="true" />
+
+
+    <EditText
+        android:id="@+id/email_singup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_singup"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/white"
+        android:hint="البريد الإلكتروني"
+        android:inputType="text"
+        android:padding="10dp"
+
+        />
+
+    <EditText
+        android:id="@+id/password_singup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_singup"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/white"
+        android:gravity="right"
+        android:hint="كلمة السر"
+        android:inputType="textPassword"
+        android:padding="10dp"
+
+        />
+
+    <EditText
+        android:id="@+id/password2_singup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_singup"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/white"
+        android:gravity="right"
+        android:hint="أعد كتابة كلمة السر"
+        android:inputType="textPassword"
+        android:padding="10dp"
+
+        />
+
+    <Button
+        android:id="@+id/singup_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password2_singup"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorPrimary"
+        android:text="إنشاء الحساب"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        android:textStyle="bold"
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/or_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/singup_btn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="158dp"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_toStartOf="@+id/or"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:id="@+id/or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="أو"
+            android:textColor="@android:color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="249dp"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="-0dp"
+            android:layout_toEndOf="@+id/or"
+            android:background="@android:color/white" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/facebook_singup_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FACEBOOK"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_below="@+id/or_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="0dp"
+
+        />
+
+
+    <Button
+        android:id="@+id/singin_link_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/white"
+        android:text="تملك حسابا ؟ تسجيل الدخول"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="17dp"
+
+        />
+
+</RelativeLayout>

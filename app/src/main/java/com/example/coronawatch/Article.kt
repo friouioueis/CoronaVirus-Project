@@ -1,13 +1,7 @@
-import android.annotation.SuppressLint
 import android.content.Context
-import android.os.Build
-import androidx.annotation.RequiresApi
 import com.example.coronawatch.Commentaire
 import com.example.coronawatch.adapter.CommentsAdapter
-import com.example.myapplication.RecyclerViewAdapter
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.LocalTime
+import com.example.coronawatch.RecyclerViewAdapter
 
 class Article(
     username: String,

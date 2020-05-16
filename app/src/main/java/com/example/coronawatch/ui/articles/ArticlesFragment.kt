@@ -15,6 +15,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.coronawatch.Commentaire
 import com.example.coronawatch.adapter.ArticlesAdapter
 import com.example.coronawatch.R
+
 import com.google.android.material.snackbar.Snackbar
 import com.squareup.okhttp.Callback
 import  com.squareup.okhttp.OkHttpClient
@@ -67,7 +68,7 @@ class ArticlesFragment : Fragment() {
         return root
     }
 
-     public fun fetchJSON(url: String, token: String) : Int {
+     private fun fetchJSON(url: String, token: String) : Int {
 //        swipeRefreshLayout.isRefreshing = true
         val url = url
         var resultNumber : Int = 0

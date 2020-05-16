@@ -6,13 +6,12 @@ import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.coronawatch.Commentaire
-import com.example.coronawatch.R
+
 import com.example.coronawatch.ui.articles.ArticlesFeed
+import com.example.coronawatch.R
 import kotlinx.android.synthetic.main.article_row.view.*
 
 
@@ -44,7 +43,7 @@ class ArticlesAdapter(
 
         holder.itemView.image_recyclerview.adapter = articlesFeed.articles[position].imageAdapter
         holder.itemView.tv_time.text = articlesFeed.articles[position].time
-        holder.itemView.list_view_comments.layoutManager = LinearLayoutManager(nContext , LinearLayoutManager.VERTICAL , false)
+        /*holder.itemView.list_view_comments.layoutManager = LinearLayoutManager(nContext , LinearLayoutManager.VERTICAL , false)
         holder.itemView.list_view_comments.adapter = articlesFeed.articles[position].commentsAdapter
 
         holder.itemView.edit_text_add_comment.setOnEditorActionListener { v, actionId, event ->
@@ -58,7 +57,7 @@ class ArticlesAdapter(
                 handled = true
             }
             handled
-        }
+        }*/
     }
 }
 

@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 
-                    .setAction("Action", null).show()
+                .setAction("Action", null).show()
 
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
@@ -37,8 +37,19 @@ class MainActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
 
-        appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_download), drawerLayout)
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.nav_main,
+                R.id.nav_articles,
+                R.id.social_media,
+                R.id.pics_videos,
+                R.id.nav_download,
+                R.id.nav_health,
+                R.id.nav_alerts,
+                R.id.nav_diagno,
+                R.id.nav_notifications
+            ), drawerLayout
+        )
 
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)

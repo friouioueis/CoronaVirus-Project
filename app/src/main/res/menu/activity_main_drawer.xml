@@ -5,16 +5,21 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_main"
+
+            android:icon="@drawable/ic_article"
+            android:title="الصفحة الرئيسية" />
+        <item
+            android:id="@+id/nav_articles"
 
             android:icon="@drawable/ic_article"
             android:title="عرض المقالات" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/social_media"
             android:icon="@drawable/ic_social"
             android:title="و.التواصل الإجتماعي" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/pics_videos"
             android:icon="@drawable/ic_image"
             android:title="فيديوهات و صور" />
         <item
