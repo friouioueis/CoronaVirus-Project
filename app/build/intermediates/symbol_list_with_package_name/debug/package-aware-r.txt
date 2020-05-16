@@ -763,6 +763,18 @@ attr uiScrollGesturesDuringRotateOrZoom
 attr uiTiltGestures
 attr uiZoomControls
 attr uiZoomGestures
+attr umanoAnchorPoint
+attr umanoClipPanel
+attr umanoDragView
+attr umanoFadeColor
+attr umanoFlingVelocity
+attr umanoInitialState
+attr umanoOverlay
+attr umanoPanelHeight
+attr umanoParallaxOffset
+attr umanoScrollInterpolator
+attr umanoScrollableView
+attr umanoShadowHeight
 attr uri
 attr useCompatPadding
 attr useMaterialThemeColors
@@ -1415,12 +1427,14 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable above_shadow
 drawable article_pic
 drawable avd_hide_password
 drawable avd_show_password
 drawable back
 drawable background
 drawable bavette
+drawable below_shadow
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1587,6 +1601,7 @@ id adjust_width
 id alertTitle
 id all
 id always
+id anchored
 id article_content
 id article_imageview
 id async
@@ -1595,6 +1610,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id button
 id buttonPanel
 id cancel_action
 id cancel_button
@@ -1611,6 +1627,7 @@ id clear_text
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id collapsed
 id comment_content
 id comment_section
 id confirm_button
@@ -1648,6 +1665,7 @@ id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
+id expanded
 id expanded_menu
 id fab
 id facebook_singup_btn
@@ -1668,6 +1686,7 @@ id glide_custom_view_target_tag
 id gone
 id group_divider
 id groups
+id hidden
 id hideable
 id home
 id homeAsUp
@@ -1805,6 +1824,7 @@ id singup_btn
 id singup_link_btn
 id skipCollapsed
 id slide
+id sliding_layout
 id smallLabel
 id snackbar_action
 id snackbar_text
@@ -2036,6 +2056,8 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout wilaya_states
+layout wilaya_statesempty
 menu activity_main_drawer
 menu main
 mipmap ic_launcher
@@ -2939,6 +2961,7 @@ styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable SignInButton buttonSize colorScheme scopeUris
+styleable SlidingUpPanelLayout umanoAnchorPoint umanoClipPanel umanoDragView umanoFadeColor umanoFlingVelocity umanoInitialState umanoOverlay umanoPanelHeight umanoParallaxOffset umanoScrollInterpolator umanoScrollableView umanoShadowHeight
 styleable Snackbar snackbarButtonStyle snackbarStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha elevation maxActionInlineWidth
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme

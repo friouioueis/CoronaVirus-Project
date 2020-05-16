@@ -11,14 +11,20 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import com.example.coronawatch.InfoWilaya
+import com.example.coronawatch.api.DataService
 import com.example.coronawatch.R
 import com.example.coronawatch.ReadWriteFileManager
-import com.example.coronawatch.Wilaya
+import com.example.coronawatch.api.RetrofitClientInstance
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.*
+import com.sothree.slidinguppanel.SlidingUpPanelLayout
+import kotlinx.android.synthetic.main.fragment_main.*
+import retrofit2.*
 
 
 @Suppress("CAST_NEVER_SUCCEEDS")
@@ -28,6 +34,7 @@ class MainFragment : Fragment() {
     private lateinit var googleMap: GoogleMap
     private lateinit var mainViewModel: MainViewModel
     private var mMap: GoogleMap? = null
+    lateinit var infoWilaya : List<InfoWilaya>
 
     @SuppressLint("WrongViewCast")
     override fun onCreateView(
@@ -97,8 +104,13 @@ class MainFragment : Fragment() {
             listWilaya?.forEach {
                 location = LatLng(it.latitude, it.longitude)
                 googleMap.addMarker(
-                    MarkerOptions().position(location).title(it.nom).icon(
-                        context?.let { it1 -> bitmapDescriptorFromVector(it1, R.drawable.ic_fiber_manual_record_black_24dp) }
+                    MarkerOptions().position(location).title(it.nom).title("${it.id}").icon(
+                        context?.let { it1 ->
+                            bitmapDescriptorFromVector(
+                                it1,
+                                R.drawable.ic_fiber_manual_record_black_24dp
+                            )
+                        }
                     )
                 )
             }
@@ -109,9 +121,16 @@ class MainFragment : Fragment() {
             )
             googleMap.setLatLngBoundsForCameraTarget(bounds)
 
+            googleMap.setOnMarkerClickListener{
+                marker ->
+                println("${marker.title}ggggggggg")
+                sliding_layout.panelState = SlidingUpPanelLayout.PanelState.EXPANDED
+                return@setOnMarkerClickListener true
+            }
+
         })
 
-
+        getStats()
         /* (activity?.supportFragmentManager?.findFragmentById(R.id.map_fragment) as SupportMapFragment?)?.let {
              map = it
 
@@ -177,4 +196,30 @@ class MainFragment : Fragment() {
         return BitmapDescriptorFactory.fromBitmap(bitmap)
     }
 
+    fun getStats() {
+        val retrofit = RetrofitClientInstance.retrofitInstance
+        val service = retrofit.create(DataService::class.java)
+        val stats_request = service.get_stats_wilaya()
+
+        stats_request.enqueue(object : Callback<List<InfoWilaya>> {
+            override fun onFailure(call: Call<List<InfoWilaya>>, t: Throwable) {
+                Toast.makeText(context, "error getting stats", Toast.LENGTH_SHORT)
+                    .show()
+            }
+
+            override fun onResponse(
+                call: Call<List<InfoWilaya>>,
+                response: Response<List<InfoWilaya>>
+            ) {
+                val allStats = response.body()
+                if (allStats != null) {
+                    infoWilaya = allStats
+                    infoWilaya.forEach { println("${it.casRetablis}FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF") }
+                }
+            }
+
+        })
+
+
+    }
 }
