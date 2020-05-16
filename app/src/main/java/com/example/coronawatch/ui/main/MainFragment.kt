@@ -24,6 +24,7 @@ import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.*
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import kotlinx.android.synthetic.main.fragment_main.*
+import kotlinx.android.synthetic.main.wilaya_states.*
 import retrofit2.*
 
 
@@ -44,43 +45,10 @@ class MainFragment : Fragment() {
     ): View? {
         mainViewModel =
             ViewModelProviders.of(this).get(MainViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_main, container, false)
-
-
-        //map = activity?.supportFragmentManager?.findFragmentById(R.id.map_fragment) as SupportMapFragment
-        /* (activity?.supportFragmentManager?.findFragmentById(R.id.map_fragment) as SupportMapFragment?)?.let {
-              it.getMapAsync(OnMapReadyCallback { it ->
-                  googleMap = it
-                  googleMap.mapType = GoogleMap.MAP_TYPE_NORMAL
-                  googleMap.setMaxZoomPreference(8.0F)
-                  googleMap.setMinZoomPreference(3.0F)
-                  googleMap.uiSettings.isRotateGesturesEnabled = false
-                  var location1 = LatLng(13.03 , 77.60)
-                  googleMap.addMarker(MarkerOptions().position(location1).title("location1"))
-                  setMapStyle(googleMap)
-
-                  true
-
-              })
-          }*/
-
-/*
-        val fragment = MapsFragment()
-        val fragmentTransaction: androidx.fragment.app.FragmentTransaction? =
-            activity?.supportFragmentManager?.beginTransaction()
-        fragmentTransaction?.replace(R.id.map_fragment, fragment)
-        fragmentTransaction?.commit()
-        fragment.getMapAsync(OnMapReadyCallback {
-            googleMap = it
-            onMapReady(googleMap)
-        })*/
 
 
 
-
-
-
-        return root
+        return inflater.inflate(R.layout.fragment_main, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -91,20 +59,20 @@ class MainFragment : Fragment() {
         val fragment = SupportMapFragment()
         fragmentTransaction?.replace(R.id.map_fragment, fragment)
         fragmentTransaction?.commit()
-        println("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH")
+
         fragment.getMapAsync(OnMapReadyCallback { googleMap ->
             googleMap.mapType = GoogleMap.MAP_TYPE_NORMAL
             googleMap.setMaxZoomPreference(7.5F)
             googleMap.setMinZoomPreference(6.0F)
             googleMap.uiSettings.isRotateGesturesEnabled = false
             var location = LatLng(13.03, 77.60)
-            googleMap.addMarker(MarkerOptions().position(location).title("location1"))
+
             setMapStyle(googleMap)
 
             listWilaya?.forEach {
                 location = LatLng(it.latitude, it.longitude)
                 googleMap.addMarker(
-                    MarkerOptions().position(location).title(it.nom).title("${it.id}").icon(
+                    MarkerOptions().position(location).title("${it.id}").icon(
                         context?.let { it1 ->
                             bitmapDescriptorFromVector(
                                 it1,
@@ -123,7 +91,29 @@ class MainFragment : Fragment() {
 
             googleMap.setOnMarkerClickListener{
                 marker ->
-                println("${marker.title}ggggggggg")
+                val regionStats = infoWilaya.filter { it2 -> it2.idRegionSt.toString() == marker.title }
+                if (listWilaya != null) {
+                    wilaya_name.text = listWilaya[marker.title.toInt()-1].nom
+                }
+                var casConfirme : Int = 0
+                var casSuspects : Int = 0
+                var nombreDeces : Int = 0
+                var casRetablis : Int = 0
+                var porteurs : Int = 0
+
+                    regionStats.forEach {
+                        casConfirme +=it.casConfirme
+                        casSuspects +=it.nbrGuerisons
+                        nombreDeces +=it.nbrDeces
+                        casRetablis +=it.casRetablis
+                        porteurs +=it.nbrPorteurVirus
+                }
+                cas_confirme.text = casConfirme.toString()
+                porteurs_virus.text = porteurs.toString()
+                nombre_deces.text = nombreDeces.toString()
+                cas_suspects.text = casSuspects.toString()
+                cas_retablis.text = casRetablis.toString()
+
                 sliding_layout.panelState = SlidingUpPanelLayout.PanelState.EXPANDED
                 return@setOnMarkerClickListener true
             }
@@ -131,11 +121,7 @@ class MainFragment : Fragment() {
         })
 
         getStats()
-        /* (activity?.supportFragmentManager?.findFragmentById(R.id.map_fragment) as SupportMapFragment?)?.let {
-             map = it
 
-
-         }*/
     }
 
 
@@ -159,21 +145,7 @@ class MainFragment : Fragment() {
         }
     }
 
-    /*override fun onMapReady(googleMap: GoogleMap) {
-        try {
-            val success = googleMap.setMapStyle(
-                MapStyleOptions.loadRawResourceStyle(
-                    context, R.raw.map_style
-                )
-            )
-            if (!success) {
-                println("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH")
-            }
-        } catch (e: Resources.NotFoundException) {
-            Log.e(TAG, "Can't find style. Error: ", e)
-        }
-    }
-*/
+
 
     private fun bitmapDescriptorFromVector(
         context: Context,
@@ -214,7 +186,7 @@ class MainFragment : Fragment() {
                 val allStats = response.body()
                 if (allStats != null) {
                     infoWilaya = allStats
-                    infoWilaya.forEach { println("${it.casRetablis}FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF") }
+
                 }
             }
 
