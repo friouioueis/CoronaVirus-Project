@@ -1636,10 +1636,12 @@ id direct
 id disableHome
 id drawer_layout
 id dropdown_menu
+id editTextEmail
+id editTextPassword
+id editTextUsername
 id edit_query
 id edit_text_add_comment
 id email_login
-id email_singup
 id end
 id end_padder
 id enterAlways
@@ -1758,7 +1760,6 @@ id parent_matrix
 id password2_singup
 id password_forgotten
 id password_login
-id password_singup
 id password_toggle
 id peekHeight
 id percent
@@ -1872,7 +1873,6 @@ id up
 id useLogo
 id user_name
 id username_article
-id username_singup
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag

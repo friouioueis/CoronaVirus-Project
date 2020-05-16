@@ -1,5 +1,7 @@
 package com.example.coronawatch
 
+import com.example.coronawatch.api.RetrofitClient
+import models.LoginResponse
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -11,8 +13,15 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun login_test() {
+        assertEquals(
+            "248c591d00accc787b2e72f2e1f",
+            RetrofitClient.instance.login("kaouthar", "kaouthar").toString()
+        )
     }
 
+
 }
+
+
+

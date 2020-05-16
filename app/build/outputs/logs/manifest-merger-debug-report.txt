@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-52:12
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-59:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.2.2] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\cf2e6c29c8c9888fdec3c0f3b6c812b6\navigation-ui-ktx-2.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui:2.2.2] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\b190acf2ae74eed7eace3d4f5b154e2b\navigation-ui-2.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\a28e3071b49cd303c87ab88f035299ad\material-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -19,12 +19,12 @@ MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Lenovo\.
 MERGED from [androidx.navigation:navigation-fragment:2.2.2] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\d935391921a6d0fd167f73248895a5b1\navigation-fragment-2.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8896a3d5fa4b6dea4e655d799963e7dd\jetified-circleimageview-3.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\72f4849b83d53b2571ad8978bcb1b56e\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\a1768896b6a622b39e1354a69168da0e\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\acdeea4bba2ca1209181f036ffed85f1\jetified-glide-4.11.0\AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\24081f6a7f8e3a918bda356586a78c23\jetified-play-services-maps-17.0.0\AndroidManifest.xml:17:1-38:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\a1768896b6a622b39e1354a69168da0e\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\c9c36a73c4d92b2af4d18c6e7c9a3cfa\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.2.2] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\2dbcef7867a307b799934ced8eeea21f\navigation-common-ktx-2.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\d75caeab24d259cf4a41c633b6c6ae2a\jetified-lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\c9c36a73c4d92b2af4d18c6e7c9a3cfa\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8a66819fa60dccc15ec8a899bee9a083\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\74ba376e5f4f34ef879a2bc253b663b3\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\db72437fffedc6d6e9a32ec555665f9e\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -69,65 +69,65 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\f950727d86cde628325d81e7d263a503\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8ba1861a037181f3766850afe0160a40\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.7] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\7bfb09cefcb6abecfdccff43c63da3aa\jetified-android-gif-drawable-1.2.7\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-59:12
 	package
 		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:4:5-38
 		INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-52:12
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-59:12
 		INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-52:12
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:1-59:12
 		INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:6:5-79
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:7:5-79
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\24081f6a7f8e3a918bda356586a78c23\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\24081f6a7f8e3a918bda356586a78c23\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:6:22-76
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:7:22-76
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:7:5-67
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:8:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\24081f6a7f8e3a918bda356586a78c23\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\24081f6a7f8e3a918bda356586a78c23\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:7:22-64
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:8:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:8:5-81
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:9:5-81
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:8:22-78
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:9:22-78
 uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:9:5-98
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:10:5-98
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:9:22-95
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:10:22-95
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:10:5-81
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:10:22-78
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:11:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:11:5-79
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:12:5-79
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:11:22-76
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:12:22-76
 permission#com.company.app.permission.MAPS_RECEIVE
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:12:5-14:47
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:13:5-15:47
 	android:protectionLevel
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:14:9-44
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:15:9-44
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:13:9-63
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:14:9-63
 uses-permission#com.company.app.permission.MAPS_RECEIVE
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:16:5-79
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:17:5-79
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:16:22-76
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:17:22-76
 application
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:19:5-47:19
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:21:5-54:19
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\a28e3071b49cd303c87ab88f035299ad\material-1.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\a28e3071b49cd303c87ab88f035299ad\material-1.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.dyhdyh.support:glide:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\edf6339ac9e18249f9ce240f3bc5f4d2\jetified-glide-1.0.0\AndroidManifest.xml:11:5-14:19
@@ -159,63 +159,65 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Le
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\9075dbfaab39e40f8982b36dac1019b6\core-1.2.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:24:9-35
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:27:9-35
 	android:label
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:22:9-41
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:25:9-41
 	android:roundIcon
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:23:9-54
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:26:9-54
 	android:icon
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:21:9-43
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:24:9-43
 	android:allowBackup
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:20:9-35
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:22:9-35
 	android:theme
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:25:9-40
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:28:9-40
+	android:usesCleartextTraffic
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:23:9-44
 activity#com.example.coronawatch.SingupActivity
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:26:9-29:20
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:30:9-34:20
 	android:theme
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:28:13-56
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:33:13-56
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:27:13-43
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:31:13-43
 activity#com.example.coronawatch.LoginActivity
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:30:9-37:20
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:36:9-43:20
 	android:theme
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:32:13-56
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:38:13-56
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:31:13-42
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:37:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:33:13-36:29
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:39:13-42:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:34:17-69
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:40:17-69
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:34:25-66
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:40:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:35:16-76
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:41:16-76
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:35:26-73
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:41:26-73
 activity#com.example.coronawatch.MainActivity
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:38:9-41:59
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:44:9-47:59
 	android:label
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:40:13-45
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:46:13-45
 	android:theme
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:41:13-56
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:47:13-56
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:39:13-41
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:45:13-41
 meta-data#com.google.android.maps.v2.API_KEY
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:43:9-45:54
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:50:9-52:54
 	android:value
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:45:13-52
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:52:13-52
 	android:name
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:44:13-62
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:51:13-62
 uses-feature#0x00020000
-ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:48:5-51:40
+ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:55:5-58:40
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\24081f6a7f8e3a918bda356586a78c23\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\24081f6a7f8e3a918bda356586a78c23\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
 	tools:ignore
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:51:9-37
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:58:9-37
 	android:glEsVersion
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:49:9-41
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:56:9-41
 	android:required
-		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:50:9-32
+		ADDED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml:57:9-32
 uses-sdk
 INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Lenovo\Desktop\projet\AlgeriaCities-develop\Coronawatch\app\src\main\AndroidManifest.xml
@@ -250,18 +252,18 @@ MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\Lenovo\.gradle\caches\
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8896a3d5fa4b6dea4e655d799963e7dd\jetified-circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\72f4849b83d53b2571ad8978bcb1b56e\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\72f4849b83d53b2571ad8978bcb1b56e\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\a1768896b6a622b39e1354a69168da0e\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\a1768896b6a622b39e1354a69168da0e\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\acdeea4bba2ca1209181f036ffed85f1\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\acdeea4bba2ca1209181f036ffed85f1\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\24081f6a7f8e3a918bda356586a78c23\jetified-play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\24081f6a7f8e3a918bda356586a78c23\jetified-play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\a1768896b6a622b39e1354a69168da0e\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\a1768896b6a622b39e1354a69168da0e\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\c9c36a73c4d92b2af4d18c6e7c9a3cfa\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\c9c36a73c4d92b2af4d18c6e7c9a3cfa\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-common-ktx:2.2.2] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\2dbcef7867a307b799934ced8eeea21f\navigation-common-ktx-2.2.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-common-ktx:2.2.2] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\2dbcef7867a307b799934ced8eeea21f\navigation-common-ktx-2.2.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\d75caeab24d259cf4a41c633b6c6ae2a\jetified-lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\d75caeab24d259cf4a41c633b6c6ae2a\jetified-lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\c9c36a73c4d92b2af4d18c6e7c9a3cfa\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\c9c36a73c4d92b2af4d18c6e7c9a3cfa\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8a66819fa60dccc15ec8a899bee9a083\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8a66819fa60dccc15ec8a899bee9a083\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\74ba376e5f4f34ef879a2bc253b663b3\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
