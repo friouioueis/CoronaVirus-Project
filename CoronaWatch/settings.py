@@ -156,6 +156,8 @@ REST_FRAMEWORK = {
 
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
     'EXCEPTION_HANDLER': 'requestlogs.views.exception_handler',
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10
     }
 
 
@@ -163,7 +165,7 @@ REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'Utilisateurs.serializers.compteUtilisateurSerializer',
     'TOKEN_SERIALIZER': 'Utilisateurs.serializers.TokenSerializer',}
 
-ALLOWED_HOSTS=['*']
+cornaD_HOSTS=['*']
 
 LOGGING = {
     'version': 1,

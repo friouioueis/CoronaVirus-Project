@@ -4,6 +4,11 @@
     <list default="true" id="3391a679-f613-45bc-96d2-0cf7bc29a75b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CoronaWatch/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CoronaWatch/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robots/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Robots/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robots/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Robots/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robots/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Robots/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robots/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Robots/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robots/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Robots/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CoronaWatch" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bill" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,6 +49,12 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC Asus\Desktop\ProjetCorona_WatchEquipe4\Robots" />
+      <recent name="C:\Users\PC Asus\Desktop\ProjetCorona_WatchEquipe4\CoronaWatch" />
+    </key>
   </component>
   <component name="RunManager" selected="Django tests.Test: Sante.tests_views.UtilisateurInfoSanteList">
     <configuration name="Test: Articles.tests_views.ModerateurArticlesRList" type="DjangoTestsConfigurationType" temporary="true">
@@ -221,7 +232,12 @@
       <workItem from="1589490726382" duration="208000" />
       <workItem from="1589494486009" duration="18293000" />
       <workItem from="1589562781251" duration="3875000" />
-      <workItem from="1589572769928" duration="314000" />
+      <workItem from="1589572769928" duration="7068000" />
+      <workItem from="1589764999057" duration="623000" />
+      <workItem from="1590095009035" duration="1847000" />
+      <workItem from="1590159647846" duration="3576000" />
+      <workItem from="1590163564509" duration="96000" />
+      <workItem from="1590163683156" duration="4616000" />
     </task>
     <servers />
   </component>
@@ -255,26 +271,34 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1322" height="250" key="GridCell.Tab.0.bottom" timestamp="1589572744720">
+    <state x="309" y="41" key="#Inspections" timestamp="1590162886577">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="309" y="41" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1590162886577" />
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1589765646733">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589765646733" />
+    <state width="1322" height="250" key="GridCell.Tab.0.bottom" timestamp="1589573149381">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1210" height="196" key="GridCell.Tab.0.bottom/0.0.1254.768@0.0.1254.768" timestamp="1589054888988" />
-    <state width="1322" height="250" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589572744720" />
-    <state width="1322" height="250" key="GridCell.Tab.0.center" timestamp="1589572744719">
+    <state width="1322" height="250" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589573149381" />
+    <state width="1322" height="250" key="GridCell.Tab.0.center" timestamp="1589573149381">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1210" height="196" key="GridCell.Tab.0.center/0.0.1254.768@0.0.1254.768" timestamp="1589054888987" />
-    <state width="1322" height="250" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589572744719" />
-    <state width="1322" height="250" key="GridCell.Tab.0.left" timestamp="1589572744719">
+    <state width="1322" height="250" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589573149381" />
+    <state width="1322" height="250" key="GridCell.Tab.0.left" timestamp="1589573149380">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1210" height="196" key="GridCell.Tab.0.left/0.0.1254.768@0.0.1254.768" timestamp="1589054888987" />
-    <state width="1322" height="250" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589572744719" />
-    <state width="1322" height="250" key="GridCell.Tab.0.right" timestamp="1589572744719">
+    <state width="1322" height="250" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589573149380" />
+    <state width="1322" height="250" key="GridCell.Tab.0.right" timestamp="1589573149381">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1210" height="196" key="GridCell.Tab.0.right/0.0.1254.768@0.0.1254.768" timestamp="1589054888987" />
-    <state width="1322" height="250" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589572744719" />
+    <state width="1322" height="250" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589573149381" />
     <state width="1322" height="195" key="GridCell.Tab.1.bottom" timestamp="1589500239433">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
