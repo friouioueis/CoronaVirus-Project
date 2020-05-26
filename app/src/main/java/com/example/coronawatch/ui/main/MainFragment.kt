@@ -35,7 +35,7 @@ class MainFragment : Fragment() {
     private lateinit var googleMap: GoogleMap
     private lateinit var mainViewModel: MainViewModel
     private var mMap: GoogleMap? = null
-    lateinit var infoWilaya : List<InfoWilaya>
+    var infoWilaya = listOf<InfoWilaya>()
 
     @SuppressLint("WrongViewCast")
     override fun onCreateView(
@@ -188,6 +188,7 @@ class MainFragment : Fragment() {
                     infoWilaya = allStats
 
                 }
+                else println("Eroor getting data ")
             }
 
         })

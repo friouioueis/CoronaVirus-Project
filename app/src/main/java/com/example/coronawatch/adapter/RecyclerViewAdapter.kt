@@ -36,7 +36,7 @@ class RecyclerViewAdapter(imageURLs: ArrayList<String>, nContext: Context) : Rec
             .load(imageURLs[position])
             .into(holder.image)
         holder.image.setOnClickListener(View.OnClickListener {
-            Toast.makeText(ncontext , imageURLs.get(position) , Toast.LENGTH_SHORT).show()
+            Toast.makeText(ncontext , imageURLs[position], Toast.LENGTH_SHORT).show()
         })
     }
 }

@@ -2,6 +2,7 @@ package com.example.coronawatch.ui.articles
 
 import Article
 import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
 
 import android.view.LayoutInflater
@@ -34,17 +35,25 @@ class ArticlesFragment : Fragment() {
     lateinit var swipeRefreshLayout: SwipeRefreshLayout
     var articlesFeed = ArticlesFeed(arrayListOf())
     private var adapter = this.context?.let { ArticlesAdapter(articlesFeed , it) }
-    val url = "https://cb763c47.ngrok.io/articles/articles"
-    val token = "5dfd1c7e93af18c660fa6b297999bb5c3b0e9e39"
-    @SuppressLint("ResourceAsColor")
+    val url = "https://72600909.ngrok.io/articles/articles"
+    var token = ""
+    @SuppressLint("ResourceAsColor", "WrongConstant")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
+
+
         articlesViewModel =
             ViewModelProviders.of(this).get(ArticlesViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_articles, container, false)
+
+
+        val sh1 = activity?.getSharedPreferences("authorization", Context.MODE_APPEND)
+        token = "5dfd1c7e93af18c660fa6b297999bb5c3b0e9e39"
 
         recyclerView = root.findViewById(R.id.recycler_view_articles) as RecyclerView
         recyclerView.layoutManager = LinearLayoutManager(this.context)
@@ -69,7 +78,7 @@ class ArticlesFragment : Fragment() {
     }
 
      private fun fetchJSON(url: String, token: String) : Int {
-//        swipeRefreshLayout.isRefreshing = true
+         swipeRefreshLayout.isRefreshing = true
         val url = url
         var resultNumber : Int = 0
 
@@ -142,15 +151,17 @@ class ArticlesFragment : Fragment() {
 
                             i--
                         }
-                        adapter?.notifyDataSetChanged()
+
                         swipeRefreshLayout.isRefreshing = false
+                        adapter?.notifyDataSetChanged()
 
                     }
                 } catch (e: org.json.JSONException) {
-
+                    swipeRefreshLayout.isRefreshing = false
                     view?.let {
                         Snackbar.make(it, "حدث خطأ في الإتصال ", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show()
+
                     }
 
 

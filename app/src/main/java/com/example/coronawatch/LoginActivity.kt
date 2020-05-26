@@ -1,6 +1,8 @@
 package com.example.coronawatch
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -53,6 +55,10 @@ class LoginActivity : AppCompatActivity() {
                     {   if(response.code()==200){
                         Toast.makeText(applicationContext, "لقد تم الدخول بنجاح", Toast.LENGTH_LONG).show()
 
+                        val sh: SharedPreferences = getSharedPreferences("authorization", Context.MODE_PRIVATE)
+                        val myEdit = sh.edit()
+                        myEdit.putString("token", response.toString())
+                        myEdit.apply()
                         startActivity(intent)
                     } else{
                         Toast.makeText(applicationContext, "خاطئ", Toast.LENGTH_LONG).show()
