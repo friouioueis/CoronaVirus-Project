@@ -35,7 +35,7 @@ class ArticlesFragment : Fragment() {
     lateinit var swipeRefreshLayout: SwipeRefreshLayout
     var articlesFeed = ArticlesFeed(arrayListOf())
     private var adapter = this.context?.let { ArticlesAdapter(articlesFeed , it) }
-    val url = "https://72600909.ngrok.io/articles/articles"
+    val url = "https://a471c202.ngrok.io/articles/articles"
     var token = ""
     @SuppressLint("ResourceAsColor", "WrongConstant")
     override fun onCreateView(

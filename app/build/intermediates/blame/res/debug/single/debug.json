@@ -440,12 +440,12 @@
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\src\\main\\res\\drawable\\background.png"
     },
     {
-        "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_download.png.flat",
-        "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_download.png"
-    },
-    {
         "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable_info_wilaya_style.xml.flat",
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\src\\main\\res\\drawable\\info_wilaya_style.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_download.png.flat",
+        "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_download.png"
     },
     {
         "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
@@ -492,12 +492,12 @@
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_fiber_manual_record_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_image.png.flat",
-        "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_image.png"
-    },
-    {
         "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\layout_wilaya_statesempty.xml.flat",
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\src\\main\\res\\layout\\wilaya_statesempty.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_image.png.flat",
+        "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_image.png"
     },
     {
         "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",

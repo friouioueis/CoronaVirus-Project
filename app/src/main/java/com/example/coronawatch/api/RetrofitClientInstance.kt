@@ -10,7 +10,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 object RetrofitClientInstance {
     private lateinit var retrofit: Retrofit
-    private const val BASE_URL = "https://72600909.ngrok.io"
+    private const val BASE_URL = "https://a471c202.ngrok.io"
 
 
 

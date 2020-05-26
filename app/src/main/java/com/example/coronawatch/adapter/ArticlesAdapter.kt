@@ -37,7 +37,8 @@ class ArticlesAdapter(
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         holder.itemView.username_article.text = articlesFeed.articles[position].username
-        holder.itemView.article_content.text = Html.fromHtml(articlesFeed.articles[position].content)
+        holder.itemView.article_content.text =
+            Html.fromHtml(articlesFeed.articles[position].content)
         //.text = articlesFeed.articles[position].content
         holder.itemView.image_recyclerview.layoutManager =
             LinearLayoutManager(nContext, LinearLayoutManager.HORIZONTAL, false)
@@ -45,21 +46,20 @@ class ArticlesAdapter(
 
         holder.itemView.image_recyclerview.adapter = articlesFeed.articles[position].imageAdapter
         holder.itemView.tv_time.text = articlesFeed.articles[position].time
-        holder.itemView.list_view_comments.layoutManager = LinearLayoutManager(nContext , LinearLayoutManager.VERTICAL , false)
-        holder.itemView.list_view_comments.adapter = articlesFeed.articles[position].commentsAdapter
+        //holder.itemView.list_view_comments.layoutManager = LinearLayoutManager(nContext , LinearLayoutManager.VERTICAL , false)
+        //holder.itemView.list_view_comments.adapter = articlesFeed.articles[position].commentsAdapter
 
-        holder.itemView.edit_text_add_comment.setOnEditorActionListener { v, actionId, event ->
-            var handled = false
-            if (actionId == EditorInfo.IME_ACTION_DONE) {
-                //adding a comment
-                articlesFeed.articles[position].comments.add(Commentaire(holder.itemView.edit_text_add_comment.text.toString() , "now"))
-                articlesFeed.articles[position].commentsAdapter?.notifyDataSetChanged()
-                holder.itemView.edit_text_add_comment.text.clear()
-                holder.itemView.edit_text_add_comment.isFocusable = false
-                handled = true
-            }
-            handled
-        }
+        /* holder.itemView.edit_text_add_comment.setOnEditorActionListener { v, actionId, event ->
+             var handled = false
+             if (actionId == EditorInfo.IME_ACTION_DONE) {
+                 //adding a comment
+                 articlesFeed.articles[position].comments.add(Commentaire(holder.itemView.edit_text_add_comment.text.toString() , "now"))
+                 articlesFeed.articles[position].commentsAdapter?.notifyDataSetChanged()
+                 holder.itemView.edit_text_add_comment.text.clear()
+                 holder.itemView.edit_text_add_comment.isFocusable = false
+                 handled = true
+             }
+             handled*/
     }
 }
 
