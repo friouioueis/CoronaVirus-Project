@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3391a679-f613-45bc-96d2-0cf7bc29a75b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Utilisateurs/policies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CoronaWatch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CoronaWatch.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Robots/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Robots/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Robots/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Robots/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Robots/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Robots/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Robots/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Robots/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Robots/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Robots/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoronaWatch/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CoronaWatch/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -249,6 +257,7 @@
       <workItem from="1590163564509" duration="96000" />
       <workItem from="1590163683156" duration="4616000" />
       <workItem from="1590247938928" duration="306000" />
+      <workItem from="1590512206805" duration="978000" />
     </task>
     <servers />
   </component>

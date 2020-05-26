@@ -64,8 +64,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-     'requestlogs.middleware.RequestLogsMiddleware',
-    'requestlogs.middleware.RequestIdMiddleware',
+    #  'requestlogs.middleware.RequestLogsMiddleware',
+    # 'requestlogs.middleware.RequestIdMiddleware',
 ]
 
 ROOT_URLCONF = 'CoronaWatch.urls'
@@ -155,7 +155,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny', ),
 
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
-    'EXCEPTION_HANDLER': 'requestlogs.views.exception_handler',
+    # 'EXCEPTION_HANDLER': 'requestlogs.views.exception_handler',
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 10
     }
@@ -166,31 +166,31 @@ REST_AUTH_SERIALIZERS = {
     'TOKEN_SERIALIZER': 'Utilisateurs.serializers.TokenSerializer',}
 
 cornaD_HOSTS=['*']
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'requestlogs_to_file': {
-            'level': 'INFO',
-            'class': 'logging.FileHandler',
-            'filename': '/tmp/requestlogs.log',
-        },
-    },
-    'loggers': {
-        'requestlogs': {
-            'handlers': ['requestlogs_to_file'],
-            'level': 'INFO',
-            'propagate': False,
-        },
-    },
-}
-
-REQUESTLOGS = {
-    'STORAGE_CLASS': 'requestlogs.storages.LoggingStorage',
-    'ENTRY_CLASS': 'requestlogs.entries.RequestLogEntry',
-    'SERIALIZER_CLASS': 'requestlogs.storages.BaseEntrySerializer',
-    'SECRETS': ['password', 'token'],
-    'ATTRIBUTE_NAME': '_requestlog',
-    'METHODS': ('GET', 'PUT', 'PATCH', 'POST', 'DELETE'),
-}
+#
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'requestlogs_to_file': {
+#             'level': 'INFO',
+#             'class': 'logging.FileHandler',
+#             'filename': '/tmp/requestlogs.log',
+#         },
+#     },
+#     'loggers': {
+#         'requestlogs': {
+#             'handlers': ['requestlogs_to_file'],
+#             'level': 'INFO',
+#             'propagate': False,
+#         },
+#     },
+# }
+#
+# REQUESTLOGS = {
+#     'STORAGE_CLASS': 'requestlogs.storages.LoggingStorage',
+#     'ENTRY_CLASS': 'requestlogs.entries.RequestLogEntry',
+#     'SERIALIZER_CLASS': 'requestlogs.storages.BaseEntrySerializer',
+#     'SECRETS': ['password', 'token'],
+#     'ATTRIBUTE_NAME': '_requestlog',
+#     'METHODS': ('GET', 'PUT', 'PATCH', 'POST', 'DELETE'),
+# }
