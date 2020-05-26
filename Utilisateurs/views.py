@@ -8,6 +8,7 @@ class compteUtilisateurView(viewsets.ModelViewSet):
     serializer_class                    = compteUtilisateurSerializer
     queryset                            = compteUtilisateur.objects.all()
 
+
 class roleView(viewsets.ModelViewSet):
     serializer_class                    = roleSerializer
     queryset                            = role.objects.all()

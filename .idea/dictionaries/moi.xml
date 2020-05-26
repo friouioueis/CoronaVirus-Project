@@ -1,39 +1,10 @@
 <component name="ProjectDictionaryState">
   <dictionary name="moi">
     <words>
-      <w>allauth</w>
-      <w>commentaires</w>
       <w>compte</w>
-      <w>comptes</w>
-      <w>coms</w>
-      <w>contenu</w>
-      <w>coreapi</w>
-      <w>gestion</w>
-      <w>moderateur</w>
-      <w>naissance</w>
-      <w>notif</w>
-      <w>notifs</w>
       <w>personel</w>
-      <w>personnelles</w>
       <w>prenom</w>
-      <w>redacteur</w>
-      <w>refus</w>
-      <w>refuser</w>
-      <w>sante</w>
-      <w>signalement</w>
-      <w>sortedpub</w>
-      <w>supuser</w>
-      <w>thematique</w>
       <w>utilisateur</w>
-      <w>utilisateurs</w>
-      <w>valider</w>
-      <w>videoss</w>
-<<<<<<< HEAD
-=======
-      <w>videothematique</w>
->>>>>>> 43b535b61bdba1ee50f0c2980f0d9feda105923c
-      <w>viewset</w>
-      <w>wilaya</w>
     </words>
   </dictionary>
 </component>
