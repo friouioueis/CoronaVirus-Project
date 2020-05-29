@@ -14,8 +14,7 @@ class signalement(models.Model):
                                                         related_name='sign_moderateur', verbose_name='moderateur',
                                                         null=True, blank=True)
     descriptionSg                   = models.TextField(verbose_name='Description')
-    validerSg                       = models.BooleanField(default=False, verbose_name='validée',null=True, blank=True)
-    refuserSg                       = models.BooleanField(default=False, verbose_name='refusée',null=True, blank=True)
+    validerSg                       = models.BooleanField(default=None, verbose_name='validé',null=True, blank=True)
     dateSg                          = models.DateTimeField(auto_now=True, verbose_name='Date de signalement')
     typeSg                          = models.CharField(max_length=2, choices=SIGNALEMENT_CHOICES, verbose_name='type')
     lienSg                          = models.ImageField(upload_to='signalement/', verbose_name='lien')
