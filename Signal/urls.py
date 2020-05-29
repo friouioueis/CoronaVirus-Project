@@ -9,7 +9,7 @@ router.register(r'utilisateur/(?P<id>.+)/signals',views.utilisateurSignalsView,b
 router.register(r'utilisateur/(?P<id>.+)/photos',views.utilisateurPhotosView,basename='utilisateurPhotos')
 router.register(r'moderateur/(?P<id>.+)/valid', views.SignalModerValidView, basename='moderateur-valid')
 router.register(r'moderateur/(?P<id>.+)/refus', views.SignalModerRefusView, basename='moderateur-refus')
-router.register(r'valid', views.SignalementValidView, basename='articles-valid')
-router.register(r'refus', views.SignalementRefusView, basename='articles-refus')
+router.register(r'valid', views.SignalementValidView, basename='signal-valid')
+router.register(r'refus', views.SignalementRefusView, basename='signal-refus')
 
 urlpatterns = router.urls
