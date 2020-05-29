@@ -7,7 +7,7 @@ from .models import *
 
 
 class signalementView(viewsets.ModelViewSet):
-    #permission_classes          = SignalAccessPolicy
+    permission_classes          = SignalAccessPolicy
     serializer_class            = signalementSerializer
     queryset                    = signalement.objects.filter(validerSg=None)
 
