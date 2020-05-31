@@ -16,6 +16,7 @@ class RegionList(APITestCase):
         for i in range(2):
             RegionFactory()
 
+
     def test_region_list(self):
         response = self.client.get(
             reverse('regions-list')
@@ -25,7 +26,7 @@ class RegionList(APITestCase):
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response.json().get('count'),
             expected)
 
 class RegionGet(APITestCase):
@@ -158,7 +159,7 @@ class StatistiqueList(APITestCase):
         self.user2 = compteUtilisateurFactory()
         Group.objects.get_or_create(name='md')
         role.addRole(self.user1.id, 'md')
-        for i in range(2):
+        for i in range(4):
             StatistiqueFactory()
 
     def test_statistique_list_authorized(self):
@@ -166,12 +167,12 @@ class StatistiqueList(APITestCase):
         response = self.client.get(
             reverse('stat_regions-list')
         )
-        expected = 2
+        expected = 4
 
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response.json().get('count'),
             expected)
 
     def test_statistique_list_unauthorized(self):
@@ -323,7 +324,7 @@ class StatistiqueValideList(APITestCase):
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response.json().get('count'),
             expected)
 
 
@@ -357,7 +358,7 @@ class RegionStatistiqueList(APITestCase):
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response.json().get('count'),
             expected)
 
 class RegionStatistiqueGet(APITestCase):

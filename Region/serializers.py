@@ -10,6 +10,7 @@ class regionSerializer(serializers.ModelSerializer):
 
 
 class statistiqueRegionSerializer(serializers.ModelSerializer):
+
     class Meta:
         model                = statistiqueRegion
         fields               = '__all__'

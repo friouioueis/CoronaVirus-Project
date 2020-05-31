@@ -113,8 +113,8 @@ class ModerateurAccessPolicy(AccessPolicy):
     ]
 
     def is_moderateur(self, request, view, action) -> bool:
-        article = view.get_object()
-        return request.user == article.idModerateurAr
+        ar = view.get_object()
+        return request.user == ar.idModerateurAr
 
 
 class CommentaireAccessPolicy(AccessPolicy):

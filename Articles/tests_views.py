@@ -32,7 +32,7 @@ class ArticleList(APITestCase):
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response.json().get('count'),
             expected)
 
     def test_article_list_unauthorized(self):
@@ -66,7 +66,7 @@ class ArticleTermineList(APITestCase):
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response.json().get('count'),
             expected)
     def test_article_termine_list_unauthorized(self):
         self.client.force_authenticate(user=self.user2)
@@ -95,7 +95,7 @@ class ArticleValideList(APITestCase):
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response.json().get('count'),
             expected)
 
 class ArticleGet(APITestCase):
@@ -252,7 +252,7 @@ class VideoArticleList(APITestCase):
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response.json().get('count'),
             expected)
 
 class VideoArticleGet(APITestCase):
@@ -314,7 +314,7 @@ class PhotoArticleList(APITestCase):
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response.json().get('count'),
             expected)
 
 class PhotoArticleGet(APITestCase):
@@ -376,7 +376,7 @@ class CommentaireList(APITestCase):
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response.json().get('count'),
             expected)
 
 class CommentaireGet(APITestCase):
@@ -504,7 +504,7 @@ class RedacteurArticleList(APITestCase):
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response.json().get('count'),
             expected)
 
 class RedacteurArticleGet(APITestCase):
@@ -542,7 +542,7 @@ class ArticleCommentaireList(APITestCase):
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response.json().get('count'),
             expected)
 
 class ArticleCommentaireGet(APITestCase):
@@ -576,7 +576,7 @@ class ArticlePhotosList(APITestCase):
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response.json().get('count'),
             expected)
 
 class ArticlePhotosGet(APITestCase):
@@ -609,7 +609,7 @@ class ArticleVideosList(APITestCase):
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response.json().get('count'),
             expected)
 
 class ArticleVideosGet(APITestCase):
@@ -641,12 +641,11 @@ class ModerateurArticlesVList(APITestCase):
         )
         expected = 4
         print(article.objects.count())
-        print(self.ar.validerAR)
 
         self.assertEqual(
             response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response.json().get('count'),
             expected)
 
 class ModerateurArticlesRList(APITestCase):
