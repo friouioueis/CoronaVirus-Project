@@ -26,6 +26,7 @@ class compteUtilisateurSerializer(serializers.ModelSerializer):
 
     class Meta:
         model                = compteUtilisateur
+        fields = '__all__'
         read_only_fields = ('is_admin', 'is_staff', 'is_superuser', 'is_active', 'groups', 'user_permissions')
 
 
