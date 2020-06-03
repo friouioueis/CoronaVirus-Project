@@ -14,8 +14,10 @@ class roleView(viewsets.ModelViewSet):
     queryset                            = role.objects.all()
 
     def create(self, request):
-        role.addRole(request.data['idUtilisateurR'], request.data['Type'])
-        return super().create(request)
+        if role.addRole(request.data['idUtilisateurR'], request.data['Type']) is True:
+            return super().create(request)
+        else:
+            return Response({"detail": 'role already exists'})
 
     def destroy(self, request, *args, **kwargs):
         role.deleteRole(self.get_object().idUtilisateurR,self.get_object().Type)

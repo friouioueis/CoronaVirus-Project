@@ -27,7 +27,6 @@ class compteUtilisateurSerializer(serializers.ModelSerializer):
     class Meta:
         model                = compteUtilisateur
         read_only_fields = ('is_admin', 'is_staff', 'is_superuser', 'is_active', 'groups', 'user_permissions')
-        exclude =('password',)
 
 
 class TokenSerializer(serializers.ModelSerializer):
