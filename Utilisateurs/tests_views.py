@@ -12,7 +12,7 @@ class UserList(APITestCase):
         for i in range(4):
             compteUtilisateurFactory()
 
-    def test_photoArticle_list(self):
+    def test_user_list(self):
         response = self.client.get(
             reverse('comptes-list')
         )
