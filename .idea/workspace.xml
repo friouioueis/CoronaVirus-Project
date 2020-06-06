@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3391a679-f613-45bc-96d2-0cf7bc29a75b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Articles/tests_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Articles/tests_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utilisateurs/tests_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilisateurs/tests_views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,7 +68,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Django tests.Test: Utilisateurs.tests_views.RoleUpdate">
-    <configuration name="Test: Utilisateurs.tests_views.RoleDelete" type="DjangoTestsConfigurationType" temporary="true">
+    <configuration name="Test: Utilisateurs.tests_views.InfoDelete" type="DjangoTestsConfigurationType" temporary="true">
       <module name="CoronaWatch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -82,27 +81,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="Utilisateurs.tests_views.RoleDelete" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Test: Utilisateurs.tests_views.RoleList" type="DjangoTestsConfigurationType" temporary="true">
-      <module name="CoronaWatch" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="Utilisateurs.tests_views.RoleList" />
+      <option name="TARGET" value="Utilisateurs.tests_views.InfoDelete" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
@@ -149,7 +128,7 @@
       <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Test: Utilisateurs.tests_views.roleGet" type="DjangoTestsConfigurationType" temporary="true">
+    <configuration name="Test: Utilisateurs.tests_views.infoGet" type="DjangoTestsConfigurationType" temporary="true">
       <module name="CoronaWatch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -162,7 +141,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="Utilisateurs.tests_views.roleGet" />
+      <option name="TARGET" value="Utilisateurs.tests_views.infoGet" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: Utilisateurs.tests_views.infoList" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="CoronaWatch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="Utilisateurs.tests_views.infoList" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
@@ -196,10 +195,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Django tests.Test: Utilisateurs.tests_views.RoleUpdate" />
+        <item itemvalue="Django tests.Test: Utilisateurs.tests_views.InfoDelete" />
+        <item itemvalue="Django tests.Test: Utilisateurs.tests_views.infoGet" />
+        <item itemvalue="Django tests.Test: Utilisateurs.tests_views.infoList" />
         <item itemvalue="Django tests.Test: Utilisateurs.tests_views.RoleUpdate.test_role_update" />
-        <item itemvalue="Django tests.Test: Utilisateurs.tests_views.RoleDelete" />
-        <item itemvalue="Django tests.Test: Utilisateurs.tests_views.roleGet" />
-        <item itemvalue="Django tests.Test: Utilisateurs.tests_views.RoleList" />
       </list>
     </recent_temporary>
   </component>
@@ -265,7 +264,7 @@
       <workItem from="1591293827741" duration="560000" />
       <workItem from="1591300547438" duration="1886000" />
       <workItem from="1591398957959" duration="69000" />
-      <workItem from="1591433219520" duration="3678000" />
+      <workItem from="1591433219520" duration="4729000" />
     </task>
     <servers />
   </component>
@@ -410,6 +409,7 @@
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_TestPhotoArticle.coverage" NAME="Test: Articles.tests_views.TestPhotoArticle Coverage Results" MODIFIED="1588775025866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CoronaWatch$Test__Utilisateurs_tests_serializers_rolesSerializer.coverage" NAME="Test: Utilisateurs.tests_serializers.rolesSerializer Coverage Results" MODIFIED="1591188371435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_TestCommentaire_test_video_not_found.coverage" NAME="Test: Articles.tests_views.TestCommentaire.test_video_not_found Coverage Results" MODIFIED="1587761948122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CoronaWatch$Test__Utilisateurs_tests_views_infoList.coverage" NAME="Test: Utilisateurs.tests_views.infoList Coverage Results" MODIFIED="1591437336658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_TestArticle_test_article_update_authorized.coverage" NAME="Test: Articles.tests_views.TestArticle.test_article_update_authorized Coverage Results" MODIFIED="1588775705354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_ArticleVideosList.coverage" NAME="Test: Articles.tests_views.ArticleVideosList Coverage Results" MODIFIED="1589500541106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CoronaWatch$Test__Articles_tests_serializers_ArticleSerializer_test_model_fields.coverage" NAME="Test: Articles.tests_serializers.ArticleSerializer.test_model_fields Coverage Results" MODIFIED="1590530282924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -423,6 +423,7 @@
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_TestCommentaire_test_commentaire_update.coverage" NAME="Test: Articles.tests_views.TestCommentaire.test_commentaire_update Coverage Results" MODIFIED="1587765926742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_TestArticle_test_article_not_found.coverage" NAME="Test: Articles.tests_views.TestArticle.test_article_not_found Coverage Results" MODIFIED="1588778743976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CoronaWatch$Test__Utilisateurs_tests_models_roleTests_test_add_role.coverage" NAME="Test: Utilisateurs.tests_models.roleTests.test_add_role Coverage Results" MODIFIED="1590525659057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CoronaWatch$Test__Utilisateurs_tests_views_InfoDelete.coverage" NAME="Test: Utilisateurs.tests_views.InfoDelete Coverage Results" MODIFIED="1591437650301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_TestArticle_test_article_delete_unauthorized.coverage" NAME="Test: Articles.tests_views.TestArticle.test_article_delete_unauthorized Coverage Results" MODIFIED="1588775593055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_VideoArticleDelete.coverage" NAME="Test: Articles.tests_views.VideoArticleDelete Coverage Results" MODIFIED="1589500124032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_TestRedacteurArticles_test_redacteur_article_update_unauthorized.coverage" NAME="Test: Articles.tests_views.TestRedacteurArticles.test_redacteur_article_update_unauthorized Coverage Results" MODIFIED="1587768027885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -452,6 +453,7 @@
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_TestVideoArticle_test_video_found.coverage" NAME="Test: Articles.tests_views.TestVideoArticle.test_video_found Coverage Results" MODIFIED="1587692913178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_ArticlePhotosGet.coverage" NAME="Test: Articles.tests_views.ArticlePhotosGet Coverage Results" MODIFIED="1589500507817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_TestPhotoArticle_test_video_not_found.coverage" NAME="Test: Articles.tests_views.TestPhotoArticle.test_video_not_found Coverage Results" MODIFIED="1587751410900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CoronaWatch$Test__Utilisateurs_tests_views_infoGet.coverage" NAME="Test: Utilisateurs.tests_views.infoGet Coverage Results" MODIFIED="1591437456889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Region_tests_views_RegionUpdate.coverage" NAME="Test: Region.tests_views.RegionUpdate Coverage Results" MODIFIED="1589156539938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_serializers_PhotoArticleSerializer.coverage" NAME="Test: Articles.tests_serializers.PhotoArticleSerializer Coverage Results" MODIFIED="1589123184344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Region_tests_views_StatistiqueValideGet.coverage" NAME="Test: Region.tests_views.StatistiqueValideGet Coverage Results" MODIFIED="1589163292677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -459,7 +461,7 @@
     <SUITE FILE_PATH="coverage/CoronaWatch$Test__Utilisateurs_tests_views_UserList.coverage" NAME="Test: Utilisateurs.tests_views.UserList Coverage Results" MODIFIED="1591433682350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_TestRedacteurArticles_test_article_not_found.coverage" NAME="Test: Articles.tests_views.TestRedacteurArticles.test_article_not_found Coverage Results" MODIFIED="1587766815239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_TestPhotoArticle_test_video_found.coverage" NAME="Test: Articles.tests_views.TestPhotoArticle.test_video_found Coverage Results" MODIFIED="1587751347916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/CoronaWatch$Test__Utilisateurs_tests_views_RoleUpdate.coverage" NAME="Test: Utilisateurs.tests_views.RoleUpdate Coverage Results" MODIFIED="1591436902893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CoronaWatch$Test__Utilisateurs_tests_views_RoleUpdate.coverage" NAME="Test: Utilisateurs.tests_views.RoleUpdate Coverage Results" MODIFIED="1591437795716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Sante_tests_views_UtilisateurInfoSanteGet.coverage" NAME="Test: Sante.tests_views.UtilisateurInfoSanteGet Coverage Results" MODIFIED="1589563959155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_ModerateurArticlesRList.coverage" NAME="Test: Articles.tests_views.ModerateurArticlesRList Coverage Results" MODIFIED="1589563506022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ProjetCorona_WatchEquipe4$Test__Articles_tests_views_ArticleCreate.coverage" NAME="Test: Articles.tests_views.ArticleCreate Coverage Results" MODIFIED="1589550990687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

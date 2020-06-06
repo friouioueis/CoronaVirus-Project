@@ -1,5 +1,4 @@
 import json
-from django.forms import model_to_dict
 from rest_framework.reverse import reverse
 from rest_framework.test import APITestCase
 from rest_framework import status
@@ -139,3 +138,71 @@ class RoleUpdate(APITestCase):
         response = self.client.put(url, {'idRole': self.role.idRole, 'Type': self.role.Type, 'idUtilisateurR': self.role.idUtilisateurR.id})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.json().get('Type'), self.role.Type)
+
+
+class infoList(APITestCase):
+
+    def setUp(self):
+        self.user = compteUtilisateurFactory()
+        for i in range(4):
+            infoFactory()
+
+    def test_info_list(self):
+        self.client.force_authenticate(user=self.user)
+        response = self.client.get(
+            reverse('infos-list')
+        )
+        expected = 4
+
+        self.assertEqual(
+            response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            len(json.loads(response.content.decode('utf-8'))),
+            expected)
+
+
+class infoGet(APITestCase):
+
+    def setUp(self):
+        self.user = compteUtilisateurFactory()
+        self.info = infoFactory()
+
+    def test_info_found(self):
+        self.client.force_authenticate(user=self.user)
+        response = self.client.get(reverse('infos-detail',  kwargs={'pk': self.info.idInfoPer}))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.json().get('nom'), self.info.nom)
+
+    def test_info_not_found(self):
+        self.client.force_authenticate(user=self.user)
+        response = self.client.get(reverse('infos-detail',  kwargs={'pk': 3}))
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+class InfoDelete(APITestCase):
+
+    def setUp(self):
+        self.user = compteUtilisateurFactory()
+        self.info = infoFactory()
+
+    def test_info_delete(self):
+        before_list_amount = infoPersonel.objects.count()
+        url = reverse('infos-detail', kwargs={'pk': self.info.idInfoPer})
+        self.client.force_authenticate(user=self.user)
+        response = self.client.delete(url)
+        after_list_amount = infoPersonel.objects.count()
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        self.assertEqual(before_list_amount-after_list_amount, 1)
+
+
+class infoUpdate(APITestCase):
+    def setUp(self):
+        self.user = compteUtilisateurFactory()
+        self.info = infoFactory(idUtilisateurIp=self.user)
+
+    def test_info_update(self):
+        self.info.nom = 'updated'
+        url = reverse('infos-detail', kwargs={'pk': self.info.idRole})
+        self.client.force_authenticate(user=self.user)
+        response = self.client.put(url, {'idInfoPer': self.info.idInfoPer, 'nom': self.info.nom, 'idUtilisateurIp': self.info.idUtilisateurR.id})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.json().get('nom'), self.info.nom)
