@@ -155,7 +155,6 @@ class ArticleUpdate(APITestCase):
         self.article = ArticleFactory(idRedacteurAr=self.user2)
 
     def test_article_update_authorized(self):
-
         self.article.contenuAr = "updated"
         url = reverse('articles-detail', kwargs={'pk': self.article.idArticle})
         self.client.force_authenticate(user=self.user2)

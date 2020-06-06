@@ -129,15 +129,13 @@ class RoleDelete(APITestCase):
 class RoleUpdate(APITestCase):
     def setUp(self):
         self.user = compteUtilisateurFactory()
+        Group.objects.get_or_create(name='rd')
         self.role = roleFactory(idUtilisateurR=self.user)
 
     def test_role_update(self):
-
-        self.role.Type = "md"
+        self.role.Type = 'rd'
         url = reverse('roles-detail', kwargs={'pk': self.role.idRole})
         self.client.force_authenticate(user=self.user)
-        response=self.client.put(url, {'id': self.role.idRole, 'Type': self.role.Type, 'idUtilisateurR': self.role.idUtilisateurR})
+        response = self.client.put(url, {'idRole': self.role.idRole, 'Type': self.role.Type, 'idUtilisateurR': self.role.idUtilisateurR.id})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.json().get('Type'), self.role.Type)
-
-
