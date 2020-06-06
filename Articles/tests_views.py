@@ -1,14 +1,13 @@
 import json
-
 from django.contrib.auth.models import Group
 from django.forms import model_to_dict
 from rest_framework.reverse import reverse
 from rest_framework.test import APITestCase
 from rest_framework import status
-
 from Utilisateurs.models import role
 from .factories import *
 from .models import *
+
 
 class ArticleList(APITestCase):
 
