@@ -5,6 +5,7 @@ from Articles import views
 router = routers.DefaultRouter()
 router.register(r'articles', views.articleView, basename='articles')
 router.register(r'articlesTermines',views.articleTermineView,basename='articlesTermines')
+router.register(r'articlesNonTermines',views.articleNonTermineView,basename='articlesNonTermines')
 router.register(r'articlesValides',views.articleValideView,basename='articlesValides')
 router.register(r'videos_articles', views.videoArticleView, basename='videos_articles')
 router.register(r'photos_articles', views.photoArticleView, basename='photos_articles')

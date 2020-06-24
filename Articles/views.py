@@ -32,10 +32,16 @@ class articleView(viewsets.ModelViewSet):
 
 
 class articleTermineView(viewsets.ReadOnlyModelViewSet):
-    permission_classes = (ArticleTermineAccessPolicy,)
+    permission_classes = (ArticleAccessPolicy,)
     serializer_class = articleSerializer
     def get_queryset(self):
         return article.objects.filter(terminerAR=True)
+
+class articleNonTermineView(viewsets.ReadOnlyModelViewSet):
+    permission_classes = (ArticleTermineAccessPolicy,)
+    serializer_class = articleSerializer
+    def get_queryset(self):
+        return article.objects.filter(terminerAR=None)
 
 
 class articleValideView(viewsets.ReadOnlyModelViewSet):

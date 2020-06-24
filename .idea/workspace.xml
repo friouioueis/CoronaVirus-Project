@@ -3,46 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3391a679-f613-45bc-96d2-0cf7bc29a75b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Articles/policies.py" beforeDir="false" afterPath="$PROJECT_DIR$/Articles/policies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Articles/tests_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Articles/tests_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Articles/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Articles/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Articles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Articles/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoronaWatch/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CoronaWatch/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Region/factories.py" beforeDir="false" afterPath="$PROJECT_DIR$/Region/factories.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Region/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Region/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Region/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Region/tests_serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Region/tests_serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Region/tests_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Region/tests_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Region/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Region/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Region/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Region/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/migrations/0002_beer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/migrations/0003_auto_20200522_1714.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/migrations/0004_auto_20200522_1715.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/migrations/0005_auto_20200522_1716.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/migrations/0006_article_whoarticlear.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/scrapy/news/news/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/scrapy/news/news/items.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/scrapy/news/news/middlewares.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/scrapy/news/news/pipelines.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/scrapy/news/news/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/scrapy/news/news/spiders/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/scrapy/news/news/spiders/article_spider.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/scrapy/news/scrapy.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/serializers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Signal/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Signal/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Signal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Signal/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Signal/policies.py" beforeDir="false" afterPath="$PROJECT_DIR$/Signal/policies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Signal/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Signal/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Signal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Signal/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Signal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Signal/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,7 +272,7 @@
       <workItem from="1592498792433" duration="6791000" />
       <workItem from="1592575527591" duration="12159000" />
       <workItem from="1592670386338" duration="17159000" />
-      <workItem from="1592959192481" duration="11989000" />
+      <workItem from="1592959192481" duration="13497000" />
     </task>
     <servers />
   </component>
