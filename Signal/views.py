@@ -1,15 +1,38 @@
 from django.http import JsonResponse
+from django.shortcuts import redirect
 from rest_framework import viewsets
 
-from .policies import SignalAccessPolicy
+from .policies import SignalAccessPolicy, EmailAccessPolicy
 from .serializers import *
 from .models import *
 
+from django.core.mail import send_mail, EmailMessage
+from django.conf import settings
+
+class emailView(viewsets.ModelViewSet):
+    permission_classes = (EmailAccessPolicy,)
+    serializer_class = emailSerializer
+    queryset = emailCCC.objects.all()
+    def perform_create(self, serializer):
+        serializer.save()
+        subject = serializer.data['subject']
+        message = serializer.data['message']
+        email_from = settings.EMAIL_HOST_USER
+        recipient_list = serializer.data['recipient_list'].split(',')
+        email = EmailMessage(
+            subject,
+            message,
+            email_from,
+            recipient_list
+        )
+        email.attach_file(serializer.data['attach'])
+        email.send()
+
 
 class signalementView(viewsets.ModelViewSet):
-    permission_classes          = SignalAccessPolicy
+    permission_classes          = (SignalAccessPolicy,)
     serializer_class            = signalementSerializer
-    queryset                    = signalement.objects.filter(validerSg=None)
+    queryset                    = signalement.objects.all()
 
     def perform_create(self, serializer):
         serializer.save(idUtilisateurSg=self.request.user,validerSg=None,idModerateurSg=None)
@@ -30,9 +53,14 @@ class signalementView(viewsets.ModelViewSet):
         return JsonResponse({"idSignal": s.idSignal, "descriptionSg": s.descriptionSg,"typeSg":s.typeSg,"lienSg":s.lienSg})
 
 
+class signalementNonValideView(viewsets.ReadOnlyModelViewSet):
+    permission_classes          = (SignalAccessPolicy,)
+    serializer_class            = signalementSerializer
+    queryset                    = signalement.objects.filter(validerSg=None)
+
 
 class utilisateurSignalsView(viewsets.ReadOnlyModelViewSet):
-    permission_classes = SignalAccessPolicy
+    permission_classes = (SignalAccessPolicy,)
     serializer_class            = signalementSerializer
 
     def get_queryset(self):
@@ -40,29 +68,22 @@ class utilisateurSignalsView(viewsets.ReadOnlyModelViewSet):
         return signalement.objects.filter(idUtilisateurSg=idUtilisateurSg)
 
 
-class SignalModerValidView(viewsets.ReadOnlyModelViewSet):
-    permission_classes = SignalAccessPolicy
+class SignalModerView(viewsets.ReadOnlyModelViewSet):
+    permission_classes = (SignalAccessPolicy,)
     serializer_class            = signalementSerializer
 
     def get_queryset(self):
         idModerateur            = self.kwargs['id']
-        return signalement.objects.filter(idModerateurSg=idModerateur, validerSg=True)
+        return signalement.objects.filter(idModerateurSg=idModerateur)
 
-class SignalModerRefusView(viewsets.ReadOnlyModelViewSet):
-    permission_classes = SignalAccessPolicy
-    serializer_class            = signalementSerializer
-
-    def get_queryset(self):
-        idModerateur            = self.kwargs['id']
-        return signalement.objects.filter(idModerateurSg=idModerateur, validerSg=False)
 
 class SignalementValidView(viewsets.ReadOnlyModelViewSet):
-    permission_classes = SignalAccessPolicy
+    permission_classes = (SignalAccessPolicy,)
     serializer_class            = signalementSerializer
     queryset                    = signalement.objects.filter(validerSg=True)
 
 class SignalementRefusView(viewsets.ReadOnlyModelViewSet):
-    permission_classes = SignalAccessPolicy
+    permission_classes = (SignalAccessPolicy,)
     serializer_class            = signalementSerializer
     queryset                    = signalement.objects.filter(validerSg=False)
 

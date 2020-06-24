@@ -118,6 +118,7 @@ class articlePhotosView(viewsets.ReadOnlyModelViewSet):
 
 
 class ModerateurValidView(viewsets.ReadOnlyModelViewSet):
+    permission_classes = (ModerateurAccessPolicy,)
     serializer_class            = articleSerializer
 
     def get_queryset(self):

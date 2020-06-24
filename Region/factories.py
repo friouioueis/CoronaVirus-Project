@@ -30,4 +30,5 @@ class StatistiqueFactory(DjangoModelFactory):
     nbrGuerisons=random.randint(0, 500)
     dateSt = datetime.now().strftime("%Y-%m-%dT%H:%M:%S.%f")
     idModerateurSt = factory.SubFactory(compteUtilisateurFactory)
+    idAgentSt=factory.SubFactory(compteUtilisateurFactory)
     validerSt=Faker('boolean')

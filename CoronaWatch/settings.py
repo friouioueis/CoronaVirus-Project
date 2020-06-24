@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'rest_framework_serializer_field_permissions',
+    'django_mysql',
 
 ]
 SITE_ID = 1
@@ -61,7 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-     'requestlogs.middleware.RequestLogsMiddleware',
+    'requestlogs.middleware.RequestLogsMiddleware',
     'requestlogs.middleware.RequestIdMiddleware',
 ]
 
@@ -92,7 +93,7 @@ WSGI_APPLICATION = 'CoronaWatch.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'CoronaWatch',
+        'NAME': 'corona',
         'USER': 'root',
         'PASS': '',
         'HOST': 'localhost',
@@ -162,7 +163,7 @@ REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'Utilisateurs.serializers.compteUtilisateurSerializer',
     'TOKEN_SERIALIZER': 'Utilisateurs.serializers.TokenSerializer',}
 
-cornaD_HOSTS=['*']
+ALLOWED_HOSTS=['*']
 
 LOGGING = {
     'version': 1,
@@ -191,3 +192,10 @@ REQUESTLOGS = {
     'ATTRIBUTE_NAME': '_requestlog',
     'METHODS': ('GET', 'PUT', 'PATCH', 'POST', 'DELETE'),
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'equipe4projet2cssil@gmail.com'
+EMAIL_HOST_PASSWORD = 'equipe4projet2cssilpassword'

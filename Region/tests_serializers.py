@@ -31,7 +31,7 @@ class StatistiqueSerializer(TestCase):
                 getattr(ar, field_name)
             )
         for field_name in [
-            'idModerateurSt'
+            'idModerateurSt','idAgentSt'
         ]:
             self.assertEqual(
                 serializer.data[field_name],

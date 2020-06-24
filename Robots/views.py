@@ -1,52 +1,80 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from rest_framework import viewsets
 from rest_framework.decorators import action
-from scrapy.crawler import CrawlerRunner
-from scrapy.utils.log import configure_logging
-from twisted.internet import reactor
+from .SpidersManager import SpidersManager
 
-from .scrapy.news.news.spiders.article_spider import ArticleSpider
 from .serializers import *
 from .models import *
-
-
-class pubFacebookView(viewsets.ModelViewSet):
-    serializer_class                = pubFacebookSerializer
-    queryset                        = pubFacebook.objects.all()
 
 
 class pubYoutubeView(viewsets.ModelViewSet):
     serializer_class                = pubYoutubeSerializer
     queryset                        = pubYoutube.objects.all()
 
-
-class pubSiteWebView(viewsets.ModelViewSet):
-    serializer_class                = pubSiteWebSerializer
-    queryset                        = pubSiteWeb.objects.all()
-
-
-class SortedpubFacebookView(viewsets.ModelViewSet):
-    serializer_class                = pubFacebookSerializer
-    queryset                        = pubFacebook.objects.all().order_by('DateFb')
-
+    def update(self, request, pk=None):
+        article=self.get_object()
+        article.validerYt=request.data['validerYt']
+        article.idModerateurYt_id=request.user.id
+        article.save()
+        return  JsonResponse({"idPubYoutube":article.idPubYoutube,"validerYt":article.validerYt,'idModerateurYt':article.idModerateurYt.id})
 
 class SortedpubYoutubeView(viewsets.ModelViewSet):
     serializer_class                = pubYoutubeSerializer
-    queryset                        = pubYoutube.objects.all().order_by('DateYt')
+    queryset                        = pubYoutube.objects.all().order_by('-dateYt')
+
+    def update(self, request, pk=None):
+        article=self.get_object()
+        article.validerYt=request.data['validerYt']
+        article.idModerateurYt_id=request.user.id
+        article.save()
+        return  JsonResponse({"idPubYoutube":article.idPubYoutube,"validerYt":article.validerYt,'idModerateurYt':article.idModerateurYt.id})
+
+class pubGNView(viewsets.ModelViewSet):
+    serializer_class                = pubGNSerializer
+    queryset                        = pubGoogleNews.objects.all()
+
+    def update(self, request, pk=None):
+        article=self.get_object()
+        article.validerGN=request.data['validerGN']
+        article.idModerateurGN_id=request.user.id
+        article.save()
+        return  JsonResponse({"idPubGN":article.idPubGN,"validerGN":article.validerGN,'idModerateurGN':article.idModerateurGN.id})
 
 
-class SortedpubSiteWebView(viewsets.ModelViewSet):
-    serializer_class                = pubSiteWebSerializer
-    queryset                        = pubSiteWeb.objects.all().order_by('DateSw')
+class SortedpubGNView(viewsets.ModelViewSet):
+    serializer_class                = pubGNSerializer
+    queryset                        = pubGoogleNews.objects.all().order_by('-dateExt')
+
+    def update(self, request, pk=None):
+        article=self.get_object()
+        article.validerGN=request.data['validerGN']
+        article.idModerateurGN_id=request.user.id
+        article.save()
+        return  JsonResponse({"idPubGN":article.idPubGN,"validerGN":article.validerGN,'idModerateurGN':article.idModerateurGN.id})
+
+
+class ArticlesView(viewsets.ModelViewSet):
+    serializer_class                = ArticleSerializer
+    queryset                        = Article.objects.all()
+
+    def update(self, request, pk=None):
+        article=self.get_object()
+        article.validerAr=request.data['validerAr']
+        article.idModerateurSw_id=request.user.id
+        article.save()
+        return  JsonResponse({"id":article.id,"validerAr":article.validerAr,'idModerateurSw':article.idModerateurSw.id})
+
+
+class SortedArticlesView(viewsets.ModelViewSet):
+    serializer_class                = ArticleSerializer
+    queryset                        = Article.objects.all().order_by('-dateExt')
 
 
 class RunSpiderView(viewsets.ViewSet):
-
-    @action(detail=False, methods=['GET'], name='beer-run')
+    serializer_class=RunSpiderSerializer
+    
+    @action(detail=False, methods=['POST'], name='spider-run')
     def run(self, request, pk=None):
-        configure_logging({'LOG_FORMAT': '%(levelname)s: %(message)s'})
-        runner = CrawlerRunner()
-        d = runner.crawl(ArticleSpider)
-        d.addBoth(lambda _: reactor.stop())
-        reactor.run()  # the script will block here until the crawling is finished
+        params=request.POST
+        SpidersManager(params.get('langue'),params.get('source').split(','),params.get('dateDebut'),params.get('dateFin'))
         return HttpResponse('')

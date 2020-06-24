@@ -22,22 +22,36 @@ class regionView(viewsets.ModelViewSet):
 
 class statistiqueRegionView(viewsets.ModelViewSet):
     permission_classes = (StatistiquesAccessPolicy,)
-    serializer_class                = statistiqueRegionSerializer
-    queryset                        = statistiqueRegion.objects.all()
+    serializer_class   = statistiqueRegionSerializer
+    queryset           = statistiqueRegion.objects.all()
+
+    def perform_create(self, serializer):
+        serializer.save(idAgentSt=self.request.user,validerSt=None,idModerateurSt=None)
 
     def partial_update(self, request, pk=None):
         stat=self.get_object()
         stat.validerSt=request.data["validerSt"]
-        stat.idModerateurSt_id=request.data["idModerateurSt"]
+        stat.idModerateurSt_id=request.user.id
         stat.save()
         return JsonResponse({"idStatistique":stat.idStatistique,"validerSt":stat.validerSt})
 
     def update(self, request, pk=None):
         stat = self.get_object()
-        stat.validerSt = request.data["validerSt"]
-        stat.idModerateurSt_id = request.data["idModerateurSt"]
+        stat.nbrPorteurVirus = request.data["nbrPorteurVirus"]
+        stat.casConfirme=request.data["casConfirme"]
+        stat.casRetablis=request.data["casRetablis"]
+        stat.nbrDeces=request.data["nbrDeces"]
+        stat.nbrGuerisons=request.data["nbrGuerisons"]
         stat.save()
-        return JsonResponse({"idStatistique": stat.idStatistique, "validerSt": stat.validerSt})
+        return JsonResponse({"idStatistique": stat.idStatistique, "nbrPorteurVirus": stat.nbrPorteurVirus,"casConfirme": stat.casConfirme,"casRetablis":stat.casRetablis,"nbrDeces":stat.nbrDeces,"nbrGuerisons":stat.nbrGuerisons})
+
+
+class statistiqueRegionNonValideView(viewsets.ReadOnlyModelViewSet):
+    permission_classes = (StatistiquesAccessPolicy,)
+    serializer_class = statistiqueRegionSerializer
+
+    def get_queryset(self):
+        return statistiqueRegion.objects.filter(validerSt=None)
 
 
 class statistiqueRegionValideView(viewsets.ReadOnlyModelViewSet):
@@ -46,9 +60,36 @@ class statistiqueRegionValideView(viewsets.ReadOnlyModelViewSet):
         return statistiqueRegion.objects.filter(validerSt=True)
 
 
+class statistiqueRegionRefuseView(viewsets.ReadOnlyModelViewSet):
+    permission_classes = (StatistiquesAccessPolicy,)
+    serializer_class                = statistiqueRegionSerializer
+    def get_queryset(self):
+        return statistiqueRegion.objects.filter(validerSt=False)
+
+
 class regionStatsView(viewsets.ReadOnlyModelViewSet):
     serializer_class                = statistiqueRegionSerializer
 
     def get_queryset(self):
         idRegionSt                  = self.kwargs['id']
         return statistiqueRegion.objects.filter(validerSt=True,idRegionSt=idRegionSt).order_by('dateSt')
+
+
+class ModerateurStatsView(viewsets.ReadOnlyModelViewSet):
+    permission_classes = (StatistiquesAccessPolicy,)
+    serializer_class                = statistiqueRegionSerializer
+
+    def get_queryset(self):
+        idModerateurSt                  = self.kwargs['id']
+        return statistiqueRegion.objects.filter(idModerateurSt=idModerateurSt).order_by('dateSt')
+
+
+class AgentStatsView(viewsets.ReadOnlyModelViewSet):
+    permission_classes = (StatistiquesAccessPolicy,)
+    serializer_class                = statistiqueRegionSerializer
+
+    def get_queryset(self):
+        idAgentSt                  = self.kwargs['id']
+        return statistiqueRegion.objects.filter(idAgentSt=idAgentSt).order_by('dateSt')
+
+

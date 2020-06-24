@@ -23,3 +23,19 @@ class SignalAccessPolicy(AccessPolicy):
     def is_author(self, request, view, action) -> bool:
         s = view.get_object()
         return request.user == s.idUtilisateurSg
+
+
+
+class EmailAccessPolicy(AccessPolicy):
+    statements = [
+        {
+            "action": ["create"],
+            "principal": ["group:md"],
+            "effect": "allow"
+        },
+        {
+            "action": ["destroy","update","list","retrieve","destroy","partial_update"],
+            "principal": ["*"],
+            "effect": "deny"
+        },
+    ]

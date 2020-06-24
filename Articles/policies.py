@@ -101,14 +101,18 @@ class PhotoArticleAccessPolicy(AccessPolicy):
         return request.user == ar.idRedacteurAr
 
 
-
 class ModerateurAccessPolicy(AccessPolicy):
     statements = [
         {
-            "action": ["list","retrieve"],
+            "action": ["retrieve"],
             "principal": ["group:md"],
             "effect": "allow",
             "condition": "is_moderateur"
+        },
+        {
+            "action": ["list"],
+            "principal": ["group:md"],
+            "effect": "allow"
         },
     ]
 

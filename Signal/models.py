@@ -1,4 +1,7 @@
 from django.db import models
+from django.db.models import EmailField
+from django_mysql.models import ListTextField
+
 from Utilisateurs.models import compteUtilisateur
 
 SIGNALEMENT_CHOICES = (
@@ -6,10 +9,24 @@ SIGNALEMENT_CHOICES = (
     ('vi', 'video')
 )
 
+class emailCCC (models.Model):
+    idEmail=models.AutoField(primary_key=True, editable=False)
+    subject = models.TextField(verbose_name='Titre')
+    message = models.TextField(verbose_name='Message')
+    email_from = models.EmailField(verbose_name='source')
+    recipient_list = ListTextField(
+        base_field=EmailField(),
+        size=100,
+    )
+    attach=models.TextField(verbose_name='piece jointe')
+
+    def __str__(self):
+        return 'email titre: ' + self.subject
+
 class signalement(models.Model):
     idSignal                        = models.AutoField(primary_key=True, editable=False)
     idUtilisateurSg                 = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
-                                                        related_name='sign_utilisateur', verbose_name='utilisateur')
+                                                        related_name='sign_utilisateur', verbose_name='utilisateur',null=True, blank=True)
     idModerateurSg                  = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
                                                         related_name='sign_moderateur', verbose_name='moderateur',
                                                         null=True, blank=True)

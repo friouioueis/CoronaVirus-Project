@@ -114,7 +114,7 @@ class ArticleGet(APITestCase):
 
     def test_article_not_found(self):
         self.client.force_authenticate(user=self.user)
-        response = self.client.get(reverse('articles-detail',  kwargs={'pk':10}))
+        response = self.client.get(reverse('articles-detail',  kwargs={'pk':100}))
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
 class ArticleDelete(APITestCase):
@@ -229,7 +229,7 @@ class ArticleCreate(APITestCase):
 
 
     def test_article_create_unauthorized(self):
-        article2 = ArticleFactory(idArticle=5)
+        article2 = ArticleFactory()
         dict=model_to_dict(article2)
 
         url = reverse('articles-list')
@@ -267,7 +267,7 @@ class VideoArticleGet(APITestCase):
         self.assertEqual(response.json().get('idVideo'), self.video.idVideo)
 
     def test_videoArticle_not_found(self):
-        response = self.client.get(reverse('videos_articles-detail', kwargs={'pk': 10}))
+        response = self.client.get(reverse('videos_articles-detail', kwargs={'pk': 100}))
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
 class VideoArticleDelete(APITestCase):
@@ -329,7 +329,7 @@ class PhotoArticleGet(APITestCase):
         self.assertEqual(response.json().get('idPhoto'), self.photo.idPhoto)
 
     def test_photoArticle_not_found(self):
-        response = self.client.get(reverse('photos_articles-detail', kwargs={'pk': 10}))
+        response = self.client.get(reverse('photos_articles-detail', kwargs={'pk': 100}))
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
 class PhotoArticleDelete(APITestCase):
@@ -390,7 +390,7 @@ class CommentaireGet(APITestCase):
         self.assertEqual(response.json().get('contenuCom'), self.commentaire.contenuCom)
 
     def test_commentaire_not_found(self):
-        response = self.client.get(reverse('commentaires-detail', kwargs={'pk': 10}))
+        response = self.client.get(reverse('commentaires-detail', kwargs={'pk': 100}))
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
 class CommentaireDelete(APITestCase):
@@ -460,7 +460,7 @@ class CommentaireUpdate(APITestCase):
         self.commentaire = CommentaireFactory()
 
     def test_commentaire_update_unauthorized(self):
-        c = CommentaireFactory(idCommentaire=19, idUtilisateurCom=self.user)
+        c = CommentaireFactory(idUtilisateurCom=self.user)
 
         c.contenuCom = "nouveau contenu"
         url = reverse('commentaires-detail', kwargs={'pk': c.idCommentaire})
@@ -626,47 +626,44 @@ class ArticleVideosGet(APITestCase):
         response = self.client.get(reverse('articleVideos-detail', kwargs={'id': self.article.idArticle,'pk': 10}))
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
-class ModerateurArticlesVList(APITestCase):
+class ModerateurArticlesList(APITestCase):
     def setUp(self):
         self.user=compteUtilisateurFactory()
         Group.objects.get_or_create(name='md')
         role.addRole(self.user.id, 'md')
-        for i in range(4):
-            ArticleFactory(idModerateurAr=self.user,validerAR=True)
 
-    def test_moderateur_articleV_list(self):
+        for i in range(4):
+            ArticleFactory(validerAR=True)
+
+        self.article1=ArticleFactory(validerAR=True,idModerateurAr=None)
+        self.article2=ArticleFactory(validerAR=False,idModerateurAr=None)
+
+
+    def test_moderateur_article_list(self):
         self.client.force_authenticate(user=self.user)
-        response = self.client.get(
+        res1=self.client.patch(reverse('articles-detail', kwargs={'pk': self.article1.idArticle}),
+                          {'validerAR': self.article1.validerAR, 'idModerateurAr': self.user.id})
+        res2=self.client.patch(reverse('articles-detail', kwargs={'pk': self.article2.idArticle}),
+                          {'validerAR': self.article2.validerAR, 'idModerateurAr': self.user.id})
+        response1 = self.client.get(
             reverse('moderateur-valid-list', kwargs={'id': self.user.id})
         )
-        expected = 4
-        print(article.objects.count())
-
-        self.assertEqual(
-            response.status_code, status.HTTP_200_OK)
-        self.assertEqual(
-            response.json().get('count'),
-            expected)
-
-class ModerateurArticlesRList(APITestCase):
-    def setUp(self):
-        self.user = compteUtilisateurFactory()
-        Group.objects.get_or_create(name='md')
-        role.addRole(self.user.id, 'md')
-        for i in range(4):
-            ArticleFactory(idModerateurAr=self.user, validerAR=False)
-    def test_moderateur_articleR_list(self):
-        self.client.force_authenticate(user=self.user)
-        response = self.client.get(
+        response2 = self.client.get(
             reverse('moderateur-refus-list', kwargs={'id': self.user.id})
         )
-        expected = 4
+        expected = 1
 
         self.assertEqual(
-            response.status_code, status.HTTP_200_OK)
+            response1.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(json.loads(response.content.decode('utf-8'))),
+            response1.json().get('count'),
             expected)
+        self.assertEqual(
+            response2.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            response2.json().get('count'),
+            expected)
+
 
 
 

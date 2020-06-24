@@ -1,5 +1,3 @@
-import json
-
 from django.contrib.auth.models import Group
 from django.forms import model_to_dict
 from rest_framework.reverse import reverse
@@ -132,7 +130,7 @@ class RegionCreate(APITestCase):
         role.addRole(self.user2.id, 'ad')
 
     def test_region_create_authorized(self):
-        reg = RegionFactory(idRegion=1)
+        reg = RegionFactory()
         dict=model_to_dict(reg)
 
         url = reverse('regions-list')
@@ -144,7 +142,7 @@ class RegionCreate(APITestCase):
         self.assertEqual(after_list_amount - before_list_amount, 1)
 
     def test_region_create_unauthorized(self):
-        reg = RegionFactory(idRegion=3)
+        reg = RegionFactory()
         dict=model_to_dict(reg)
 
         url = reverse('regions-list')
@@ -263,16 +261,16 @@ class StatistiqueValider(APITestCase):
 
     def test_statistique_update_authorized(self):
 
-        self.statistique.validerSt="True"
-
+        self.statistique.nbrPorteurVirus=2000
+        dict = model_to_dict(self.statistique)
         url = reverse('stat_regions-detail', kwargs={'pk': self.statistique.idStatistique})
         self.client.force_authenticate(user=self.user2)
-        response=self.client.put(url,{"validerSt":self.statistique.validerSt,"idModerateurSt":self.user2.id})
+        response=self.client.put(url,dict,format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.json().get('validerSt'), self.statistique.validerSt)
+        self.assertEqual(response.json().get('nbrPorteurVirus'), self.statistique.nbrPorteurVirus)
 
     def test_statistique_update_unauthorized(self):
-        self.statistique.validerSt = "True"
+        self.statistique.nbrPorteurVirus = 2000
 
         url = reverse('stat_regions-detail', kwargs={'pk': self.statistique.idStatistique})
         self.client.force_authenticate(user=self.user1)
@@ -288,7 +286,7 @@ class StatistiqueCreate(APITestCase):
         role.addRole(self.user2.id, 'as')
 
     def test_statistique_create_authorized(self):
-        reg = StatistiqueFactory(idStatistique=1)
+        reg = StatistiqueFactory()
         dict=model_to_dict(reg)
 
         url = reverse('stat_regions-list')
@@ -300,7 +298,7 @@ class StatistiqueCreate(APITestCase):
         self.assertEqual(after_list_amount - before_list_amount, 1)
 
     def test_region_create_unauthorized(self):
-        reg = StatistiqueFactory(idStatistique=3)
+        reg = StatistiqueFactory()
         dict=model_to_dict(reg)
 
         url = reverse('stat_regions-list')
@@ -327,6 +325,37 @@ class StatistiqueValideList(APITestCase):
             response.json().get('count'),
             expected)
 
+class StatistiqueNonValideList(APITestCase):
+
+    def setUp(self):
+        self.user1 = compteUtilisateurFactory()
+        self.user2 = compteUtilisateurFactory()
+        Group.objects.get_or_create(name='md')
+        role.addRole(self.user1.id, 'md')
+        for i in range(4):
+            StatistiqueFactory(validerSt=None)
+        StatistiqueFactory(validerSt=True)
+
+    def test_statistique_list_authorized(self):
+        self.client.force_authenticate(user=self.user1)
+        response = self.client.get(
+            reverse('stat_regions_non_valid-list')
+        )
+        expected = 4
+
+        self.assertEqual(
+            response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            response.json().get('count'),
+            expected)
+
+    def test_statistique_list_unauthorized(self):
+        self.client.force_authenticate(user=self.user2)
+        response = self.client.get(
+                reverse('stat_regions-list')
+            )
+        self.assertEqual(
+            response.status_code, status.HTTP_403_FORBIDDEN)
 
 class StatistiqueValideGet(APITestCase):
 
@@ -340,7 +369,6 @@ class StatistiqueValideGet(APITestCase):
     def test_region_not_found(self):
         response = self.client.get(reverse('stat_valid_regions-detail',  kwargs={'pk':10}))
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
-
 
 class RegionStatistiqueList(APITestCase):
 
@@ -374,3 +402,36 @@ class RegionStatistiqueGet(APITestCase):
     def test_commentaire_not_found(self):
         response = self.client.get(reverse('regionStats-detail', kwargs={'id': self.region.idRegion,'pk': 10}))
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+class StatistiqueRefuseList(APITestCase):
+
+    def setUp(self):
+        self.user1 = compteUtilisateurFactory()
+        self.user2 = compteUtilisateurFactory()
+        Group.objects.get_or_create(name='md')
+        role.addRole(self.user1.id, 'md')
+        for i in range(4):
+            StatistiqueFactory(validerSt=False)
+        StatistiqueFactory(validerSt=True)
+
+    def test_statistique_list_authorized(self):
+        self.client.force_authenticate(user=self.user1)
+        response = self.client.get(
+            reverse('stat_refuse_regions-list')
+        )
+        expected = 4
+
+        self.assertEqual(
+            response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            response.json().get('count'),
+            expected)
+
+    def test_statistique_list_unauthorized(self):
+        self.client.force_authenticate(user=self.user2)
+        response = self.client.get(
+                reverse('stat_refuse_regions-list')
+            )
+        self.assertEqual(
+            response.status_code, status.HTTP_403_FORBIDDEN)
+

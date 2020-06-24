@@ -3,6 +3,10 @@ from rest_framework import serializers
 from Signal.models import *
 from Utilisateurs.serializers import compteUtilisateurSerializer
 
+class emailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=emailCCC
+        fields='__all__'
 
 class signalementSerializer(serializers.ModelSerializer):
     idUtilisateurSg=compteUtilisateurSerializer(many=False, read_only=True)

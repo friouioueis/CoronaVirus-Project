@@ -2,27 +2,38 @@ from django.db import models
 from Utilisateurs.models import compteUtilisateur
 
 
-class pubFacebook(models.Model):
-    idPubFacebook                   = models.AutoField(primary_key=True, editable=True)
-    lienPubFb                       = models.CharField(max_length=255, verbose_name='lien')
-    DateFb                          = models.DateTimeField(verbose_name='date de publication')
-    validerFb                       = models.BooleanField(default=False, verbose_name='validée',null=True, blank=True)
-    refuserFb                       = models.BooleanField(default=False, verbose_name='refusée',null=True, blank=True)
-    idModerateurFb                  = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
-                                        related_name='fb_moderateur', verbose_name='moderateur',
+LANGUE_CHOICES = (
+    ('ar', 'arabe'),
+    ('fr', 'français')
+)
+
+class pubGoogleNews(models.Model):
+    idPubGN                   = models.AutoField(primary_key=True, editable=True)
+    lienPubGN                       = models.CharField(max_length=255, verbose_name='lien')
+    source = models.CharField(max_length=512, verbose_name='source', null=True, blank=True)
+    auteur = models.CharField(max_length=512, verbose_name='auteur', null=True, blank=True)
+    titre = models.CharField(max_length=512, verbose_name='titre')
+    langue = models.CharField(max_length=2, choices=LANGUE_CHOICES, verbose_name='langue', null=True, blank=True)
+    dateGN                          = models.DateTimeField(verbose_name='date de publication')
+    dateExt = models.DateTimeField(auto_now=True, verbose_name='date de scrapping')
+    validerGN                       = models.BooleanField(default=None, verbose_name='validée',null=True, blank=True)
+    idModerateurGN                  = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
+                                        related_name='gn_moderateur', verbose_name='moderateur',
                                         null=True, blank=True)
 
 
     def __str__(self):
-        return 'Pub Facebook n°: ' + str(self.idPubFacebook)
+        return 'Pub google news n°: ' + str(self.idPubGN)
 
 
 class pubYoutube(models.Model):
     idPubYoutube                    = models.AutoField(primary_key=True, editable=True)
-    lienPubYt                       = models.CharField(max_length=255, verbose_name='lien')
-    DateYt                          = models.DateTimeField(verbose_name='date de publication')
-    validerYt                       = models.BooleanField(default=False, verbose_name='validée',null=True, blank=True)
-    refuserYt                       = models.BooleanField(default=False, verbose_name='refusée',null=True, blank=True)
+    videoId                         = models.CharField(max_length=255, verbose_name='video_id')
+    dateYt                          = models.DateTimeField(verbose_name='date de publication')
+    titreYt                         = models.CharField(max_length=512, verbose_name='titre')
+    chaineYt                        = models.CharField(max_length=255,verbose_name='chaine')
+    dateExt = models.DateTimeField(auto_now=True, verbose_name='date de scrapping')
+    validerYt                       = models.BooleanField(default=None, verbose_name='validée',null=True, blank=True)
     idModerateurYt                  = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
                                         related_name='yt_moderateur', verbose_name='moderateur',
                                         null=True, blank=True)
@@ -30,24 +41,18 @@ class pubYoutube(models.Model):
         return 'Pub Youtube n°: ' + str(self.idPubYoutube)
 
 
-class pubSiteWeb(models.Model):
-    idPubWeb                        = models.AutoField(primary_key=True, editable=True)
-    lienPubWeb                      = models.CharField(max_length=255, verbose_name='lien')
-    DateSw                          = models.DateTimeField(verbose_name='date de publication')
-    validerSw                       = models.BooleanField(default=False, verbose_name='validée',null=True, blank=True)
-    refuserSw                       = models.BooleanField(default=False, verbose_name='refusée',null=True, blank=True)
-    idModerateurSw                  = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
-                                        related_name='sw_moderateur', verbose_name='moderateur',
-                                        null=True, blank=True)
-    def __str__(self):
-        return 'Pub Web n°: ' + str(self.idPubWeb)
-
-
 class Article(models.Model):
     id = models.AutoField(primary_key=True, editable=True)
     titre = models.CharField(max_length=512, verbose_name='titre')
     lien = models.CharField(max_length=512, verbose_name='lien')
     source = models.CharField(max_length=512, verbose_name='source')
-    date = models.DateTimeField(verbose_name='date de publication')
+    datePub = models.DateTimeField(verbose_name='date de publication')
+    langue =models.CharField(max_length=2, choices=LANGUE_CHOICES, verbose_name='langue',null=True, blank=True)
+    dateExt=models.DateTimeField(auto_now=True, verbose_name='date de scrapping')
+    validerAr = models.BooleanField(default=None, verbose_name='validée', null=True, blank=True)
+    idModerateurSw = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
+                                       related_name='ar_moderateur', verbose_name='moderateur',
+                                       null=True, blank=True)
+
     def __str__(self):
         return self.titre

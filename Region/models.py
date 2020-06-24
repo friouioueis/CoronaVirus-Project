@@ -18,6 +18,8 @@ class statistiqueRegion(models.Model):
     nbrPorteurVirus                 = models.IntegerField(default=0, verbose_name='Nombre de proteurs')
     idModerateurSt                  = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
                                            related_name='St_moderateur', verbose_name='moderateur', null=True,blank=True)
+    idAgentSt                       = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
+                                       related_name='St_agent', verbose_name='agent')
     casConfirme                     = models.IntegerField(default=0, verbose_name='cas confirmés')
     casRetablis                     = models.IntegerField(default=0, verbose_name='cas retablis')
     nbrDeces                        = models.IntegerField(default=0, verbose_name='Nombre de deces')
