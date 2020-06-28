@@ -1,5 +1,5 @@
-from django.contrib.auth.models import Group
 from rest_framework import viewsets
+from rest_framework.response import Response
 from .serializers import *
 from .models import *
 
@@ -8,13 +8,16 @@ class compteUtilisateurView(viewsets.ModelViewSet):
     serializer_class                    = compteUtilisateurSerializer
     queryset                            = compteUtilisateur.objects.all()
 
+
 class roleView(viewsets.ModelViewSet):
     serializer_class                    = roleSerializer
     queryset                            = role.objects.all()
 
     def create(self, request):
-        role.addRole(request.data['idUtilisateurR'], request.data['Type'])
-        return super().create(request)
+        if role.addRole(request.data['idUtilisateurR'], request.data['Type']) is True:
+            return super().create(request)
+        else:
+            return Response({"detail": 'role already exists'})
 
     def destroy(self, request, *args, **kwargs):
         role.deleteRole(self.get_object().idUtilisateurR,self.get_object().Type)
@@ -33,14 +36,14 @@ class utilisateurRolesView(viewsets.ModelViewSet):
         idUtilisateurR                  = self.kwargs['id']
         return role.objects.filter(idUtilisateurR=idUtilisateurR)
 
-    def create(self, request, *args, **kwargs):
-        group = Group.objects.get(name=request.data['Type'])
-        compteUtilisateur.objects.get(id=request.data['idUtilisateurR']).groups.add(group)
-        return super().create(request)
+    def create(self, request):
+        if role.addRole(request.data['idUtilisateurR'], request.data['Type']) is True:
+            return super().create(request)
+        else:
+            return Response({"detail": 'role already exists'})
 
     def destroy(self, request, *args, **kwargs):
-        group = Group.objects.get(name=self.get_object().Type)
-        group.user_set.remove(self.get_object().idUtilisateurR)
+        role.deleteRole(self.get_object().idUtilisateurR, self.get_object().Type)
         return super().destroy(request)
 
 
@@ -50,3 +53,5 @@ class utilisateurInfosView(viewsets.ModelViewSet):
     def get_queryset(self):
         idUtilisateurR                  = self.kwargs['id']
         return infoPersonel.objects.filter(idUtilisateurR=idUtilisateurR)
+
+

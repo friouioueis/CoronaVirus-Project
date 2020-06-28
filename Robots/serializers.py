@@ -30,6 +30,6 @@ class ArticleSerializer(serializers.ModelSerializer):
 class RunSpiderSerializer(serializers.Serializer):
     langue= serializers.CharField(max_length=2)
     #source=serializers.ListField(child=serializers.CharField(max_length=512))
-    source=serializers.CharField()
+    source=serializers.CharField(max_length=512)
     dateDebut=serializers.DateTimeField()
     dateFin=serializers.DateTimeField()

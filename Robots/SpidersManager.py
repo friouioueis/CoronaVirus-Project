@@ -1,15 +1,14 @@
 from scrapy.crawler import CrawlerRunner
 from scrapy.utils.log import configure_logging
-from twisted.internet import reactor
 
 from .scrapy.news.news.spiders.article_spider import ArticleSpider
 from .scrapy.news.news.spiders.news import news
 from .scrapy.news.news.spiders.youtube import youtube_spider
 
+from crochet import setup
+setup()
 
 def SpidersManager (langue,source,dateDebut,dateFin):
-    configure_logging({'LOG_FORMAT': '%(levelname)s: %(message)s'})
-    runner = CrawlerRunner()
     sources=[]
     if 'youtube' in source:
         if langue=='ar':
@@ -37,7 +36,8 @@ def SpidersManager (langue,source,dateDebut,dateFin):
             sources.append('https://www.france24.com/fr/rss')
         if 'un' in source:
             sources.append('https://news.un.org/feed/subscribe/fr/news/topic/health/feed/rss.xml')
-    d = runner.crawl(ArticleSpider,start_urls=sources, langue=langue,dateDebut=dateDebut,dateFin=dateFin)
-    d.addBoth(lambda _: reactor.stop())
-    reactor.run()
+    configure_logging({'LOG_FORMAT': '%(levelname)s: %(message)s'})
+    runner = CrawlerRunner()
+    runner.crawl(ArticleSpider,start_urls=sources, langue=langue,dateDebut=dateDebut,dateFin=dateFin)
+
     return None

@@ -75,6 +75,7 @@ class RunSpiderView(viewsets.ViewSet):
     
     @action(detail=False, methods=['POST'], name='spider-run')
     def run(self, request, pk=None):
-        params=request.POST
+        params=request.data
+        print(params)
         SpidersManager(params.get('langue'),params.get('source').split(','),params.get('dateDebut'),params.get('dateFin'))
         return HttpResponse('')

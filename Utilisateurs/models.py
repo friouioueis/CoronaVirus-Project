@@ -85,10 +85,13 @@ class role(models.Model):
         return self.get_Type_display() + ':' + self.idUtilisateurR.username
 
 
-    def addRole(idUtilisateurR,Type):
+    def addRole(idUtilisateurR, Type):
         group = Group.objects.get(name=Type)
-        user=compteUtilisateur.objects.get(id=idUtilisateurR)
-        user.groups.add(group)
+        user = compteUtilisateur.objects.get(id=idUtilisateurR)
+        if group not in user.groups.all():
+            user.groups.add(group)
+            return True
+        return False
 
     def deleteRole(idUtilisateurR,Type):
         group = Group.objects.get(name=Type)
