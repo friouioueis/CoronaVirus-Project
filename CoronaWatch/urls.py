@@ -20,6 +20,8 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.documentation import include_docs_urls
 
+from dashboard.views import get
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('articles/', include('Articles.urls')),
@@ -29,6 +31,7 @@ urlpatterns = [
     path('Sante/', include('Sante.urls')),
     path('Signal/', include('Signal.urls')),
     path('Utilisateurs/', include('Utilisateurs.urls')),
+    path('dashboard/',get),
     path('api/docs', include_docs_urls(title='CoronaWatch API'))
 ]
 

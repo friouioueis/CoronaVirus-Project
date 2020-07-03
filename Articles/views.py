@@ -153,10 +153,25 @@ class ArticleRefusView(viewsets.ReadOnlyModelViewSet):
 class videoThematiqueView(viewsets.ModelViewSet):
     serializer_class                = videoThematiqueSerializer
     queryset = videoThematique.objects.all()
+    def perform_create(self, serializer):
+        serializer.save(idUtilisateurVThema=self.request.user)
 
+    def partial_update(self, request, pk=None):
+        article=self.get_object()
+        article.validerVthema=request.data["validerVthema"]
+        article.idModerateurVthema_id=request.user.id
+        article.save()
+        return JsonResponse({"idVideoThema":article.idVideoThema,"validerVthema":article.validerVthema})
 
+    def update(self, request, pk=None):
+        article=self.get_object()
+        article.lienVthema=request.data['lienVthema']
+        article.titreVthema=request.data['titreVthema']
+        article.descriptionVthema=request.data['descriptionVthema']
+        article.save()
+        return JsonResponse({"idVideoThema": article.idVideoThema,"titreVthema":article.titreVthema,"descriptionVthema":article.descriptionVthema,"lienVthema":article.lienVthema})
 
-class VideoUtilisateurView(viewsets.ModelViewSet):
+class VideoUtilisateurView(viewsets.ReadOnlyModelViewSet):
     serializer_class            = videoThematiqueSerializer
     def get_queryset(self):
         idUtilisateur           = self.kwargs['id']

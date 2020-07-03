@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'rest_framework_serializer_field_permissions',
     'django_mysql',
+    'dashboard'
 
 ]
 SITE_ID = 1
@@ -198,4 +199,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'equipe4projet2cssil@gmail.com'
-EMAIL_HOST_PASSWORD = 'equipe4projet2cssilpassword'
+EMAIL_HOST_PASSWORD = 'equipe4' \
+                      'projet2cssilpassword'

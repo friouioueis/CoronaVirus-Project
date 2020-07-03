@@ -1,12 +1,11 @@
 from django.http import JsonResponse
-from django.shortcuts import redirect
 from rest_framework import viewsets
 
 from .policies import SignalAccessPolicy, EmailAccessPolicy
 from .serializers import *
 from .models import *
 
-from django.core.mail import send_mail, EmailMessage
+from django.core.mail import EmailMessage
 from django.conf import settings
 
 class emailView(viewsets.ModelViewSet):

@@ -65,10 +65,9 @@ class videoThematique(models.Model):
     idUtilisateurVThema             = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
                                             related_name='vid_utilisateur', verbose_name='utilisateur')
     idModerateurVthema              = models.ForeignKey(compteUtilisateur, on_delete=models.CASCADE,
-                                           related_name='vid_moderateur', verbose_name='moderateur')
+                                           related_name='vid_moderateur', verbose_name='moderateur',null=True,blank=True)
     lienVthema                      = models.FileField(upload_to='video_thematique/', verbose_name='lien')
-    validerVthema                   = models.BooleanField(default=False, verbose_name='validée')
-    refuserVthema                   = models.BooleanField(default=False, verbose_name='refusée')
+    validerVthema                   = models.BooleanField(default=None, verbose_name='validée')
     titreVthema                     = models.CharField(max_length=255, verbose_name='titre')
     descriptionVthema               = models.TextField(verbose_name='description')
 
