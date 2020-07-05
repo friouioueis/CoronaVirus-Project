@@ -1,10 +1,16 @@
 package com.example.coronawatch
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.coronawatch.api.RetrofitClient
+import com.facebook.CallbackManager
+import com.facebook.FacebookCallback
+import com.facebook.FacebookException
+import com.facebook.login.LoginResult
+import com.facebook.login.widget.LoginButton
 
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_singup.*
@@ -16,6 +22,10 @@ import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
 
+    private lateinit var login : LoginButton;
+    private val callbackManager = CallbackManager.Factory.create()
+
+
     companion object{
         lateinit var loginUser: User
         lateinit var token: String
@@ -24,6 +34,35 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        login = findViewById(R.id.facebook_button)
+
+        login.registerCallback(callbackManager , object : FacebookCallback<LoginResult> {
+
+            override fun onSuccess(result: LoginResult?) {
+
+                Toast.makeText(applicationContext , "تم الدخول بنجاح" , Toast.LENGTH_SHORT ).show()
+
+
+                    startActivity(Intent(applicationContext, MainActivity::class.java))
+
+            }
+
+            override fun onCancel() {
+                println("cancel")
+            }
+
+            override fun onError(error: FacebookException?) {
+                println("error")
+            }
+
+
+        }
+
+        )
+
+
+
 
         login_btn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
@@ -72,6 +111,11 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(Intent(this, SingupActivity::class.java))
             }
         }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        callbackManager.onActivityResult(requestCode , resultCode , data)
+        super.onActivityResult(requestCode, resultCode, data)
     }
 }
 

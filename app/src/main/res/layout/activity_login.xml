@@ -66,13 +66,14 @@
         android:textStyle="bold"
         android:textSize="16sp"
         android:text="نسيت كلمة السر ؟" />
+
     <Button
         android:id="@+id/login_btn"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@+id/password_forgotten"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="29dp"
         android:layout_marginRight="20dp"
         android:background="@color/colorPrimary"
         android:text="تسجيل الدخول"
@@ -83,6 +84,19 @@
 
         />
 
+
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/facebook_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginBottom="30dp"
+        android:layout_below="@+id/login_btn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginRight="20dp"/>
 
     <Button
         android:id="@+id/singup_link_btn"
