@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/country_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:text="Pays"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:padding="10dp"
+        android:id="@+id/linearLayout2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/info_wilaya_style"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/country_name"
+        app:layout_constraintTop_toBottomOf="@+id/country_name" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="الحالات المؤكدة"
+            android:textAlignment="center" />
+        <TextView
+            android:id="@+id/international_cas_confirme"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:id="@+id/linearLayout3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/info_wilaya_style"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/country_name"
+        app:layout_constraintTop_toBottomOf="@+id/country_name" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="حاملو الفيروس"
+            android:textAlignment="center" />
+        <TextView
+            android:id="@+id/international_porteurs_virus"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:padding="10dp"
+        android:id="@+id/linearLayout5"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/info_wilaya_style"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/country_name"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="عدد حالات التعافي"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/international_cas_retablis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="5"
+            android:textAlignment="center" />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:padding="10dp"
+        android:id="@+id/linearLayout4"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/info_wilaya_style"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/country_name"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="الوفايات"
+            android:textAlignment="center" />
+        <TextView
+            android:id="@+id/international_nombre_deces"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

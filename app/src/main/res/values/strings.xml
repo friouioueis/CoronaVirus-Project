@@ -18,6 +18,7 @@
     <string name="menu_alert">الإخطارات</string>
     <string name="menu_diagno">الحصول على تشخيص</string>
     <string name="menu_notification">التنبيهات</string>
+    <string name="base_url">string</string>
 
 
 

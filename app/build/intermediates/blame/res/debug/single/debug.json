@@ -16,6 +16,10 @@
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_article.png"
     },
     {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\layout_video_list.xml.flat",
+        "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\src\\main\\res\\layout\\video_list.xml"
+    },
+    {
         "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_image.png.flat",
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_image.png"
     },
@@ -74,6 +78,10 @@
     {
         "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo.png.flat",
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\src\\main\\res\\drawable\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\layout_international_statesempty.xml.flat",
+        "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\src\\main\\res\\layout\\international_statesempty.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable_side_nav_bar.xml.flat",
@@ -228,6 +236,10 @@
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
     },
     {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\layout_video_view.xml.flat",
+        "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\src\\main\\res\\layout\\video_view.xml"
+    },
+    {
         "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_bavette.png.flat",
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\src\\main\\res\\drawable-v21\\bavette.png"
     },
@@ -368,6 +380,10 @@
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_download.xml"
     },
     {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\layout_international_states.xml.flat",
+        "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\src\\main\\res\\layout\\international_states.xml"
+    },
+    {
         "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_social.png.flat",
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_social.png"
     },
@@ -482,6 +498,10 @@
     {
         "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_notifications.png.flat",
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_notifications.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_international.xml.flat",
+        "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\src\\main\\res\\layout\\fragment_international.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_article.png.flat",

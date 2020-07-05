@@ -7,15 +7,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.coronawatch.R
+import com.example.coronawatch.ui.international.InternationalFragment
 
 
 class DownloadFragment : Fragment() {
 
     companion object {
-        fun newInstance() = DownloadFragment()
+        fun newInstance() = InternationalFragment()
     }
 
-    private lateinit var viewModel: DownloadViewModel
+    private lateinit var viewModel: InternationalViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,7 +27,7 @@ class DownloadFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(DownloadViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(InternationalViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

@@ -9,7 +9,7 @@ class InfoWilaya(
     val nbrGuerisons: Int,
     val dateSt: String,
     val validerSt: Int,
-    val refuserSt: Int,
+
     val idRegionSt: Int,
     val idModerateurSt: Int
 ) {

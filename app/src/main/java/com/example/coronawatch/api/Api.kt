@@ -1,6 +1,7 @@
 package com.example.coronawatch.api
 
 import com.example.coronawatch.InfoWilaya
+import com.example.coronawatch.Results
 import models.DefaultResponse
 import models.LoginResponse
 
@@ -31,6 +32,7 @@ interface Api {
     ): Call<LoginResponse>
 
 
+    @GET("/Region/stat_valid_regions/") fun get_stats_wilaya(): Call<Results>
 
 }
 

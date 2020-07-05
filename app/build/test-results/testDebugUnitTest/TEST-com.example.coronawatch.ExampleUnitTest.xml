@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.coronawatch.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-17T18:41:59" hostname="LAPTOP-TIT7IAH1" time="0.002">
-  <properties/>
-  <testcase name="addition_isCorrect" classname="com.example.coronawatch.ExampleUnitTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

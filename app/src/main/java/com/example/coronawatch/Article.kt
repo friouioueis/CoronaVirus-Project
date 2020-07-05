@@ -1,21 +1,29 @@
+
+import android.annotation.SuppressLint
 import android.content.Context
+import android.os.Build
+import androidx.annotation.RequiresApi
 import com.example.coronawatch.Commentaire
+
 import com.example.coronawatch.adapter.CommentsAdapter
-import com.example.coronawatch.RecyclerViewAdapter
+import com.example.myapplication.RecyclerViewAdapter
+import com.example.myapplication.RecyclerViewVideoAdapter
+
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.LocalTime
 
 class Article(
-    username: String,
-    content: String,
-    imageURLs: ArrayList<String>,
+    val username: String,
+    val content: String,
+    val imageURLs: ArrayList<String>,
+    val videoURLs: ArrayList<String>,
     context: Context?,
     time: String,
-    comments: ArrayList<Commentaire>
+    val comments: ArrayList<Commentaire>
 ) {
-    val username = username
-    val content = content
-    val imageURLs = imageURLs
     val imageAdapter = context?.let { RecyclerViewAdapter(imageURLs, it) }
-    val comments = comments
+    val videoAdapter = context?.let { RecyclerViewVideoAdapter(videoURLs , it) }
     val commentsAdapter = context?.let { CommentsAdapter(comments, it) }
     private val dateTime = Article.Time(time)
 

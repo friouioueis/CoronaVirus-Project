@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="3dp">
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+
+        android:id="@+id/videoWebView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+
+        app:videoId="S0Q4gqBUs7c"
+        app:autoPlay="true"
+        app:showFullScreenButton="false"
+       />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/youtube_video_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CORONA YOUTUBE VIDEO"
+        android:layout_marginLeft="10dp"
+
+        android:textStyle="bold"
+        android:textSize="20sp"
+
+        />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/youtube_video_channel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CORONA youtub channel"
+        android:layout_marginLeft="10sp"
+        android:textStyle="normal"
+        android:textSize="17sp"
+
+        />
+</LinearLayout>

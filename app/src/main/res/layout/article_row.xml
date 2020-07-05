@@ -61,22 +61,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/image_recyclerview"
-        android:layout_width="match_parent"
+    <ScrollView
+        android:id="@+id/media_feed"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/comment_section"
+        app:layout_constraintBottom_toTopOf="@+id/switcher"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/article_content"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/article_pic" />
+
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/linear_layout_article"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/image_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/article_pic" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/video_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                app:layout_constraintStart_toEndOf="@+id/image_recyclerview"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/article_pic" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
 
     <ImageView
         android:id="@+id/imageView3"
@@ -88,7 +121,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edit_text_add_comment"
         app:srcCompat="@drawable/ic_account_circle_black_24dp"
-        tools:ignore="VectorDrawableCompat" />
+        tools:ignore="VectorDrawableCompat"
+        android:contentDescription="self Image" />
 
     <EditText
         android:id="@+id/edit_text_add_comment"
@@ -108,30 +142,31 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintCircleRadius="20dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/comment_section" />
+        app:layout_constraintTop_toBottomOf="@+id/switcher" />
 
-    <ScrollView
-        android:id="@+id/comment_section"
+    <Button
+        android:id="@+id/switcher"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:maxHeight="160dp"
+        android:text="عرض مقاطع الفيديو"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:background="@color/cardview_shadow_end_color"
         android:orientation="vertical"
         android:scrollbarStyle="insideInset"
         app:layout_constraintBottom_toTopOf="@+id/edit_text_add_comment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_recyclerview"
+        app:layout_constraintTop_toBottomOf="@+id/media_feed"
         app:layout_constraintTop_toTopOf="@+id/edit_text_add_comment">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/list_view_comments"
-            android:layout_width="match_parent"
-            android:layout_height="160dp" />
 
-    </ScrollView>
+    </Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
