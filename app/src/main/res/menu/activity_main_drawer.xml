@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_article"
+            android:title="عرض المقالات" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_social"
+            android:title="و.التواصل الإجتماعي" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_image"
+            android:title="فيديوهات و صور" />
+        <item
+            android:id="@+id/nav_download"
+            android:icon="@drawable/ic_download"
+            android:title="تحميل" />
+        <item
+            android:id="@+id/nav_health"
+            android:icon="@drawable/ic_health_info"
+            android:title="المعلومات الحيوية" />
+        <item
+            android:id="@+id/nav_alerts"
+            android:icon="@drawable/ic_alerts"
+            android:title="الإخطارات" />
+        <item
+            android:id="@+id/nav_diagno"
+            android:icon="@drawable/ic_diagno"
+            android:title="الحصول على تشخيص" />
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/ic_notifications"
+            android:title="التنبيهات" />
+
+        <item
+            android:id="@+id/info_per"
+            android:icon="@drawable/ic_diagno"
+            android:title="المعلومات الشخصية" />
+    </group>
+</menu>
