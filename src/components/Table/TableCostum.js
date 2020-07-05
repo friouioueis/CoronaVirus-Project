@@ -15,21 +15,27 @@ import Grow from "@material-ui/core/Grow";
 import Paper from "@material-ui/core/Paper";
 import Avatar from '@material-ui/core/Avatar';
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
+import Axios from 'axios';
 import Hidden from "@material-ui/core/Hidden";
 import Poppers from "@material-ui/core/Popper";
 import Button from "components/CustomButtons/Button.js";
-
-
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Radio from '@material-ui/core/Radio';
 //import styles from "assets/jss/material-dashboard-react/components/headerLinksStyle.js";
 // core components
 import styles from "assets/jss/material-dashboard-react/components/tableStyle.js";
+import GridItem from "components/Grid/GridItem.js";
+import GridContainer from "components/Grid/GridContainer.js";
 
 const useStyles = makeStyles(styles);
-
+const token = localStorage.getItem("token")
 export default function CustomTable(props) {
     const [openNotification, setOpenNotification] = React.useState(null);
     const [openProfile, setOpenProfile] = React.useState(null);
-    const handleClickNotification = event => {
+    const [notif, setNotif] = React.useState(null);
+    const handleClickNotification = (event,key) => {
+      setNotif(key)
+      //console.log(table[0].role.find( reg => reg.Type === "md"))
       if (openNotification && openNotification.contains(event.target)) {
         setOpenNotification(null);
       } else {
@@ -49,7 +55,28 @@ export default function CustomTable(props) {
     const handleCloseProfile = () => {
       setOpenProfile(null);
     };
-  
+
+    const changeRole = ( type, id ) => {
+      //alert(type)
+      //alert(id)
+    //alert( table[notif].id)
+    //console.log(table.role.find( reg => reg.Type === "md"))
+     if (!table[notif].role.find( reg => reg.Type === type) ){
+      Axios.post("http://localhost:8000/Utilisateurs/gestionComptes/roles/",
+       {
+        "Type": type,
+        "idUtilisateurR": table[notif].id
+       },
+         { headers: { 'Content-Type' : 'application/json','Authorization': `Token ${token}` } })
+      .then(res => {
+          console.log(res.data)    
+          window.location.reload(false);        
+      }).catch(error=> alert(error))
+    }else{
+      alert("il est deja affecter a ce role !")
+    }
+    };
+  var table =[]
   const classes = useStyles();
   const { tableHead, tableData, tableHeaderColor } = props;
   return (
@@ -75,18 +102,50 @@ export default function CustomTable(props) {
         ) : null}
         <TableBody>
           {tableData.map((prop, key) => {
+             table.push({"id" : prop[4],"role":prop[3]})
+             console.log(table)
             return (
               <TableRow key={key} className={classes.tableBodyRow}>
-                    
                     <TableCell className={classes.tableCell} key={key}>
-                    <Avatar className={classes.orange} style={{ display: "inline-block",marginRight : 20}} >N</Avatar>
-                      <p style={{ display: "inline-block" }}>{prop.name} <br></br>email</p>  
+                    <GridContainer   >
+                  <GridItem  xs={6} sm={6} md={2} >  
+            <Avatar className={classes.orange} style={{ backgroundColor: '#00acc1', marginTop : 5 }} >{ prop[0][0].toUpperCase()}</Avatar>
+                    </GridItem>
+                    <GridItem  xs={6} sm={6} md={6} >  
+                      <p style={{ fontSize: 14 }}><b>{prop[0]}</b>  <br></br>{prop[1]}</p>  
+                      </GridItem>
+                  </GridContainer>
                     </TableCell>
                     <TableCell className={classes.tableCell} key={key}>
-                      {prop.calories}
+                      
+          {
+         prop[3].map((option , key ) => (
+          <p>
+            {(function() {
+              switch (option.Type) {
+             case 'as':
+               return "agent de santé"  
+             case 'md':
+               return "moderateur"
+             case 'si':
+               return "simple"
+             case 'ad':
+               return "admin" 
+             case 'rd':
+                return "redacteur" 
+             default:
+               return <p>hello</p>;
+           }
+       
+         })()}  
+
+          </p>
+            
+          
+        ))}
                     </TableCell>
                     <TableCell className={classes.tableCell} key={key}>
-                      {prop.fat}
+                      { prop[2] }
                     </TableCell>
                  
                 <TableCell>
@@ -97,7 +156,7 @@ export default function CustomTable(props) {
           simple={!(window.innerWidth > 959)}
           aria-owns={openNotification ? "notification-menu-list-grow" : null}
           aria-haspopup="true"
-          onClick={handleClickNotification}
+          onClick={(event) => handleClickNotification(event,key)}
           className={classes.buttonLink}
         >
         <b> ... </b>
@@ -106,6 +165,7 @@ export default function CustomTable(props) {
         <Poppers
           open={Boolean(openNotification)}
           anchorEl={openNotification}
+          key={key}
           transition
           disablePortal
           className={
@@ -123,39 +183,28 @@ export default function CustomTable(props) {
                   placement === "bottom" ? "center top" : "center bottom"
               }}
             >
-              <Paper>
+              <Paper key={key}>
                 <ClickAwayListener onClickAway={handleCloseNotification}>
-                  <MenuList role="menu">
+                  <MenuList role="menu" key={key}>
                     <MenuItem
-                      onClick={handleCloseNotification}
+                      onClick={() => changeRole("md",key)}
                       className={classes.dropdownItem}
                     >
-                      Mike John responded to your email
+                    Ajouter comme moderateur
                     </MenuItem>
                     <MenuItem
-                      onClick={handleCloseNotification}
+                      onClick={() => changeRole("rd",key)}
                       className={classes.dropdownItem}
                     >
-                      You have 5 new tasks
+                      Ajouter comme redacteur
                     </MenuItem>
                     <MenuItem
-                      onClick={handleCloseNotification}
+                      onClick={() => changeRole("as",key)}
                       className={classes.dropdownItem}
                     >
-                      You{"'"}re now friend with Andrew
+                      Ajouter comme agent de santé
                     </MenuItem>
-                    <MenuItem
-                      onClick={handleCloseNotification}
-                      className={classes.dropdownItem}
-                    >
-                      Another Notification
-                    </MenuItem>
-                    <MenuItem
-                      onClick={handleCloseNotification}
-                      className={classes.dropdownItem}
-                    >
-                      Another One
-                    </MenuItem>
+                 
                   </MenuList>
                 </ClickAwayListener>
               </Paper>

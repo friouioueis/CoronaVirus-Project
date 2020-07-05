@@ -190,11 +190,23 @@ class AuthView extends React.Component {
       if (r.Type === this.state.role && r.Type=== 'as'){
      //alert(r.Type)
      this.props.history.push("/agentSante")
+     localStorage.setItem("role","agentSante")
       }
       else if (r.Type === this.state.role && r.Type=== 'md') {
       //  alert(r.Type)
         this.props.history.push("/moderateur")
+        localStorage.setItem("role","moderateur")
       } 
+      else if (r.Type === this.state.role && r.Type=== 'rd') {
+        //  alert(r.Type)
+          this.props.history.push("/redacteur")
+          localStorage.setItem("role","redacteur")
+        }
+        else if (r.Type === this.state.role && r.Type=== 'ad') {
+          //  alert(r.Type)
+            this.props.history.push("/admin1")
+            localStorage.setItem("role","admin1")
+          }
       });
     };
    
@@ -296,21 +308,42 @@ class AuthView extends React.Component {
      <DialogContentText>
      choisissez le role que vous voulez s'authentifié avec :
      </DialogContentText>
-        <RadioGroup
+     <RadioGroup
           aria-label="ringtone"
           name="ringtone"
           onChange={this.handleChange}
         >
           {
          this.state.roles.map((option , key ) => (
-          <FormControlLabel value={option.Type} key={key} control={<Radio />} label={option.Type} />
-        ))}
-        </RadioGroup>
+          <FormControlLabel value={option.Type} key={key} control={<Radio />} label=
+            {(function() {
+              switch (option.Type) {
+             case 'as':
+               return "agent de santé"  
+             case 'md':
+               return "moderateur" 
+             case 'si':
+               return "simple"
+             case 'ad':
+               return "admin" 
+             case 'rd':
+                return "redacteur" 
+             default:
+               return "default";
+           }
+       
+         })()}  
+
+           onChange={this.handleChange}/>
+            
+          
+        ))}</RadioGroup>
+        
      
    </DialogContent>
    <DialogActions>
      <Button onClick={this.handleClose} color="primary">
-       Quitter
+      Annuler
      </Button>
      <Button onClick={this.handleLogin} color="primary">
       Connexion

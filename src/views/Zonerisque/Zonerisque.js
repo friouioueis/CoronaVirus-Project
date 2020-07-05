@@ -12,9 +12,6 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import Grid from '@material-ui/core/Grid';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import Radio from '@material-ui/core/Radio';
 import {
     fade,
     withStyles,
@@ -27,15 +24,6 @@ import {
   import Checkbox from '@material-ui/core/Checkbox';
   import ListItem from '@material-ui/core/ListItem';
   import SearchIcon from '@material-ui/icons/Search';
-  import TextField from '@material-ui/core/TextField';
-
-import {
-  MuiPickersUtilsProvider,
-  KeyboardTimePicker,
-  KeyboardDatePicker,
-} from '@material-ui/pickers';
-
-
 
 
 const   useStyles = makeStyles(theme => ({
@@ -184,8 +172,6 @@ const BootstrapInput = withStyles(theme => ({
   }))(InputBase);
 
 
-  const wilaya = ['Adrar','Chlef','Laghaout','Oum Bouaghi',' Batna','Bejaia','Biskra','Bechar','Blida','Bouira','Tamanrasset','Tebessa','Tlemcen','Tiaret','Tizi Ouzou','Alger','Djelfa','Jijel','Setif','Saida','Skikda','Sidi Bel Abbes','Annaba','Guelma','Constantine','Medea','Mostaganem','Msila','Mascara','Ouargla','Oran','El Baydh','Illizi','Bordj Bou Arreridj','Boumerdes','El Taref','Tindouf','Tissemsilet','El Oued','Khenchla','Souk Ahrass','Tipaza','Mila','Ain Defla','Naama','Ain Temouchent','Ghardaia','Relizane']; 
-  
   const renderThumb = ({ style, ...props }) => {
     const thumbStyle = {
       borderRadius: 8,
@@ -217,7 +203,6 @@ const [nomWilaya, setNom] = React.useState("Wilaya");
 const [idWilaya, setId] = React.useState(0);
 const [filtre, setFiltre] = React.useState([]);
 const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
-//const [check, setCheck] = React.useState(false);
 const classes = useStyles();  
  const [selectedIndex, setSelectedIndex] = React.useState(0);
 const handleListItemClick = (event, index,w) => {
@@ -246,15 +231,7 @@ const handleChange = (event) => {
 
 setFiltre(newlist)
 };
-/*
-const handleClickOpen =  () => {
-  setOpen(true)
-};
 
-const handleClose = () => {
-  setOpen(false)
-};
-*/
 useEffect(() => { 
   fetch("http://127.0.0.1:8000/Region/regions/", {
     method : 'GET',
@@ -268,10 +245,9 @@ useEffect(() => {
     (responseJson) => {
       return responseJson
    }).then(wilayas=>{
-     setWilayas(wilayas);
-     setFiltre(wilayas)
+     setWilayas(wilayas.results);
+     setFiltre(wilayas.results)
      console.log(wilayas);
-     setLoading(false);
     })
    .catch(error =>alert(error));
  
@@ -308,7 +284,8 @@ const state ={
     nbrDeces : 0 , 
     nbrGuerisons:0, 
     dateSt : "2020-03-28T02:21:56Z",
-    idRegionSt : idWilaya
+    idRegionSt : idWilaya,
+    idAgentSt : localStorage.getItem("idUser")
   }
 }
 
@@ -316,7 +293,6 @@ const update = (event,urlRg,urlStat) => {
     setOpen(false)
     console.log(state.credentials)
   const request = urlRg+ idWilaya+'/isRisque/'
-   // alert (token)
     if (idWilaya===0){alert ("please enter a wilaya")}
     else{
     fetch(urlStat, {
@@ -330,18 +306,16 @@ const update = (event,urlRg,urlStat) => {
     .then(data => data.json())
     .then(
       data => {
-        //alert(data.idRegionSt)
        console.log(data)
-       //alert(check)
+    
       }
     )
   .then(
-   
      fetch(request, {
        method : 'PATCH',
        headers:{
         'Content-Type' : 'application/json',
-       'Authorization' : 'Token '+token
+        'Authorization' : 'Token '+token
       },
        body:  JSON.stringify(region.properties)
      })
@@ -349,11 +323,13 @@ const update = (event,urlRg,urlStat) => {
      .then(
        data1 => {
         console.log(data1)
+        alert("Statistique inséerés avec success ")
        }
      ).catch(error =>alert(error)))
      .catch(error =>alert(error));
     
       }
+    
 }
 
 
@@ -492,7 +468,7 @@ const update = (event,urlRg,urlStat) => {
    <DialogActions>
 
      <Button onClick={event => setOpen(false)} color="primary">
-       Quitter
+       Annuler
      </Button>
      <Button type="submit" color="primary" >
       Connexion

@@ -1,4 +1,4 @@
-import React from "react";
+import React , { Component, useState, useEffect } from "react";
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
 // @material-ui/core
@@ -28,6 +28,7 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardIcon from "components/Card/CardIcon.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
+import Axios from 'axios';
 
 import { bugs, website, server } from "variables/general.js";
 
@@ -42,119 +43,181 @@ import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js"
 const useStyles = makeStyles(styles);
 
 export default function Dashboard() {
+  const [data, setData] = useState([])
+  const [val, setVal] = useState([])
+  const [ref, setRef] = useState([])
+
+  const [dataS, setDataS] = useState([])
+  const [valS, setValS] = useState([])
+  const [refS, setRefS] = useState([])
   const classes = useStyles();
+  const [loading, setLoading] = useState(false)
+ //var data
+  useEffect(() => {
+
+    Axios.get(`http://localhost:8000/dashboard/`, 
+    { headers: {  'Content-Type' : 'application/json' } })
+        .then(res => {
+            console.log(res)
+            console.log(res.data.nbr_articles)
+            setData(res.data.nbr_articles)
+            setVal(res.data.nbr_articles_valid)
+            setRef(res.data.nbr_articles_refus)
+// SANTE
+setDataS(res.data.nbr_stat)
+setValS(res.data.nbr_stat_valid)
+setRefS(res.data.nbr_stat_refus)
+            setLoading (true)
+            console.log(data)
+            //articleV.data.labels = res.data
+            
+   
+        }).catch(error =>alert(error));   
+},[])
+
+const articleE ={
+  data: {
+    labels: [],
+    series: []
+  }
+}
+
+const articleV ={
+  data: {
+    labels: [],
+    series: []
+  }
+}
+
+const articleR ={
+  data: {
+    labels: [],
+    series: []
+  }
+}
+
+const santeE ={
+  data: {
+    labels: [],
+    series: []
+  }
+}
+
+const santeV ={
+  data: {
+    labels: [],
+    series: []
+  }
+}
+
+const santeR ={
+  data: {
+    labels: [],
+    series: []
+  }
+}
+function formatDate(string){
+  var options = {month: 'numeric', day: 'numeric'};
+  return new Date(string).toLocaleDateString([],options);
+}
+
+data.map(info => {
+  if ( loading===true) { 
+    return (
+    articleE.data.labels.push([
+      formatDate(info.dateAr)
+   ]),
+   articleE.data.series.push([
+    info.total
+   ])
+)
+
+}
+})
+
+dataS.map(info => {
+  if ( loading===true) { 
+    return (
+    santeE.data.labels.push([
+      formatDate(info.dateSt)
+   ]),
+   santeE.data.series.push([
+    info.total
+   ])
+)
+
+}
+})
+
+val.map(info => {
+  if ( loading===true) { 
+    return (
+    articleV.data.labels.push([
+      formatDate(info.dateAr)
+   ]),
+   articleV.data.series.push([
+    info.total
+   ])
+)
+
+}
+})
+
+valS.map(info => {
+  if ( loading===true) { 
+    return (
+    santeV.data.labels.push([
+      formatDate(info.dateSt)
+   ]),
+   santeV.data.series.push([
+    info.total
+   ])
+)
+
+}
+})
+
+ref.map(info => {
+  if ( loading===true) { 
+    return (
+    articleR.data.labels.push([
+      formatDate(info.dateAr)
+   ]),
+   articleR.data.series.push([
+    info.total
+   ])
+)
+
+}
+})
+
+refS.map(info => {
+  if ( loading===true) { 
+    return (
+    santeR.data.labels.push([
+      formatDate(info.dateSt)
+   ]),
+   santeR.data.series.push([
+    info.total
+   ])
+)
+
+}
+})
+
+console.log(data)
   return (
+
     <div>
-      <GridContainer>
-        <GridItem xs={12} sm={6} md={3}>
-          <Card>
-            <CardHeader color="warning" stats icon>
-              <CardIcon color="warning">
-                <Icon>content_copy</Icon>
-              </CardIcon>
-              <p className={classes.cardCategory}>Used Space</p>
-              <h3 className={classes.cardTitle}>
-                49/50 <small>GB</small>
-              </h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <Danger>
-                  <Warning />
-                </Danger>
-                <a href="#pablo" onClick={e => e.preventDefault()}>
-                  Get more space
-                </a>
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={6} md={3}>
-          <Card>
-            <CardHeader color="success" stats icon>
-              <CardIcon color="success">
-                <Store />
-              </CardIcon>
-              <p className={classes.cardCategory}>Revenue</p>
-              <h3 className={classes.cardTitle}>$34,245</h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <DateRange />
-                Last 24 Hours
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={6} md={3}>
-          <Card>
-            <CardHeader color="danger" stats icon>
-              <CardIcon color="danger">
-                <Icon>info_outline</Icon>
-              </CardIcon>
-              <p className={classes.cardCategory}>Fixed Issues</p>
-              <h3 className={classes.cardTitle}>75</h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <LocalOffer />
-                Tracked from Github
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={6} md={3}>
-          <Card>
-            <CardHeader color="info" stats icon>
-              <CardIcon color="info">
-                <Accessibility />
-              </CardIcon>
-              <p className={classes.cardCategory}>Followers</p>
-              <h3 className={classes.cardTitle}>+245</h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <Update />
-                Just Updated
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-      </GridContainer>
-      <GridContainer>
-        <GridItem xs={12} sm={12} md={4}>
-          <Card chart>
-            <CardHeader color="success">
-              <ChartistGraph
-                className="ct-chart"
-                data={dailySalesChart.data}
-                type="Line"
-                options={dailySalesChart.options}
-                listener={dailySalesChart.animation}
-              />
-            </CardHeader>
-            <CardBody>
-              <h4 className={classes.cardTitle}>Daily Sales</h4>
-              <p className={classes.cardCategory}>
-                <span className={classes.successText}>
-                  <ArrowUpward className={classes.upArrowCardCategory} /> 55%
-                </span>{" "}
-                increase in today sales.
-              </p>
-            </CardBody>
-            <CardFooter chart>
-              <div className={classes.stats}>
-                <AccessTime /> updated 4 minutes ago
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
+        <h4 className={classes.cardTitleBlack} style={{paddingLeft : "20px"}}>Historique des articles</h4>
+      <GridContainer style={{paddingLeft : "20px", paddingRight : "20px"}}>
+ 
+          <GridItem xs={12} sm={12} md={4}>
           <Card chart>
             <CardHeader color="warning">
               <ChartistGraph
                 className="ct-chart"
-                data={emailsSubscriptionChart.data}
+                data={articleE.data}
                 type="Bar"
                 options={emailsSubscriptionChart.options}
                 responsiveOptions={emailsSubscriptionChart.responsiveOptions}
@@ -162,8 +225,7 @@ export default function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Email Subscriptions</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
+              <h4 className={classes.cardTitle}>Articles ecrits</h4>
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
@@ -172,20 +234,44 @@ export default function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
+
+        <GridItem xs={12} sm={12} md={4}>
+          <Card chart>
+            <CardHeader color="success">
+              <ChartistGraph
+                className="ct-chart"
+                data={articleV.data}
+                type="Bar"
+                options={emailsSubscriptionChart.options}
+                responsiveOptions={emailsSubscriptionChart.responsiveOptions}
+                listener={emailsSubscriptionChart.animation}
+              />
+            </CardHeader>
+            <CardBody>
+              <h4 className={classes.cardTitle}>Articles validés</h4>
+            </CardBody>
+            <CardFooter chart>
+              <div className={classes.stats}>
+                <AccessTime /> campaign sent 2 days ago
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+       
         <GridItem xs={12} sm={12} md={4}>
           <Card chart>
             <CardHeader color="danger">
               <ChartistGraph
                 className="ct-chart"
-                data={completedTasksChart.data}
-                type="Line"
-                options={completedTasksChart.options}
-                listener={completedTasksChart.animation}
+                data={articleR.data}
+                type="Bar"
+                options={emailsSubscriptionChart.options}
+                responsiveOptions={emailsSubscriptionChart.responsiveOptions}
+                listener={emailsSubscriptionChart.animation}
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Completed Tasks</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
+              <h4 className={classes.cardTitle}>Articles refusées</h4>
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
@@ -195,71 +281,84 @@ export default function Dashboard() {
           </Card>
         </GridItem>
       </GridContainer>
+
+
+
+
+      <h4 className={classes.cardTitleBlack} style={{paddingLeft : "20px"}}>Historique des statistiques de santé</h4>
       <GridContainer>
-        <GridItem xs={12} sm={12} md={6}>
-          <CustomTabs
-            title="Tasks:"
-            headerColor="primary"
-            tabs={[
-              {
-                tabName: "Bugs",
-                tabIcon: BugReport,
-                tabContent: (
-                  <Tasks
-                    checkedIndexes={[0, 3]}
-                    tasksIndexes={[0, 1, 2, 3]}
-                    tasks={bugs}
-                  />
-                )
-              },
-              {
-                tabName: "Website",
-                tabIcon: Code,
-                tabContent: (
-                  <Tasks
-                    checkedIndexes={[0]}
-                    tasksIndexes={[0, 1]}
-                    tasks={website}
-                  />
-                )
-              },
-              {
-                tabName: "Server",
-                tabIcon: Cloud,
-                tabContent: (
-                  <Tasks
-                    checkedIndexes={[1]}
-                    tasksIndexes={[0, 1, 2]}
-                    tasks={server}
-                  />
-                )
-              }
-            ]}
-          />
-        </GridItem>
-        <GridItem xs={12} sm={12} md={6}>
-          <Card>
+          <GridItem xs={12} sm={12} md={4}>
+          <Card chart>
             <CardHeader color="warning">
-              <h4 className={classes.cardTitleWhite}>Employees Stats</h4>
-              <p className={classes.cardCategoryWhite}>
-                New employees on 15th September, 2016
-              </p>
+              <ChartistGraph
+                className="ct-chart"
+                data={santeE.data}
+                type="Bar"
+                options={emailsSubscriptionChart.options}
+                responsiveOptions={emailsSubscriptionChart.responsiveOptions}
+                listener={emailsSubscriptionChart.animation}
+              />
             </CardHeader>
             <CardBody>
-              <Table
-                tableHeaderColor="warning"
-                tableHead={["ID", "Name", "Salary", "Country"]}
-                tableData={[
-                  ["1", "Dakota Rice", "$36,738", "Niger"],
-                  ["2", "Minerva Hooper", "$23,789", "Curaçao"],
-                  ["3", "Sage Rodriguez", "$56,142", "Netherlands"],
-                  ["4", "Philip Chaney", "$38,735", "Korea, South"]
-                ]}
-              />
+              <h4 className={classes.cardTitle}>Statistiques de santé</h4>
             </CardBody>
+            <CardFooter chart>
+              <div className={classes.stats}>
+                <AccessTime /> campaign sent 2 days ago
+              </div>
+            </CardFooter>
           </Card>
         </GridItem>
+
+        <GridItem xs={12} sm={12} md={4}>
+          <Card chart>
+            <CardHeader color="success">
+              <ChartistGraph
+                className="ct-chart"
+                data={santeV.data}
+                type="Bar"
+                options={emailsSubscriptionChart.options}
+                responsiveOptions={emailsSubscriptionChart.responsiveOptions}
+                listener={emailsSubscriptionChart.animation}
+              />
+            </CardHeader>
+            <CardBody>
+              <h4 className={classes.cardTitle}>Statistiques validés</h4>
+            </CardBody>
+            <CardFooter chart>
+              <div className={classes.stats}>
+                <AccessTime /> campaign sent 2 days ago
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+       
+        <GridItem xs={12} sm={12} md={4}>
+          <Card chart>
+            <CardHeader color="danger">
+              <ChartistGraph
+                className="ct-chart"
+                data={santeR.data}
+                type="Bar"
+                options={emailsSubscriptionChart.options}
+                responsiveOptions={emailsSubscriptionChart.responsiveOptions}
+                listener={emailsSubscriptionChart.animation}
+              />
+            </CardHeader>
+            <CardBody>
+              <h4 className={classes.cardTitle}>Statistiques refusées</h4>
+            </CardBody>
+            <CardFooter chart>
+              <div className={classes.stats}>
+                <AccessTime /> campaign sent 2 days ago
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+
+
       </GridContainer>
+
     </div>
   );
 }

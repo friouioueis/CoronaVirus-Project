@@ -1,3 +1,4 @@
+import React, { Component, useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -14,25 +15,24 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-//import oldmansick from "assets/img/oldmansick.png";
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import React, { Component, useEffect, useState } from 'react';
 import Axios from 'axios';
+import DeleteIcon from '@material-ui/icons/Close';
+import EditIcon from '@material-ui/icons/Edit';
+import Tooltip from '@material-ui/core/Tooltip';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import Next from '@material-ui/icons/NavigateNextOutlined';
-import Previous from '@material-ui/icons/NavigateBeforeOutlined';
-
+import moment from "moment";
 const useStyles = makeStyles(theme => ({
     root: {
         maxWidth: 1000,
         marginBottom: 73,
-        padding : "15px 45px"
+        padding : "10px 30px"
     },
     media: {
         height: 0,
@@ -78,71 +78,71 @@ export default function RecipeReviewCard() {
     const [expanded, setExpanded] = React.useState(false);
     const [user, setUser] = useState([])
     const  [ loading ,setLoading ]= React.useState(false);
-    const  [ valider ,setValider ]= React.useState(false);
-    const  [ open ,setOpen ]= React.useState(false);
+    const  [ open1 ,setOpen1 ]= React.useState(false);
+    const  [ open2 ,setOpen2 ]= React.useState(false);
     const  [ id ,setId ]= React.useState(0);
-    const  [ red ,setRed ]= React.useState(0);
-    const  [ cont ,setCont ]= React.useState("");
-    const [page, setPage] = React.useState(1);
-    const [current, setCurrent] = React.useState(10);
-    const [next, setNext] = React.useState(null);
-    const [previous, setPrevious] = React.useState(null);
-    const handleChangeNextPage = (event, value) => {
-          if(next != null){
-      setPage(page+10);
-      setCurrent(current+10)
-      get_Articles_redige(next)
-      }
-    };
-    const handleChangePreviousPage = (event, value) => {
-      if(previous != null){
-      setPage(page-10);
-      setCurrent(current-10)
-      get_Articles_redige(previous)
-      }
-    };
 
+    const handleClickOpen1 =  (id) => {
+        setOpen1(true)
+        //setValider(val)
+        setId(id)
+      };
+   
+     const handleClose1 = () => {
+        setOpen1(false)
+      };
+      const handleClickOpen2 =  (id) => {
+        setOpen2(true)
+        setId(id)
+        //setValider(val)
+      };
+   
+     const handleClose2 = () => {
+        setOpen2(false)
+      };
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
-    const handleClickOpen =  (e,val,id,rd,ct) => {
-        e.preventDefault()
-        setOpen(true)
-        setValider(val)
-        setRed(rd)
-        setId(id)
-        setCont(ct)
-       // alert(val)
-      };
-   
-     const handleClose = () => {
-        setOpen(false)
-      };
 
     useEffect(() => {
-        get_Articles_redige('http://localhost:8000/articles/articlesTermines/')
+        get_Articles_redige()
     }, [q])
 
-
-    const get_Articles_redige = (url) => {
-       //  alert(token)
-        console.log("dada")
-        Axios.get(url, 
-        { headers: { "Authorization": `Token ${token}` } })
+    const set_terminer = (valider,contenu) => {
+      //  alert(contenu)
+       // alert(valider)
+       // alert(id)
+        handleClose1()
+        console.log("set valider true")
+        Axios.put(`http://localhost:8000/articles/articles/${id}/`, {
+            "dateAr": moment().format("YYYY-MM-DD[T]HH:mm:ss"),
+            "contenuAr": contenu,
+            "terminerAR": valider,
+         }, { headers: { "Authorization": `Token ${token}` } })
             .then(res => {
-                console.log(res.data.results)
+                console.log(res)
+                window.location.reload(false);
+            })
+    }
+
+    const delete_article = () => {
+      //  alert(id)
+        handleClose2()
+        Axios.delete(`http://localhost:8000/articles/articles/${id}/`, { headers: { "Authorization": `Token ${token}` } })
+            .then(res => {
+                console.log(res)
+                window.location.reload(false);
+                alert("Article rejeter avec success!")
+            }).catch(error =>alert(error));
+    }
+
+
+    const get_Articles_redige = () => {
+
+        Axios.get('http://localhost:8000/articles/articlesNonTermines/', { headers: { "Authorization": `Token ${token}` } })
+            .then(res => {
+                console.log(res.data)
                 setActicleredigi(res.data.results)
-                if(res.data.next != null){
-    
-                    setNext(res.data.next)
-                    }else{
-                        setNext(null)
-                    }
-                    if(res.data.previous != null){
-                    setPrevious(res.data.previous)
-                    }else{
-                        setPrevious(null)
-                    }
             }).then(  
                 Axios.get(`http://localhost:8000/Utilisateurs/gestionComptes/comptes/`)
                 .then(res => {
@@ -152,27 +152,6 @@ export default function RecipeReviewCard() {
                 })
                    ) 
     }
-
-    const set_valider_ar = () => {
-
-        console.log("set valider true")
-        Axios.patch(`http://localhost:8000/articles/articles/${id}/`, {
-            "contenuAr": cont,
-            "validerAR": valider,
-            "idRedacteurAr": red,
-            "idModerateurAr" : localStorage.getItem("idUser")
-        }, { headers: { "Authorization": `Token ${token}` } })
-            .then(res => {
-                console.log(res)
-                alert(valider ?'Article validé avec success': 'Article refusé avec success' )
-                window.location.reload(false);
-                
-            })
-    }
-
-
-   
- 
     function formatDate(string){
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: "2-digit", minute:"2-digit"};
         return new Date(string).toLocaleDateString([],options);
@@ -180,22 +159,46 @@ export default function RecipeReviewCard() {
 
     return (
         <Container maxWidth="md">
-       
             {articleredigi.map(article => {
-     if (loading) {
+                       if (loading) {
+                            const url = '/redacteur/nonTermines/editer'+article.idArticle
                     return (
-
                         <Card className={classes.root}>
-                            <CardHeader
+                              <Grid
+                                container
+                                direction="row"
+                                justify="space-between"
+                                alignItems="center"
+                            >                           
+                             <CardHeader
                                 avatar={
                                     <Avatar aria-label="recipe" className={classes.avatar}>
-                                       {user.find( user => user.id === article.idRedacteurAr).username[0].toUpperCase()} 
+                                          {user.find( user => user.id === article.idRedacteurAr).username[0].toUpperCase()} 
                                     </Avatar>
                                 }
 
                                 title={user.find( user => user.id === article.idRedacteurAr).username}
                                 subheader={formatDate(article.dateAr)}
                             />
+                               <div >
+                              <Tooltip title="Modifier l'article">
+                                    <IconButton aria-label="modifier">
+                                    <a href={url} style={{color : "#00acc1"}}>
+                                        <EditIcon  className={classes.icon} />
+                                        </a>
+                                    </IconButton>
+                                </Tooltip>
+                                
+                                <Tooltip title="Rejeter l'article">
+                                    <IconButton aria-label="delete">
+                                       
+                                      <DeleteIcon  onClick={() => handleClickOpen2(article.idArticle) } className={classes.icon} />
+                                     
+                                    </IconButton>
+                                </Tooltip>
+                                </div>
+                                </Grid>
+
                             <CardContent>
                                 <Typography variant="body2" color="" component="p">
                                     <div dangerouslySetInnerHTML={{
@@ -210,24 +213,14 @@ export default function RecipeReviewCard() {
                                 title="Old man sick"
                             /> */}
 
+                            
                             <CardActions disableSpacing>
-                                <Grid
-                                    container
-                                    direction="row"
-                                    justify="space-between"
-                                    alignItems="center"
-                                >
-                                    <Button onClick={(e) => handleClickOpen(e,true,article.idArticle,article.idRedacteurAr,article.contenuAr) } variant="contained" color="primary" className={classes.accbutt}>
+                                    <Button  variant="contained" color="primary" className={classes.accbutt} onClick={() => handleClickOpen1(article.idArticle) }>
                                         {/* <FavoriteIcon /> */}
-                            Accepter
-                        </Button>
-                        <Button onClick={(e) => handleClickOpen(e,false,article.idArticle,article.idRedacteurAr,article.contenuAr) } variant="outlined" color="primary" className={classes.refbutt}>
-                                        {/* <FavoriteIcon /> */}
-                         Refuser
-                        </Button>
-                                </Grid>
-
+                                    Terminer
+                                    </Button>
                             </CardActions>
+
                             <Collapse in={expanded} timeout="auto" unmountOnExit>
                                 <CardContent>
                                     {/* <Typography paragraph>La suite:</Typography> */}
@@ -236,38 +229,47 @@ export default function RecipeReviewCard() {
                                     </Typography>
                                 </CardContent>
                             </Collapse>
-
-<Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+                                                       
+<Dialog open={open1} onClose={handleClose1} aria-labelledby="form-dialog-title">
    <DialogTitle id="form-dialog-title">Confirmation</DialogTitle>
    <DialogContent>
      <p className={classes.text}>
-     {valider ?'Etes vous sure de vouloir valider cet article ?': 'Etes vous sure de vouloir rejeter cet article ?' 
-     }
+     Etes vous sure que vous avez terminer cet article ?
          </p>
    </DialogContent>
    <DialogActions>
-   <Button  color="primary" onClick={() => set_valider_ar()} type = "submit">
+   <Button  color="primary" onClick={() => set_terminer(true,article.contenuAr) }  type = "submit">
       Confirmer
      </Button>
-     <Button onClick={handleClose} color="primary">
+     <Button onClick={handleClose1} color="primary">
        Annuler
      </Button>
    </DialogActions>
  </Dialog>
+ <Dialog open={open2} onClose={handleClose2} aria-labelledby="form-dialog-title">
+   <DialogTitle id="form-dialog-title">Confirmation</DialogTitle>
+   <DialogContent>
+     <p className={classes.text}>
+     Etes vous sure de vouloir Rejeter cet article ?
+         </p>
+   </DialogContent>
+   <DialogActions>
+   <Button  color="primary" onClick={() => delete_article()} type = "submit">
+      Confirmer
+     </Button>
+     <Button onClick={handleClose2} color="primary">
+       Annuler
+     </Button>
+   </DialogActions>
+ </Dialog>
+ 
                         </Card>
-                        
+        
+                    )
 
-                    )}
+                        }
             })}
-  <div className={classes.pages}>
- <Previous onClick={handleChangePreviousPage}></Previous>
-            <p style={{display : "inline-block", margin : "20px" }}>{page} - {current}</p>
-    <Next onClick={handleChangeNextPage}></Next>
-   
-</div>
 
         </Container>
     );
 }
-
-

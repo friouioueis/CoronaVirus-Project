@@ -42,6 +42,17 @@ class RecipeReviewCard extends React.Component {
     this.setState({open : true});
         //setValider(val)
       };
+
+      componentWillMount = () => {
+        const token = localStorage.getItem("token")
+       // alert(window.location.pathname.substr(29))
+        Axios.get(`http://localhost:8000/articles/articlesNonTermines/${parseInt(window.location.pathname.substr(29))}`, 
+        { headers: { "Authorization": `Token ${token}` } })
+            .then(res => {
+                console.log(res.data)
+               this.setState({article : res.data.contenuAr})
+            }).catch(error=>alert(error))
+    }
    
   handleClose = () => {
     this.setState({open : false});
@@ -52,27 +63,20 @@ class RecipeReviewCard extends React.Component {
         console.log(this.state.article)
         console.log(e); //Get Content Inside Editor
         this.setState({
-
             article: e
-
         })
-
-
         console.log("after " + this.state.article)
-
-
-    }
+    };
 
    
 
     handlesubmit = (e) => {
         e.preventDefault()
-       
         console.log("axios post")
         const token = localStorage.getItem("token")
         this.handleClose()
-        Axios.post('http://localhost:8000/articles/articles/', {
-            "dateAr" :   moment().format("YYYY-MM-DD[T]HH:mm:ss"),
+        Axios.put(`http://localhost:8000/articles/articles/${parseInt(window.location.pathname.substr(29))}/`, {
+            "dateAr" : moment().format("YYYY-MM-DD[T]HH:mm:ss"),
             "contenuAr": this.state.article,
             "terminerAR" : false,
             "idRedacteurAr": localStorage.getItem("idUser")
@@ -80,18 +84,19 @@ class RecipeReviewCard extends React.Component {
         ).then(res => {
             console.log(res)
             console.log(res.data.idArticle)
-            window.location.reload(false);
+            alert("article modifier et enregistrer en tantque brouillant  avec success! ")
+            this.props.history.push("/redacteur/nonTermines/nonTer")
             // this.handleClickVariant('success')
-        })
+        }).catch(error=>alert(error))
     }
   set_terminer = (e) => {
     e.preventDefault()
-    
     console.log("axios post")
     const token = localStorage.getItem("token")
     this.handleClose()
-    Axios.post('http://localhost:8000/articles/articles/', {
-        "dateAr" :  moment().format("YYYY-MM-DD[T]HH:mm:ss"),
+
+    Axios.put(`http://localhost:8000/articles/articles/${parseInt(window.location.pathname.substr(29))}/`, {
+        "dateAr" : moment().format("YYYY-MM-DD[T]HH:mm:ss"),
         "contenuAr": this.state.article,
         "terminerAR" : true,
         "idRedacteurAr": localStorage.getItem("idUser")
@@ -99,10 +104,11 @@ class RecipeReviewCard extends React.Component {
     ).then(res => {
         console.log(res)
         console.log(res.data.idArticle)
-        alert("Article terminer avec succes , il ajouter a la liste des articles en attente de validation")
-        window.location.reload(false);
+        alert("article modifier et en attente de validation avec success !")
+        this.props.history.push("/redacteur/nonTermines/nonTer")
+      //  window.location.reload(false);
         // this.handleClickVariant('success')
-    })
+    }).catch(error=>alert(error))
     }
 
        render() {
@@ -110,8 +116,10 @@ class RecipeReviewCard extends React.Component {
 
         return (
             <div>
-                <SunEditor onChange={this.handleChange} setOptions={{
-                    height: 100,
+                <SunEditor onChange={this.handleChange} 
+                setContents={this.state.article}
+                height={100}
+                setOptions={{
                     "buttonList": [
                         ["undo",
                             "redo",

@@ -19,10 +19,11 @@
 import LocationOn from "@material-ui/icons/LocationOn";
 import setting from "@material-ui/icons/Settings";
 import video from "@material-ui/icons/Videocam";
-import stat from "@material-ui/icons/List";
+import stat from "@material-ui/icons/Dashboard";
 // core components/views for Admin layout
 import zone from "views/Zonerisque/Zonerisque.js";
 import gestion from "views/GestionCompte/gestionCompte.js";
+import Dashboard from "views/Dashboard/Dashboard";
 import videoUser from "views/VideoUser/videoUser.js";
 import statistique from "views/Statistiques/Statistiques";
 import articles from "views/ArticlesRediges/ArticleRedigePage";
@@ -30,43 +31,30 @@ import prof from "views/UserProfile/UserProfile";
 //import rediger from "views/RedigerArticles/RedigerArticle"
 
 const dashboardRoutes = [
-
   {
-    path: "/ZoneDeRisque",
-    name: "Zones de risque",
-    rtlName: "لوحة القيادة",
-    icon: LocationOn,
-    component: zone,
-    layout: "/agentSante"
-  },
-  {
-    path: "/Statistiques",
-    name: "Statistiques",
+    path: "/dashboard",
+    name: "Dashboard",
     rtlName: "لوحة القيادة",
     icon: stat,
-    component: statistique,
-    layout: "/agentSante"
+    component: Dashboard,
+    layout: "/admin1"
   },
-
-  
- /* {
-    path: "/rediger",
-    name: "Rediger articles",
-    rtlName: "لوحة القيادة",
-    icon: LocationOn,
-    component: rediger,
-    layout: "/agentSante"
-  },
-  */
-
  
+  {
+    path: "/gestionDeCompte",
+    name: "Gestion de compte",
+    rtlName: "لوحة القيادة",
+    icon: setting,
+    component: gestion,
+    layout: "/admin1"
+  },
   {
     path: "/profile",
     name: "Profile",
     rtlName: "لوحة القيادة",
     icon: video,
     component: prof,
-    layout: "/agentSante"
+    layout: "/admin1"
   },
   
 ];

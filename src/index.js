@@ -26,6 +26,8 @@ import AgentSante from "layouts/AgentSante.js";
 import RTL from "layouts/RTL.js";
 import Auth from "views/Authentification/AuthView.js";
 import Moderateur from "layouts/Moderateur";
+import Redacteur from "layouts/Redacteur";
+import Profile from "views/UserProfile/UserProfile";
 //import Auth from "layouts/Authentification.js";
 
 import "assets/css/material-dashboard-react.css?v=1.8.0";
@@ -39,7 +41,9 @@ ReactDOM.render(
     <Switch>
       <Route path="/agentSante" token={hist.token} component={AgentSante} />
       <Route  path="/moderateur" component={Moderateur} />
-      <Route  exact path="/login" component={Auth} />  
+      <Route  path="/redacteur" component={Redacteur} />
+      <Route  path="/admin1" component={Admin} />  
+      <Route  exact path="/login" component={Auth} />    
       <Redirect from="/" to="login" />
     </Switch>
   </Router>,

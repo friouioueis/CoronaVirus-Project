@@ -8,18 +8,20 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import Button from '@material-ui/core/Button';
-import DeleteIcon from '@material-ui/icons/Delete';
+import DeleteIcon from '@material-ui/icons/DeleteOutlineTwoTone';
+import Check from '@material-ui/icons/CheckBoxOutlined';
+import Next from '@material-ui/icons/NavigateNextOutlined';
+import Previous from '@material-ui/icons/NavigateBeforeOutlined';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import React, { Component, useState, useEffect } from 'react';
 import Axios from 'axios';
-import Snackbar from '@material-ui/core/Snackbar';
-// import MuiAlert from '@material-ui/lab/Alert';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 
-
-// function Alert(props) {
-//     return <MuiAlert elevation={6} variant="filled" {...props} />;
-// }
 
 const styles = {
     cardCategoryWhite: {
@@ -33,6 +35,9 @@ const styles = {
         "& a,& a:hover,& a:focus": {
             color: "#FFFFFF"
         },
+    },
+    pages:{
+        marginLeft : "50%"
     },
     cardTitleWhite: {
         color: "#FFFFFF",
@@ -57,84 +62,125 @@ const styles = {
     }
 };
 
-{/* <span class="material-icons">
-check_box
-</span> */}
 
 const useStyles = makeStyles(styles);
 
 export default function TableList() {
     const [info_Regions, set_info_Regions] = useState([])
     const classes = useStyles();
-    const [q, setq] = useState([])
-    //const [reg, setReg] = useState("")
-    var reg = "wilaya"
+    const  [ open ,setOpen ]= React.useState(false);
+  const  [ valider ,setValider ]= React.useState(false);
+  const  [ idstat ,setIdstat ]= React.useState(false);
+    const [reg, setReg] = useState([])
     const token = localStorage.getItem("token")
+    const  [ loading ,setLoading ]= React.useState(false);
+    const [page, setPage] = React.useState(1);
+    const [current, setCurrent] = React.useState(10);
+    const [next, setNext] = React.useState(null);
+    const [previous, setPrevious] = React.useState(null);
 
-
+    const handleChangeNextPage = (event, value) => {
+        if(next != null){
+        setPage(page+10);
+        setCurrent(current+10)
+        get_info_wilaya(next)
+        }
+      };
+      const handleChangePreviousPage = (event, value) => {
+        if(previous != null){
+        setPage(page-10);
+        setCurrent(current-10)
+        get_info_wilaya(previous)
+        }
+      };
+    const handleClickOpen =  ( id_stat, val) => {
+        setValider(val)
+        setIdstat (id_stat)
+        setOpen(true)
+      };
+   
+     const handleClose = () => {
+        setOpen(false)
+      };
 
     useEffect(() => {
-        get_info_wilaya()
-    }, [q])
-
-    const get_info_wilaya = () => {
-        console.log("dada")
-        Axios.get('http://127.0.0.1:8000/Region/stat_regions/', 
+        Axios.get('http://localhost:8000/Region/stat_regions_non_valid/', 
         { headers: {  'Content-Type' : 'application/json',"Authorization": `Token ${token}` } })
             .then(res => {
                 console.log(res.data)
-                set_info_Regions(res.data)
-            })
-    }
+                set_info_Regions(res.data.results) 
+                setNext(res.data.next) 
+            }).then(  
+                Axios.get(`http://localhost:8000/Region/regions/`)
+                .then(res => {
+                    setReg(res.data.results)
+                    console.log(res.data.results)
+                    setLoading (true)
+                })
+                   )    
+    },[])
 
-    const get_rg_name = (id) => {
-            console.log("dada")
-        Axios.get(`http://localhost:8000/Region/regions/${id}/`)
+    const get_info_wilaya = (url) => {
+        Axios.get(url, 
+        { headers: {  'Content-Type' : 'application/json',"Authorization": `Token ${token}` } })
             .then(res => {
-                //console.log(res.data)
-                reg=res.data.nomRegion
-               // alert(reg)
-               // return reg 
-                //setReg(res.data.nomRegion)
+                console.log(res.data)
+                set_info_Regions(res.data.results)  
+                if(res.data.next != null){
+                setNext(res.data.next)
+                }else{
+                    setNext(null)
+                }
+                if(res.data.previous != null){
+                setPrevious(res.data.previous)
+                }else{
+                    setPrevious(null)
+                }
             })
     }
 
-    const set_valider_rg = ( id_stat) => {
+    const set_valider_rg = ( id_stat ) => {
+        handleClose()
         console.log("set valider true")
         Axios.patch(`http://localhost:8000/Region/stat_regions/${id_stat}/`, {
-            "validerSt": true,
+            "validerSt": valider,
             'idModerateurSt' : localStorage.getItem("idUser")
         }, { headers: { 'Authorization': `Token ${token}` } })
             .then(res => {
                 console.log(res)
-                get_info_wilaya()
-            })
+                alert(" Statistique changé avec success")
+
+                window.location.reload(false);
+            }).catch(error =>alert(error));
     }
-
-    const set_refuser_rg = ( id_stat) => {
-
-        console.log("set valider true")
-        Axios.patch(`http://localhost:8000/Region/stat_regions/${id_stat}/`, {
-            'validerSt': false,
-            'idModerateurSt' : localStorage.getItem("idUser")
-        }, { headers: { 'Content-Type' : 'application/json', "Authorization": `Token ${token}` } })
-            .then(res => {
-                console.log(res)
-                get_info_wilaya()
-            })
-    }
-
    
-
+    function formatDate(string){
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: "2-digit", minute:"2-digit"};
+        return new Date(string).toLocaleDateString([],options);
+      }
 
     var table_info = [
     ]
-    info_Regions.map(info => {
-       
-        if (info.validerSt === false && info.idModerateurSt===null) { 
-            get_rg_name(info.idRegionSt)
+ info_Regions.map(info => {
+       console.log(reg.find( reg => reg.idRegion === info.idRegionSt))
+        if ( loading===true) { 
             return (
-                table_info.push([info.idRegionSt, info.nbrPorteurVirus, info.casConfirme, info.nbrGuerisons, info.nbrDeces, info.casRetablis, <div><Tooltip title="Accepter"><IconButton onClick={() => set_valider_rg(info.idStatistique)} aria-label="delete" className={classes.icon2}><span class="material-icons">check_box</span></IconButton></Tooltip><Tooltip title="Supprimer"><IconButton onClick={() => set_refuser_rg(info.idStatistique)} aria-label="delete" className={classes.icon}><DeleteIcon /></IconButton></Tooltip></div>])
+                table_info.push([
+                    formatDate(info.dateSt),
+                    reg.find( reg => reg.idRegion === info.idRegionSt).nomRegion,
+                     info.nbrPorteurVirus, 
+                     info.casConfirme,
+                      info.nbrGuerisons, 
+                      info.nbrDeces,
+                       info.casRetablis, 
+                    <div><Tooltip title="Accepter">
+                    <IconButton onClick={() => handleClickOpen(info.idStatistique, true)}
+                     aria-label="delete" className={classes.icon2}>
+                     <Check style = {{color :"#757575"}} />
+                    </IconButton></Tooltip><Tooltip title="Supprimer">
+                  <IconButton onClick={() => handleClickOpen(info.idStatistique, false)} 
+                 aria-label="delete" className={classes.icon}>
+              <DeleteIcon style = {{color :"#757575"}} /></IconButton></Tooltip></div>])
             )
         
         }
@@ -143,23 +189,45 @@ export default function TableList() {
 
     return (
         <Card>
+             <CardHeader color = "info">
+            <h4 className={classes.cardTitleWhite}>Statistiques de Santé</h4>
+            <p className={classes.cardCategoryWhite}>
+            Valider ou refuser les statistiques des wilayas
+            </p>
+          </CardHeader>
             <CardBody>
                 <Table
-                    tableHeaderColor="primary"
-                    tableHead={["Wilaya", "Porteurs", "Guerisons", "Malades", "Décés", "Rétablis", "Action"]}
+                    
+                    tableHead={["date","Wilaya", "Porteurs", "Guerisons", "Malades", "Décés", "Rétablis", "Action"]}
                     tableData={
-                        table_info
+                       table_info
                     }
                 />
-                {/* <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-                    <Alert onClose={handleClose} severity="success">
-                        This is a success message!
-                    </Alert>
-                </Snackbar> */}
             </CardBody>
-        </Card>
-
+   <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+   <DialogTitle id="form-dialog-title">Confirmation</DialogTitle>
+   <DialogContent>
+     <p className={classes.text}>
+     {valider ?'Etes vous sure de vouloir valider ce statistique ?': 'Etes vous sure de vouloir rejeter ce statistique?' }
+         </p>
+   </DialogContent>
+   <DialogActions>
+   <Button  color="primary" onClick={()=>set_valider_rg(idstat)} type = "submit">
+      Confirmer
+     </Button>
+     <Button onClick={handleClose} color="primary">
+       Annuler
+     </Button>
+   </DialogActions>
+ </Dialog>
+ 
+ <div className={classes.pages}>
+ <Previous onClick={handleChangePreviousPage}></Previous>
+<p style={{display : "inline-block", margin : "20px" }}>{page} - {current}</p>
+<Next onClick={handleChangeNextPage}></Next> 
+</div>
+ 
+ </Card>
+      
     )
 }
-
-// ["19", "19", "19", "19", "19", "19", <div><Tooltip title="Accepter"><IconButton aria-label="delete" className={classes.icon2}><span class="material-icons">check_box</span></IconButton></Tooltip><Tooltip title="Supprimer"><IconButton aria-label="delete" className={classes.icon}><DeleteIcon /></IconButton></Tooltip></div>],

@@ -11,7 +11,7 @@ import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
 import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
-import routes from "routesMd.js";
+import routes from "routesRd.js";
 
 import styles from "assets/jss/material-dashboard-react/layouts/adminStyle.js";
 
@@ -23,7 +23,7 @@ let ps;
 const switchRoutes = (
   <Switch>
     {routes.map((prop, key) => {
-      if (prop.layout === "/moderateur" ) {
+      if (prop.layout === "/redacteur") {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -34,7 +34,7 @@ const switchRoutes = (
       }
       return null;
     })}
-    <Redirect from="/moderateur" to="/moderateur/valider" />
+    <Redirect from="/redacteur" to="/redacteur/rediger" />
   </Switch>
 );
 
@@ -118,7 +118,7 @@ export default function Moderateur({ ...rest }) {
         ) : (
           <div className={classes.map}>{switchRoutes}</div>
         )}
-   
+      
         
       </div>
     </div>

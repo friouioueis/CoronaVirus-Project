@@ -1,3 +1,5 @@
+import React, { Component, useEffect, useState } from 'react';
+
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -14,25 +16,26 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-//import oldmansick from "assets/img/oldmansick.png";
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import React, { Component, useEffect, useState } from 'react';
 import Axios from 'axios';
+
+import AddIcon from '@material-ui/icons/Add';
+import Fab from '@material-ui/core/Fab';
+import DeleteIcon from '@material-ui/icons/Close';
+import Tooltip from '@material-ui/core/Tooltip';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import Next from '@material-ui/icons/NavigateNextOutlined';
-import Previous from '@material-ui/icons/NavigateBeforeOutlined';
 
 const useStyles = makeStyles(theme => ({
     root: {
         maxWidth: 1000,
-        marginBottom: 73,
-        padding : "15px 45px"
+        marginBottom: 50,
+        padding : "10px 30px"
     },
     media: {
         height: 0,
@@ -67,6 +70,9 @@ const useStyles = makeStyles(theme => ({
             backgroundColor: '#fff'
         },
 
+    },
+    icon: {
+        color: "#757575",
     }
 }));
 
@@ -78,71 +84,31 @@ export default function RecipeReviewCard() {
     const [expanded, setExpanded] = React.useState(false);
     const [user, setUser] = useState([])
     const  [ loading ,setLoading ]= React.useState(false);
-    const  [ valider ,setValider ]= React.useState(false);
     const  [ open ,setOpen ]= React.useState(false);
     const  [ id ,setId ]= React.useState(0);
-    const  [ red ,setRed ]= React.useState(0);
-    const  [ cont ,setCont ]= React.useState("");
-    const [page, setPage] = React.useState(1);
-    const [current, setCurrent] = React.useState(10);
-    const [next, setNext] = React.useState(null);
-    const [previous, setPrevious] = React.useState(null);
-    const handleChangeNextPage = (event, value) => {
-          if(next != null){
-      setPage(page+10);
-      setCurrent(current+10)
-      get_Articles_redige(next)
-      }
-    };
-    const handleChangePreviousPage = (event, value) => {
-      if(previous != null){
-      setPage(page-10);
-      setCurrent(current-10)
-      get_Articles_redige(previous)
-      }
-    };
-
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
-    const handleClickOpen =  (e,val,id,rd,ct) => {
-        e.preventDefault()
+    const handleClickOpen =  (id) => {
         setOpen(true)
-        setValider(val)
-        setRed(rd)
         setId(id)
-        setCont(ct)
-       // alert(val)
+        //setValider(val)
       };
    
      const handleClose = () => {
         setOpen(false)
       };
-
     useEffect(() => {
-        get_Articles_redige('http://localhost:8000/articles/articlesTermines/')
+        get_Articles_redige()
     }, [q])
 
+    const get_Articles_redige = () => {
 
-    const get_Articles_redige = (url) => {
-       //  alert(token)
         console.log("dada")
-        Axios.get(url, 
-        { headers: { "Authorization": `Token ${token}` } })
+        Axios.get('http://localhost:8000/articles/articlesTermines/', { headers: { "Authorization": `Token ${token}` } })
             .then(res => {
-                console.log(res.data.results)
+                console.log(res.data)
                 setActicleredigi(res.data.results)
-                if(res.data.next != null){
-    
-                    setNext(res.data.next)
-                    }else{
-                        setNext(null)
-                    }
-                    if(res.data.previous != null){
-                    setPrevious(res.data.previous)
-                    }else{
-                        setPrevious(null)
-                    }
             }).then(  
                 Axios.get(`http://localhost:8000/Utilisateurs/gestionComptes/comptes/`)
                 .then(res => {
@@ -150,52 +116,54 @@ export default function RecipeReviewCard() {
                     console.log(res.data.results)
                     setLoading (true)
                 })
-                   ) 
+                   )
     }
 
-    const set_valider_ar = () => {
-
-        console.log("set valider true")
-        Axios.patch(`http://localhost:8000/articles/articles/${id}/`, {
-            "contenuAr": cont,
-            "validerAR": valider,
-            "idRedacteurAr": red,
-            "idModerateurAr" : localStorage.getItem("idUser")
-        }, { headers: { "Authorization": `Token ${token}` } })
+    const delete_article = () => {
+        handleClose()
+        Axios.delete(`http://localhost:8000/articles/articles/${id}/`, { headers: { "Authorization": `Token ${token}` } })
             .then(res => {
                 console.log(res)
-                alert(valider ?'Article validé avec success': 'Article refusé avec success' )
                 window.location.reload(false);
-                
-            })
+                alert("Article rejeter avec success!")
+            }).catch(error =>alert(error));
     }
 
-
-   
- 
     function formatDate(string){
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: "2-digit", minute:"2-digit"};
         return new Date(string).toLocaleDateString([],options);
       }
 
+    
     return (
         <Container maxWidth="md">
-       
             {articleredigi.map(article => {
-     if (loading) {
+  if (loading) {
                     return (
 
                         <Card className={classes.root}>
-                            <CardHeader
-                                avatar={
-                                    <Avatar aria-label="recipe" className={classes.avatar}>
-                                       {user.find( user => user.id === article.idRedacteurAr).username[0].toUpperCase()} 
-                                    </Avatar>
-                                }
+                            <Grid
+                                container
+                                direction="row"
+                                justify="space-between"
+                                alignItems="center"
+                            >
+                                <CardHeader
+                                    avatar={
+                                        <Avatar aria-label="recipe" className={classes.avatar}>
+                                           {user.find( user => user.id === article.idRedacteurAr).username[0].toUpperCase()}
+                                      </Avatar>
+                                    }
 
-                                title={user.find( user => user.id === article.idRedacteurAr).username}
-                                subheader={formatDate(article.dateAr)}
-                            />
+                                    title={user.find( user => user.id === article.idRedacteurAr).username}
+                                    subheader={formatDate(article.dateAr)}
+                                />
+                                <Tooltip title="Rejeter l'article">
+                                    <IconButton aria-label="delete">
+                                        <DeleteIcon onClick={() => handleClickOpen(article.idArticle)} className={classes.icon} />
+                                    </IconButton>
+                                </Tooltip>
+                            </Grid>
                             <CardContent>
                                 <Typography variant="body2" color="" component="p">
                                     <div dangerouslySetInnerHTML={{
@@ -210,24 +178,21 @@ export default function RecipeReviewCard() {
                                 title="Old man sick"
                             /> */}
 
-                            <CardActions disableSpacing>
-                                <Grid
-                                    container
-                                    direction="row"
-                                    justify="space-between"
-                                    alignItems="center"
-                                >
-                                    <Button onClick={(e) => handleClickOpen(e,true,article.idArticle,article.idRedacteurAr,article.contenuAr) } variant="contained" color="primary" className={classes.accbutt}>
-                                        {/* <FavoriteIcon /> */}
-                            Accepter
-                        </Button>
-                        <Button onClick={(e) => handleClickOpen(e,false,article.idArticle,article.idRedacteurAr,article.contenuAr) } variant="outlined" color="primary" className={classes.refbutt}>
-                                        {/* <FavoriteIcon /> */}
-                         Refuser
-                        </Button>
-                                </Grid>
 
-                            </CardActions>
+
+
+
+                            {/* <IconButton
+                                    className={clsx(classes.expand, {
+                                        [classes.expandOpen]: expanded,
+                                    })}
+                                    onClick={handleExpandClick}
+                                    aria-expanded={expanded}
+                                    aria-label="show more"
+                                >
+                                    <ExpandMoreIcon />
+                                </IconButton> */}
+                            {/* </CardActions> */}
                             <Collapse in={expanded} timeout="auto" unmountOnExit>
                                 <CardContent>
                                     {/* <Typography paragraph>La suite:</Typography> */}
@@ -236,17 +201,16 @@ export default function RecipeReviewCard() {
                                     </Typography>
                                 </CardContent>
                             </Collapse>
-
+                            
 <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
    <DialogTitle id="form-dialog-title">Confirmation</DialogTitle>
    <DialogContent>
      <p className={classes.text}>
-     {valider ?'Etes vous sure de vouloir valider cet article ?': 'Etes vous sure de vouloir rejeter cet article ?' 
-     }
+     Etes vous sure de vouloir Rejeter cet article ?
          </p>
    </DialogContent>
    <DialogActions>
-   <Button  color="primary" onClick={() => set_valider_ar()} type = "submit">
+   <Button  color="primary" onClick={() => delete_article()}  type = "submit">
       Confirmer
      </Button>
      <Button onClick={handleClose} color="primary">
@@ -255,19 +219,10 @@ export default function RecipeReviewCard() {
    </DialogActions>
  </Dialog>
                         </Card>
-                        
 
                     )}
             })}
-  <div className={classes.pages}>
- <Previous onClick={handleChangePreviousPage}></Previous>
-            <p style={{display : "inline-block", margin : "20px" }}>{page} - {current}</p>
-    <Next onClick={handleChangeNextPage}></Next>
-   
-</div>
 
         </Container>
     );
 }
-
-

@@ -40,7 +40,7 @@ import gestion from "views/GestionCompte/gestionCompte.js";
 import videoUser from "views/VideoUser/videoUser.js";
 // core components/views for RTL layout
 import RTLPage from "views/RTLPage/RTLPage.js";
-
+import prof from "views/UserProfile/UserProfile";
 
 const dashboardRoutes = [
 
@@ -133,6 +133,14 @@ const dashboardRoutes = [
     icon: Language,
     component: RTLPage,
     layout: "/rtl"
+  },
+  {
+    path: "/profile",
+    name: "profile",
+    rtlName: "لوحة القيادة",
+    icon: Unarchive,
+    component: prof,
+    layout: "/moderateur"
   },
   {
     path: "/upgrade-to-pro",

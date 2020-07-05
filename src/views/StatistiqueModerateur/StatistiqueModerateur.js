@@ -8,10 +8,9 @@ import Table from "components/Table/Table.js";
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
-import Axios from 'axios';
 import Next from '@material-ui/icons/NavigateNextOutlined';
 import Previous from '@material-ui/icons/NavigateBeforeOutlined';
-import CardFooter from "components/Card/CardFooter";
+import Axios from 'axios';
 const styles = {
   cardCategoryWhite: {
     "&,& a,& a:hover,& a:focus": {
@@ -62,32 +61,42 @@ export default function TableList() {
     if(next != null){
     setPage(page+10);
     setCurrent(current+10)
-    getStat(next)
+    getStats(next)
     }
   };
   const handleChangePreviousPage = (event, value) => {
     if(previous != null){
     setPage(page-10);
     setCurrent(current-10)
-    getStat(previous)
+    getStats(previous)
     }
   };
-  const getStat = (url) => {
+  const getStats = (url) => {
     Axios.get(url, 
     { headers: {  'Content-Type' : 'application/json',"Authorization": `Token ${token}` } })
         .then(res => {
             console.log(res.data)
-            set_info_Regions(res.data.results) 
+            set_info_Regions(res.data.results)           
             if(res.data.next != null){
-              setNext(res.data.next)
-              }else{
-                  setNext(null)
-              }
-              if(res.data.previous != null){
-              setPrevious(res.data.previous)
-              }else{
-                  setPrevious(null)
-              } 
+                setNext(res.data.next)
+                }else{
+                    setNext(null)
+                }
+                if(res.data.previous != null){
+                setPrevious(res.data.previous)
+                }else{
+                    setPrevious(null)
+                }
+        })
+  };
+
+  useEffect(() => {
+    Axios.get(`http://localhost:8000/Region/moderateur/${localStorage.getItem("idUser")}/stats/`, 
+    { headers: {  'Content-Type' : 'application/json',"Authorization": `Token ${token}` } })
+        .then(res => {
+            console.log(res.data)
+            set_info_Regions(res.data.results)  
+            setNext(res.data.next)   
         }).then(  
             Axios.get(`http://localhost:8000/Region/regions/`)
             .then(res => {
@@ -97,48 +106,24 @@ export default function TableList() {
                 setReg(res.data.results)
                 console.log(res.data.results)
                 setLoading (true)
-            })
+             
+            }).catch(error => alert(error))
                )    
-  };
-  useEffect(() => {
-  getStat(`http://localhost:8000/Region/agent/${localStorage.getItem("idUser")}/stats_refus/`)
 },[])
-
-
-
-var table_info = [
-]
 function formatDate(string){
   var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: "2-digit", minute:"2-digit"};
   return new Date(string).toLocaleDateString([],options);
 }
-info_Regions.map(info => { 
+var table_info = [
+]
+info_Regions.map(info => {
   if (loading===true) {
-    var valid = "";
-    if (info.validerSt=== null){
-      valid = "pas encore validé"
-    }else{
-      if (info.validerSt){
-        valid ='Validé'
-      }else{
-        valid ='Non validé' 
-      }
-    }
-
         return (
-         
-            table_info.push([
-              formatDate(info.dateSt),
-              reg[info.idRegionSt-1].nomRegion, 
-              info.nbrPorteurVirus,
-              info.casConfirme,
-              info.casRetablis,
-              info.nbrDeces, info.nbrGuerisons,
-            <p>{valid}</p>
+            table_info.push([formatDate(info.dateSt),reg[info.idRegionSt-1].nomRegion, info.nbrPorteurVirus, info.casConfirme, info.casRetablis, info.nbrDeces, info.nbrGuerisons,<p> {info.validerSt ?'Validé': 'Refusé' }</p>
           ])
         )
         }
- })
+})
 
   return (
     <GridContainer>
@@ -156,17 +141,16 @@ info_Regions.map(info => {
               tableData={table_info}
             />
           </CardBody>
-          <CardFooter>
-          <div className={classes.pages}>
-          <Previous onClick={handleChangePreviousPage}></Previous>
+                
+ <div className={classes.pages}>
+ <Previous onClick={handleChangePreviousPage}></Previous>
             <p style={{display : "inline-block", margin : "20px" }}>{page} - {current}</p>
-          <Next onClick={handleChangeNextPage}></Next>
+    <Next onClick={handleChangeNextPage}></Next>
    
 </div>
-          </CardFooter>
         </Card>
       </GridItem>
-      
+
     </GridContainer>
   );
 }
