@@ -1,7 +1,6 @@
 package com.example.coronawatch.api
 
-import com.example.coronawatch.InfoWilaya
-import com.example.coronawatch.Results
+import com.example.coronawatch.classes.Results
 import models.DefaultResponse
 import models.LoginResponse
 

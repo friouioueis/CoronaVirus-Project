@@ -1,23 +1,18 @@
 package com.example.coronawatch.ui.main
 
 import android.annotation.SuppressLint
-import android.content.ContentValues.TAG
-import android.content.Context
-import android.content.res.Resources
-import android.graphics.Bitmap
-import android.graphics.Canvas
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.coronawatch.*
 import com.example.coronawatch.R
 import com.example.coronawatch.api.*
+import com.example.coronawatch.classes.InfoWilaya
+import com.example.coronawatch.classes.Results
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
@@ -187,6 +182,7 @@ class MainFragment : Fragment() {
                                 barChart.setTouchEnabled(true)
                                 barChart.isDragEnabled = true
                                 barChart.setScaleEnabled(true)
+                                barChart.description.text = "عدد الحالات المؤكدة"
                             }
                         }catch (e : Exception){
 

@@ -4,14 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import android.widget.VideoView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.coronawatch.Commentaire
+import com.example.coronawatch.classes.Commentaire
 import com.example.coronawatch.R
-
-import com.example.myapplication.RecyclerViewAdapter
 
 import kotlinx.android.synthetic.main.comment_row.view.*
 

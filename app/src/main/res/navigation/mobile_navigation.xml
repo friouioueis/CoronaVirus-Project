@@ -28,7 +28,7 @@
 
         android:id="@+id/social_media"
         android:name="com.example.coronawatch.ui.socialMedia.SocialMediaFragment"
-        android:label="و.التواصل الإجتماعي"
+        android:label="مقالات مواقع الانترنت"
         tools:layout="@layout/fragment_social_media">
 
 
@@ -36,7 +36,7 @@
     <fragment
         android:id="@+id/pics_videos"
         android:name="com.example.coronawatch.ui.picsVideos.PicsVideosFragment"
-        android:label="فيديوهات و صور"
+        android:label="فيديوهات اليوتوب"
         tools:layout="@layout/fragment_pics_videos">
 
 

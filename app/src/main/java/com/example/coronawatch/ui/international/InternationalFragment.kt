@@ -9,21 +9,19 @@ import android.view.ViewGroup
 import com.example.coronawatch.*
 import com.example.coronawatch.api.bitmapDescriptorFromVector
 import com.example.coronawatch.api.setMapStyle
+import com.example.coronawatch.classes.InfoWilaya
 import com.example.coronawatch.ui.download.InternationalViewModel
 import com.example.coronawatch.ui.main.MainViewModel
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.MarkerOptions
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import com.squareup.okhttp.OkHttpClient
 import com.squareup.okhttp.Request
 import kotlinx.android.synthetic.main.fragment_international.*
-import kotlinx.android.synthetic.main.fragment_main.*
 import kotlinx.android.synthetic.main.international_states.*
-import kotlinx.android.synthetic.main.wilaya_states.*
 import java.io.IOException
 import java.lang.Exception
 

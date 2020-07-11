@@ -1665,6 +1665,7 @@ id chronometer
 id clear_text
 id clip_horizontal
 id clip_vertical
+id coeur
 id collapseActionView
 id collapsed
 id comment_content
@@ -1699,6 +1700,8 @@ id drop_shadow_top
 id dropdown_menu
 id editTextEmail
 id editTextPassword
+id editTextPoids
+id editTextTemperature
 id editTextUsername
 id edit_query
 id edit_text_add_comment
@@ -1712,7 +1715,6 @@ id expand_activities_button
 id expanded
 id expanded_menu
 id extra_views_container
-id fab
 id facebook_singup_btn
 id fade
 id fill
@@ -1732,6 +1734,7 @@ id glide_custom_view_target_tag
 id gone
 id group_divider
 id groups
+id health_info
 id hidden
 id hideable
 id home
@@ -1756,6 +1759,7 @@ id invisible
 id italic
 id item_touch_helper_previous_elevation
 id labeled
+id language_robot
 id largeLabel
 id left
 id light
@@ -1767,6 +1771,7 @@ id linearLayout3
 id linearLayout4
 id linearLayout5
 id linear_layout_article
+id link_robot
 id listMode
 id list_item
 id live_video_indicator
@@ -1858,6 +1863,7 @@ id progress_horizontal
 id radio
 id recycler_view
 id recycler_view_articles
+id recycler_view_robots
 id right
 id right_icon
 id right_side
@@ -1884,6 +1890,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id send
 id shortcut
 id showCustom
 id showHome
@@ -1900,6 +1907,7 @@ id snackbar_text
 id snap
 id snapMargins
 id social_media
+id source_robot
 id spacer
 id split_action_bar
 id spread
@@ -1914,6 +1922,8 @@ id stretch
 id submenuarrow
 id submit_area
 id swipe_refresh_layout
+id swipe_robots_refresh_layout
+id swipe_youtube_refresh_layout
 id switcher
 id tabMode
 id tag_accessibility_actions
@@ -1933,7 +1943,9 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id text_gallery
+id textView5
+id textView6
+id textView8
 id text_input_end_icon
 id text_input_start_icon
 id text_slideshow
@@ -1944,6 +1956,7 @@ id time
 id time_comment
 id title
 id titleDividerNoCustom
+id title_robot
 id title_template
 id toolbar
 id top
@@ -2125,6 +2138,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout robot_row
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

@@ -320,6 +320,10 @@
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_notifications.xml"
     },
     {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\layout_robot_row.xml.flat",
+        "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\src\\main\\res\\layout\\robot_row.xml"
+    },
+    {
         "merged": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_diagno.png.flat",
         "source": "C:\\Users\\Lenovo\\Desktop\\projet\\AlgeriaCities-develop\\Coronawatch\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_diagno.png"
     },

@@ -1,6 +1,6 @@
 package com.example.coronawatch.ui.picsVideos
 
-import android.R
+
 import android.annotation.SuppressLint
 import android.os.Build
 
@@ -17,15 +17,15 @@ import androidx.lifecycle.ViewModelProviders
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.example.coronawatch.*
+import com.example.coronawatch.adapter.VideoAdapter
+import com.example.coronawatch.classes.YouTubeVideos
 
-import com.example.coronawatch.YouTubeVideos
-import com.example.coronawatch.baseUrl
-import com.example.coronawatch.globalToken
 import com.example.coronawatch.ui.diagno.PicsVideosViewModel
 
 
-import com.example.coronawatch.youtubeVideoParsing
-import com.example.myapplication.VideoAdapter
+
 
 
 import com.squareup.okhttp.Callback
@@ -40,8 +40,9 @@ class PicsVideosFragment : Fragment() {
     private lateinit var picsVideosViewModel: PicsVideosViewModel
     lateinit var youtubeRecyclerView : RecyclerView
     var youtubeVideos  = arrayListOf<YouTubeVideos>()
+    lateinit var swipeRefreshLayout: SwipeRefreshLayout
     lateinit var adapterYt : VideoAdapter
-
+    val url = "$baseUrl/Robots/pub/youtube/sorted/"
     companion object {
         fun newInstance() = PicsVideosFragment()
     }
@@ -64,8 +65,20 @@ class PicsVideosFragment : Fragment() {
 
         youtubeRecyclerView.adapter = adapterYt
 
-        fetchJSON("$baseUrl/Robots/pub/youtube/sorted/", globalToken)
+        fetchJSON(url, globalToken)
         adapterYt.notifyDataSetChanged()
+
+        swipeRefreshLayout = view.findViewById(R.id.swipe_youtube_refresh_layout) as SwipeRefreshLayout
+        swipeRefreshLayout.setOnRefreshListener {
+
+            adapterYt.videoURLs.clear()
+
+            swipeRefreshLayout.isRefreshing = true
+            fetchJSON(url, globalToken)
+
+            adapterYt.notifyDataSetChanged()
+
+        }
 
         return view
     }
@@ -87,7 +100,7 @@ class PicsVideosFragment : Fragment() {
         val client = OkHttpClient()
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(request: Request?, e: IOException?) {
-
+                swipeRefreshLayout.isRefreshing = false
                 print("Failed to execute request")
             }
 
@@ -101,6 +114,7 @@ class PicsVideosFragment : Fragment() {
                         youtubeVideos.addAll(buffer)
                         adapterYt?.notifyDataSetChanged()
                     }
+                    swipeRefreshLayout.isRefreshing = false
                 }catch (e : Exception){
 
                 }

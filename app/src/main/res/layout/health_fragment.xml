@@ -1,13 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.health.HealthFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Health" />
+    <ImageView
+        android:id="@+id/imageView"
 
-</FrameLayout>
+        android:layout_width="244dp"
+        android:layout_height="105dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="89dp"
+        android:contentDescription="@string/nav_header_desc"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        app:srcCompat="@drawable/man" />
+
+    <TextView
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="-4dp"
+        android:gravity="bottom|center"
+        android:paddingTop="8dp"
+        android:text="محمد علي" />
+
+    <TextView
+        android:id="@+id/health_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="50dp"
+        android:textColor="#AAFFFFFF"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="الرجاء إدخال معلوماتك الحيوية" />
+
+    <EditText
+        android:id="@+id/editTextPoids"
+        android:layout_width="match_parent"
+
+        android:layout_height="40dp"
+
+        android:layout_below="@id/health_info"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/white"
+        android:gravity="right"
+        android:hint=")كغ( الوزن "
+        android:inputType="text"
+        android:padding="10dp"
+
+        tools:ignore="RtlHardcoded,TextFields"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editTextTemperature"
+        android:layout_width="match_parent"
+
+        android:layout_height="40dp"
+
+        android:layout_below="@id/editTextPoids"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/white"
+        android:gravity="right"
+        android:hint="درجة حرارة الجسم"
+        android:inputType="text"
+        android:padding="10dp"
+
+        tools:ignore="RtlHardcoded,TextFields"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/coeur"
+        android:layout_width="match_parent"
+
+        android:layout_height="40dp"
+
+        android:layout_below="@id/editTextTemperature"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/white"
+        android:gravity="right"
+        android:hint=")د/ض( ضربات القلب "
+        android:inputType="text"
+        android:padding="10dp"
+
+        tools:ignore="RtlHardcoded,TextFields"
+        android:autofillHints="" />
+
+
+
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/coeur"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorPrimary"
+        android:text="إرسال"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+
+        />
+
+</RelativeLayout>

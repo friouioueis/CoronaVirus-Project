@@ -12,7 +12,6 @@
     <list default="true" id="101c880d-a674-4f47-b3ae-5a1921d225cf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -21,598 +20,49 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_ktx_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_1_1_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_1_1_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_ktx_1_1_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_1_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_ktx_1_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_exifinterface_exifinterface_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_2_4_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_ktx_1_2_4_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_2_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_extensions_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_ktx_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_process_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_ktx_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_service_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_ktx_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_savedstate_2_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_navigation_navigation_common_2_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_navigation_navigation_common_ktx_2_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_navigation_navigation_fragment_2_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_navigation_navigation_fragment_ktx_2_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_navigation_navigation_runtime_2_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_navigation_navigation_runtime_ktx_2_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_navigation_navigation_ui_2_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_navigation_navigation_ui_ktx_2_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_core_1_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_ext_junit_1_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager2_viewpager2_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_dyhdyh_support_glide_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_annotations_4_11_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_disklrucache_4_11_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_11_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_11_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_6_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_4_5_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp_okhttp_2_7_5_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_2_5_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_torchmind_mango_observable_1_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_3_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_android_extensions_runtime_1_3_61_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_70_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_70_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_3_61_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_android_1_3_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_1_3_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__pl_droidsonroids_gif_android_gif_drawable_1_2_7_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/annotation_processor_list/debug/annotationProcessors.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/annotation_processor_list/debug/annotationProcessors.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/annotation_processor_list/debugAndroidTest/annotationProcessors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/annotation_processor_list/debugUnitTest/annotationProcessors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/apk_list/debugAndroidTest/apk-list.gson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/app_classes/debug/classes.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-af.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-af.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-am.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-am.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ar.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ar.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-as.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-as.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-az.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-az.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-b+sr+Latn.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-b+sr+Latn.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-be.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-be.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-bg.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-bg.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-bn.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-bn.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-bs.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-bs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ca.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ca.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-cs.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-cs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-da.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-da.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-de.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-de.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-el.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-el.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-en-rAU.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-en-rAU.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-en-rCA.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-en-rCA.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-en-rGB.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-en-rGB.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-en-rIN.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-en-rIN.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-en-rXC.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-en-rXC.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-es-rUS.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-es-rUS.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-es.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-es.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-et.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-et.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-eu.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-eu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-fa.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-fa.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-fi.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-fi.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-fr-rCA.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-fr-rCA.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-fr.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-fr.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-gl.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-gl.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-gu.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-gu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-h360dp-land-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-h360dp-land-v13.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-h480dp-land-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-h480dp-land-v13.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-h720dp-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-h720dp-v13.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-hdpi-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-hdpi-v4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-hi.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-hi.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-hr.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-hr.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-hu.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-hu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-hy.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-hy.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-in.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-in.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-is.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-is.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-it.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-it.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-iw.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-iw.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ja.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ja.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ka.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ka.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-kk.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-kk.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-km.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-km.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-kn.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-kn.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ko.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ko.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ky.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ky.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-land.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-land.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-large-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-large-v4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ldltr-v21.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ldltr-v21.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-lo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-lo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-lt.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-lt.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-lv.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-lv.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-mk.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-mk.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ml.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ml.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-mn.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-mn.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-mr.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-mr.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ms.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ms.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-my.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-my.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-nb.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-nb.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ne.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ne.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-night-v8.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-night-v8.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-nl.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-nl.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-or.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-or.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-pa.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-pa.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-pl.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-port.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-port.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-pt-rBR.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-pt-rBR.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-pt-rPT.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-pt-rPT.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-pt.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ro.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ro.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ru.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-si.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-si.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sk.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sk.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sl.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sl.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-small-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-small-v4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sq.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sq.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sr.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sr.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sv.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sv.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sw.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sw.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sw600dp-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sw600dp-v13.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ta.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-te.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-te.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-th.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-th.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-tl.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-tl.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-tr.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-tr.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-uk.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ur.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ur.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-uz.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-uz.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v16.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v16.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v17.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v17.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v18.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v18.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v21.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v21.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v22.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v22.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v23.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v23.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v24.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v24.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v25.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v25.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v26.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v26.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v28.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-v28.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-vi.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-vi.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-w360dp-port-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-w360dp-port-v13.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-w480dp-port-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-w480dp-port-v13.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-watch-v20.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-watch-v20.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-watch-v21.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-watch-v21.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-xlarge-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-xlarge-v4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-zh-rCN.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-zh-rCN.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-zh-rHK.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-zh-rHK.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-zh-rTW.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-zh-rTW.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-zu.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-zu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/debug/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/debug/bundle-manifest/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debugAndroidTest/R.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/out/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debugAndroidTest/out/classes.dex" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debugAndroidTest/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/external_libs_dex/debug/out/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/external_libs_dex/debugAndroidTest/out/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/+2k5UwCJ0hmRlJ_VMiviZvXfyMk=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/0gMRq8IQ90HWwyZa3xWw2Y5iLyw=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/2FUKSkPj9Hpm6qSIoBXJxE+lf_8=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/4f0DbRnpC_WNtUnf4OGoLFN0HpM=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/7XRMdUWhRjmxRZAG3NfSiTBr0bw=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/8ynYHKU_uUx9K85dyeQ8rWh815k=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/9SUZj7VjcTNdis67ps_UyFeh7K4=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/9vAr06pnH91N7ywL3BRQkmzrybQ=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/A2PD+SPMUwvJEeVFVICtMMzd3sM=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/AQ7HtzoGVXr6gljgxjyZOsMirWE=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/AWcDOIJyoiAgAaNboOfE6kvlYh4=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/BXNmSB4vFvtQekPSrPHK3hpCmS8=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/BcotcjeUl+EjSVEmzSgiYfSppWI=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/CO8zoQYycYPurE6JRqK_p2O+fn4=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/GxE9apkPLBgvadXJV0mtULIrvMo=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/HdMGHTWVNlVjpXtB6AGEHeIkM2k=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/NJkOIIRSur2uCyZY2D0IrIXweic=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/NqAI8EkU1x_URbDBslrargkvVmE=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/O1VvYw4KXopzg8ZStr45K6FdQd4=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/OdTDF+8PgI9VIExOUp7WH1gVDb8=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/OrKOgZeMEwJOyzUJXSRdwsAIqtQ=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/S+FsfltMZy0nXJXYAfHkeiBiE8Q=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/SCeKuS1vbv+RU_9rACSdajAi0qg=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/T9Y3TbxYVw67Cyl2I5VgQJJHz3w=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/TAoOhmCaOQV0hhT_FCd78tvKNpA=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/VM4HeT+fhPRGaRJqS+9MDbwPYwg=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/VWJoxYvRcqBzKtIZQCvzYVUOh5M=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Ve_i_UanYwn4Rgd5zbFqYzQwG0Y=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/WFCDiqwCqiGGxlniSJB2xdOg_7g=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/WV5xof2exFA8HkTrQOxA8v_Lpas=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/WftQdUYEO+6WfRUBPaRDWzy4TA0=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/XEoqO2lJ9SZPv6ykWbUtDGZyr68=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/XknAHhsaD0gfFtQ1MFiLDMQ1I1E=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/YX9+KrQBPiGmaTjx92P_oO0BN00=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/dTpbnta7ayS+xAkWX_uSfL234dw=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/fAJMtVm46iW+58uu4vgGBbU_4Zs=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/fKP343t_s1w4dxVZUe0Pm7vSstI=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ffvl66I9x0iKZ7wOxLhWI2Ul0f0=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/hEeRGTqRkXn2P39xM2K534h2SRk=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/hRHCzUxShEE0MZoYKbKRpZPuHmU=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ikCfL9cxD1eUAQkV415kATcrVyU=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/kzT3bcrv2gZv8ah09xoPiHAxLM8=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/qf9XEMtzn7sl3RG3PCAFZ6orBTM=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/tWQj1QJyG3mh6G4YLGl9Mei6APY=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/tt8wyp2DnSsRcXQnEGwqMyUSe6o=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/vEGZIm0YQCmEkLIFPI5jukaRWxU=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/xR8nDmVg87a0Z2aLTk3aQbHFxnM=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/yDQh01DQg1UT5JK8wSw+folHD2U=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/zCBstmGkgDC1o66moYSs13MYsCU=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/zMLLdQwcwV95psBLtEldcCUmiaE=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/zQh2prGM97eRaMhipqnoCqUr2B8=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/+2k5UwCJ0hmRlJ_VMiviZvXfyMk=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/0gMRq8IQ90HWwyZa3xWw2Y5iLyw=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/2FUKSkPj9Hpm6qSIoBXJxE+lf_8=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/4f0DbRnpC_WNtUnf4OGoLFN0HpM=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/7XRMdUWhRjmxRZAG3NfSiTBr0bw=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/8ynYHKU_uUx9K85dyeQ8rWh815k=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/9SUZj7VjcTNdis67ps_UyFeh7K4=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/9vAr06pnH91N7ywL3BRQkmzrybQ=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/A2PD+SPMUwvJEeVFVICtMMzd3sM=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/AQ7HtzoGVXr6gljgxjyZOsMirWE=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/AWcDOIJyoiAgAaNboOfE6kvlYh4=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/BXNmSB4vFvtQekPSrPHK3hpCmS8=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/BcotcjeUl+EjSVEmzSgiYfSppWI=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/CO8zoQYycYPurE6JRqK_p2O+fn4=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/GxE9apkPLBgvadXJV0mtULIrvMo=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/HdMGHTWVNlVjpXtB6AGEHeIkM2k=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/NJkOIIRSur2uCyZY2D0IrIXweic=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/NqAI8EkU1x_URbDBslrargkvVmE=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/O1VvYw4KXopzg8ZStr45K6FdQd4=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/OdTDF+8PgI9VIExOUp7WH1gVDb8=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/OrKOgZeMEwJOyzUJXSRdwsAIqtQ=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/S+FsfltMZy0nXJXYAfHkeiBiE8Q=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/SCeKuS1vbv+RU_9rACSdajAi0qg=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/T9Y3TbxYVw67Cyl2I5VgQJJHz3w=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/TAoOhmCaOQV0hhT_FCd78tvKNpA=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/VM4HeT+fhPRGaRJqS+9MDbwPYwg=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/VWJoxYvRcqBzKtIZQCvzYVUOh5M=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/Ve_i_UanYwn4Rgd5zbFqYzQwG0Y=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/WFCDiqwCqiGGxlniSJB2xdOg_7g=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/WV5xof2exFA8HkTrQOxA8v_Lpas=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/WftQdUYEO+6WfRUBPaRDWzy4TA0=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/XEoqO2lJ9SZPv6ykWbUtDGZyr68=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/XknAHhsaD0gfFtQ1MFiLDMQ1I1E=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/YX9+KrQBPiGmaTjx92P_oO0BN00=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/dTpbnta7ayS+xAkWX_uSfL234dw=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/fAJMtVm46iW+58uu4vgGBbU_4Zs=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/fKP343t_s1w4dxVZUe0Pm7vSstI=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/ffvl66I9x0iKZ7wOxLhWI2Ul0f0=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/hEeRGTqRkXn2P39xM2K534h2SRk=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/hRHCzUxShEE0MZoYKbKRpZPuHmU=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/ikCfL9cxD1eUAQkV415kATcrVyU=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/kzT3bcrv2gZv8ah09xoPiHAxLM8=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/qf9XEMtzn7sl3RG3PCAFZ6orBTM=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/tWQj1QJyG3mh6G4YLGl9Mei6APY=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/tt8wyp2DnSsRcXQnEGwqMyUSe6o=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/vEGZIm0YQCmEkLIFPI5jukaRWxU=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/xR8nDmVg87a0Z2aLTk3aQbHFxnM=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/yDQh01DQg1UT5JK8wSw+folHD2U=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/zCBstmGkgDC1o66moYSs13MYsCU=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/zMLLdQwcwV95psBLtEldcCUmiaE=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/zQh2prGM97eRaMhipqnoCqUr2B8=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes/merge-state" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes/zip-cache/5ZYJ275u9PQyffYuQnUvM76gabc=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes/zip-cache/7gw+0IUnSqe_2RKAAhN5whpePFI=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes/zip-cache/8w5yu3KCSsAQmBzupslWRV1OZKM=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes/zip-cache/ALCoLNUXrN0aY9IM3tNzyimBCsQ=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes/zip-cache/F2_9KseUBTfcF_RhhpESjnB2oxg=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes/zip-cache/JGhYFV7uD8Yml3vhtO2ceGf4eTo=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes/zip-cache/KWubsef6EQ4GVHPRD1pjDMEizFE=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes/zip-cache/RZFzqCpjKvnIvpkxfDvLr7khEBs=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes/zip-cache/aQc5GemFAOoh1WfThWC8CuEQ3tk=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes/zip-cache/hhzGl_vhnrPYAFyb_1qmyMxfjp0=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes/zip-cache/o8Xz2dIlt5g7uEHzz_mg9J+M_RQ=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes/zip-cache/oPqg7iPtywaLh0TaqPYVzoPPuAs=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes/zip-cache/yRmSRlkrLojWCOi6A_DUCJk+xCs=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeJavaRes/zip-cache/zA2TSrsg4UhFkWFcR5lh7JwTv7k=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeNativeLibs/merge-state" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeNativeLibs/zip-cache/5ZYJ275u9PQyffYuQnUvM76gabc=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeNativeLibs/zip-cache/7gw+0IUnSqe_2RKAAhN5whpePFI=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeNativeLibs/zip-cache/8w5yu3KCSsAQmBzupslWRV1OZKM=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeNativeLibs/zip-cache/ALCoLNUXrN0aY9IM3tNzyimBCsQ=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeNativeLibs/zip-cache/F2_9KseUBTfcF_RhhpESjnB2oxg=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeNativeLibs/zip-cache/JGhYFV7uD8Yml3vhtO2ceGf4eTo=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeNativeLibs/zip-cache/KWubsef6EQ4GVHPRD1pjDMEizFE=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeNativeLibs/zip-cache/RZFzqCpjKvnIvpkxfDvLr7khEBs=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeNativeLibs/zip-cache/aQc5GemFAOoh1WfThWC8CuEQ3tk=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeNativeLibs/zip-cache/hhzGl_vhnrPYAFyb_1qmyMxfjp0=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeNativeLibs/zip-cache/o8Xz2dIlt5g7uEHzz_mg9J+M_RQ=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeNativeLibs/zip-cache/oPqg7iPtywaLh0TaqPYVzoPPuAs=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeNativeLibs/zip-cache/yRmSRlkrLojWCOi6A_DUCJk+xCs=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debugAndroidTest-mergeNativeLibs/zip-cache/zA2TSrsg4UhFkWFcR5lh7JwTv7k=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestAssets/merger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestJniLibFolders/merger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestShaders/merger.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebugAndroidTest/tmp/debugAndroidTest/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebugAndroidTest/tmp/debugAndroidTest/zip-cache/androidResources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebugAndroidTest/tmp/debugAndroidTest/zip-cache/javaResources0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/processDebugResources/resources-list-for-resources-debug.ap_.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debugAndroidTest/classes/com/example/coronawatch/test/BuildConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debugAndroidTest/manifest-merger-blame-debug-androidTest-report.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debugAndroidTest/out.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debugAndroidTest/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debugAndroidTest/output.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debugAndroidTest/out/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debugAndroidTest/out/resources-debugAndroidTest.ap_" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/BuildConfig.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/BuildConfig.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/LoginActivity$onCreate$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/LoginActivity$onCreate$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/LoginActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/LoginActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/MainActivity$inlined$sam$i$androidx_navigation_ui_AppBarConfiguration_OnNavigateUpListener$0.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/MainActivity$inlined$sam$i$androidx_navigation_ui_AppBarConfiguration_OnNavigateUpListener$0.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/MainActivity$onCreate$$inlined$AppBarConfiguration$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/MainActivity$onCreate$$inlined$AppBarConfiguration$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/MainActivity$onCreate$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/MainActivity$onCreate$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/MainActivity$onCreate$1.dex" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/MainActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/MainActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/SingupActivity$onCreate$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/SingupActivity$onCreate$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/SingupActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/SingupActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/ui/slideshow/SlideshowFragment$onCreateView$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/ui/slideshow/SlideshowFragment$onCreateView$1.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/ui/slideshow/SlideshowFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/ui/slideshow/SlideshowFragment.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/ui/slideshow/SlideshowViewModel.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/coronawatch/ui/slideshow/SlideshowViewModel.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debugAndroidTest/out/05cf373c1b84129d7c7e68ae28842fca75d8efeb66d7a9bc5ca04cb4303b4c83_0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debugAndroidTest/out/05cf373c1b84129d7c7e68ae28842fca75d8efeb66d7a9bc5ca04cb4303b4c83_1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debugAndroidTest/out/com/example/coronawatch/ExampleInstrumentedTest.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debugAndroidTest/out/com/example/coronawatch/GettingDataTest.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debugAndroidTest/out/com/example/coronawatch/test/BuildConfig.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_login.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_login.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_app_bar_main.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_app_bar_main.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu_activity_main_drawer.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu_activity_main_drawer.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/navigation_mobile_navigation.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/navigation_mobile_navigation.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v21_values-v21.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v21_values-v21.arsc.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debugAndroidTest/R.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debugAndroidTest/package-aware-r.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/build-history.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/inputs/source-to-output.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/inputs/source-to-output.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/inputs/source-to-output.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/inputs/source-to-output.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/inputs/source-to-output.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/inputs/source-to-output.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/inputs/source-to-output.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/proto.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/proto.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/proto.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/counters.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/file-to-id.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/file-to-id.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/file-to-id.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/file-to-id.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/file-to-id.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/file-to-id.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/file-to-id.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/id-to-file.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/id-to-file.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/id-to-file.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/id-to-file.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/id-to-file.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/id-to-file.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/lookups.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/lookups.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/lookups.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/lookups.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/lookups.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/caches-jvm/lookups/lookups.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugAndroidTestKotlin/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/build-history.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/inputs/source-to-output.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/inputs/source-to-output.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/inputs/source-to-output.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/inputs/source-to-output.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/inputs/source-to-output.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/inputs/source-to-output.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/inputs/source-to-output.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/proto.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/proto.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/proto.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/counters.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/file-to-id.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/file-to-id.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/file-to-id.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/file-to-id.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/file-to-id.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/file-to-id.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/file-to-id.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/id-to-file.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/id-to-file.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/id-to-file.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/id-to-file.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/id-to-file.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/id-to-file.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/lookups.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/lookups.tab.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/lookups.tab.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/lookups.tab.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/lookups.tab_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/caches-jvm/lookups/lookups.tab_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugUnitTestKotlin/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/androidTest/debug/output.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/tests/testDebugUnitTest/classes/com.example.coronawatch.ExampleUnitTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/tests/testDebugUnitTest/css/base-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/tests/testDebugUnitTest/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/tests/testDebugUnitTest/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/tests/testDebugUnitTest/js/report.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/tests/testDebugUnitTest/packages/com.example.coronawatch.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/test-results/testDebugUnitTest/TEST-com.example.coronawatch.ExampleUnitTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/test-results/testDebugUnitTest/binary/output.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/test-results/testDebugUnitTest/binary/output.bin.idx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/test-results/testDebugUnitTest/binary/results.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/META-INF/app_debug.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/META-INF/app_debug.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/coronawatch/MainActivity$inlined$sam$i$androidx_navigation_ui_AppBarConfiguration_OnNavigateUpListener$0.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/coronawatch/MainActivity$inlined$sam$i$androidx_navigation_ui_AppBarConfiguration_OnNavigateUpListener$0.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/coronawatch/MainActivity$onCreate$$inlined$AppBarConfiguration$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/coronawatch/MainActivity$onCreate$$inlined$AppBarConfiguration$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/coronawatch/MainActivity$onCreate$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/coronawatch/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/coronawatch/MainActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/coronawatch/ui/slideshow/SlideshowFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/coronawatch/ui/slideshow/SlideshowFragment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debugAndroidTest/META-INF/app_debug.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debugAndroidTest/com/example/coronawatch/ExampleInstrumentedTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debugAndroidTest/com/example/coronawatch/GettingDataTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debugUnitTest/META-INF/app_debug.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debugUnitTest/com/example/coronawatch/ExampleUnitTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debugUnitTest/com/example/coronawatch/GetArticlesTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/Article.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/Article.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/InfoWilaya.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/InfoWilaya.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/ArticlesParsing.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/DataParsing.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/GlobalValues.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/GlobalValues.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/ReadWriteFileManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/ReadWriteFileManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/adapter/ArticlesAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/adapter/ArticlesAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/adapter/CommentsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/adapter/CommentsAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/adapter/RecyclerViewAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/adapter/RecyclerViewAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/api/Api.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/api/Api.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/api/DataService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/api/RetrofitClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/api/RetrofitClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/api/RetrofitClientInstance.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/ui/articles/ArticlesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/ui/articles/ArticlesFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/ui/diagno/DiagnoFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/ui/diagno/DiagnoFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/ui/download/DownloadFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/ui/download/DownloadFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/ui/main/MainFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/ui/main/MainFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/ui/picsVideos/PicsVideosFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/ui/picsVideos/PicsVideosFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/ui/socialMedia/SocialMediaFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/ui/socialMedia/SocialMediaFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/article_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/article_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/diagno_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/diagno_fragment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/download_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/download_fragment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_pics_videos.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/wilaya_states.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/wilaya_states.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/wilaya_statesempty.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/wilaya_statesempty.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_pics_videos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_pics_videos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_social_media.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_social_media.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/health_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/health_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/video_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/video_view.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/coronawatch/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/coronawatch/ExampleUnitTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -674,7 +124,7 @@
     <property name="SelectDeploymentTargetsDialog.selectedDevices" value="IRS006160600377&#10;Pixel_2_API_29" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/layout" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/libs" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/tdm/GeoMob" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -908,17 +358,6 @@
     <MESSAGE value="initializing" />
     <MESSAGE value="articles row layout" />
     <option name="LAST_COMMIT_MESSAGE" value="articles row layout" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/coronawatch/adapter/RecyclerViewAdapter.kt</url>
-          <line>3</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Corona_watch$GetArticlesTest.ic" NAME="GetArticlesTest Coverage Results" MODIFIED="1588826647779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

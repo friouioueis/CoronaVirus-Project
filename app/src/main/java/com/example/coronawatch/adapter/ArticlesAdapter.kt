@@ -3,7 +3,6 @@ package com.example.coronawatch.adapter
 import android.content.Context
 import android.os.Build
 import android.text.Html
-import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,14 +11,10 @@ import androidx.annotation.RequiresApi
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.coronawatch.Commentaire
+import com.example.coronawatch.classes.Commentaire
 import com.example.coronawatch.R
 import com.example.coronawatch.ui.articles.ArticlesFeed
 import kotlinx.android.synthetic.main.article_row.view.*
-
-import java.time.LocalTime
-
-
 
 
 class ArticlesAdapter(
@@ -73,7 +68,12 @@ class ArticlesAdapter(
             var handled = false
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 //adding a comment
-                articlesFeed.articles[position].comments.add(Commentaire(holder.itemView.edit_text_add_comment.text.toString() , "now"))
+                articlesFeed.articles[position].comments.add(
+                    Commentaire(
+                        holder.itemView.edit_text_add_comment.text.toString(),
+                        "now"
+                    )
+                )
                 articlesFeed.articles[position].commentsAdapter?.notifyDataSetChanged()
                 holder.itemView.edit_text_add_comment.text.clear()
                 holder.itemView.edit_text_add_comment.isFocusable = false
